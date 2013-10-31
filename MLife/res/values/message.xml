@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="message_bus_query_failed">no data found.</string>
+    <string name="message_mlife_list_item_click">opening soon,please hold.</string>
+    <string name="message_mlife_bus_no_more_switch">slip with inverse direction.</string>
+    <string name="message_mlife_bus_favorite">collect success.</string>
+    <string name="message_mlife_bus_help">1.目前仅支持苏州地区公交\n\n2.左右划屏可切换菜单\n\n3.线路与站台均为模糊查询\n\n4.选择线路或站台可查看详情</string>
+    <string name="message_mlife_bus_detail">1.选择线路或站台可查看详情\n\n2.左右划屏可切换上下行\n\n3.可刷新、切换、收藏</string>
+</resources>

@@ -1,0 +1,8 @@
+*******IP/电脑名,用户名,密码,要更改的用户,要更改的密码*******
+172.16.1.100, ethan3, abc, ethan3, dfdfdw
+
+172.16.1.122, ethan3, abc, ethan3, dfdf
+
+172.16.1.123, ethan3, 3abc, ethan3, abc
+
+

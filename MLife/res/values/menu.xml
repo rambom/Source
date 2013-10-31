@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MLife</string>
+    <!-- 程序主菜单 -->
+    <string name="menu_mlife_address">Phone address</string>
+    <string name="menu_mlife_bus">Bus online</string>
+    <string name="menu_mlife_tax">Private tax</string>
+    <string name="menu_mlife_train">Train schedule</string>
+    <!-- 菜单action -->
+    <string name="action_menu_mlife_bus">mlife.activity.bus</string>
+    <string name="action_bus_line_detail">mlife.activity.bus.line</string>
+    <string name="action_bus_station_detail">mlife.activity.bus.station</string>
+    <!-- 公交查询tab菜单 -->
+    <string name="menu_bus_line">Line</string>
+    <string name="menu_bus_station">Station</string>
+    <string name="menu_bus_favorite">iBus</string>
+    <string name="menu_sys_exit">Exit</string>
+    <string name="menu_sys_return">Return</string>
+    <string name="menu_sys_help">Help</string>
+    <string name="menu_sys_about">About</string>
+
+</resources>

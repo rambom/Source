@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llFunctionButton"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:paddingLeft="5dip"
+    android:visibility="gone" >
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/refresh"
+        android:onClick="btnRefresh_Click" />
+
+    <Button
+        android:id="@+id/btnSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dip"
+        android:background="@drawable/change"
+        android:onClick="btnSwitch_Click" />
+
+    <Button
+        android:id="@+id/btnCollect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dip"
+        android:background="@drawable/fav"
+        android:onClick="btnCollect_Click" />
+
+</LinearLayout>

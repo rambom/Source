@@ -1,0 +1,20 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+
+  <!--队列说明
+    name:队列名称
+	duplicates:UseFirst 遵循先进先出原则
+			   ApplyForceBuildsReplace  强制触发优先，覆盖当前正在执行的触发器队列，不会改变队列位置
+			   ApplyForceBuildsReAdd    强制触发优先，移除正在执行的触发器队列并添加到等待队列中，会改变队列位置
+			   ApplyForceBuildsReAddTop 强制触发优先，移除正在执行的触发器队列并添加到等待队列顶部，会改变队列位置-->
+  <queue>
+    <name>Q1_first</name>
+    <duplicates>UseFirst</duplicates>
+  </queue>
+  
+  <queue>
+    <name>Q1_top</name>
+    <duplicates>ApplyForceBuildsReAddTop</duplicates>
+  </queue>
+  
+</cb:config-template>

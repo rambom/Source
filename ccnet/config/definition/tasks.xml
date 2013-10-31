@@ -1,0 +1,27 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--清除目录-->
+  <cb:define name="removeBuildDir">
+    <exec>
+      <executable>$(configHome)/config/definition/removeDir.bat</executable>
+      <baseDirectory>$(projectDir)</baseDirectory>
+      <buildArgs></buildArgs>
+      <buildTimeoutSeconds>600</buildTimeoutSeconds>
+      <successExitCodes>0,1,3,5</successExitCodes>
+    </exec>
+  </cb:define>
+
+  <!--编译成功后发布-->
+  <cb:define name="buildPublisher">
+    <buildpublisher>
+      <sourceDir></sourceDir>
+      <publishDir>$(publishDir)/latest</publishDir>
+      <useLabelSubDirectory>false</useLabelSubDirectory>
+      <alwaysPublish>True</alwaysPublish>
+      <cleanPublishDirPriorToCopy>True</cleanPublishDirPriorToCopy>
+      <cleanUpMethod>NoCleaning</cleanUpMethod>
+      <cleanUpValue>5</cleanUpValue>
+    </buildpublisher>
+  </cb:define>
+
+</cb:config-template>

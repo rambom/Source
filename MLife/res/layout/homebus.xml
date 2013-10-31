@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBusMenu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="#000" >
+
+    <!-- 菜单栏 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:orientation="horizontal"
+        android:paddingTop="1dip" >
+
+        <LinearLayout
+            android:id="@+id/llFavoriteBus"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/mlife_bus_menu_normal"
+            android:gravity="center"
+            android:onClick="favoriteBus_Click"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/menu_bus_favorite"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/mlife_bus_test_menu_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="#888888" />
+
+        <LinearLayout
+            android:id="@+id/llQueryBusLine"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/mlife_bus_menu_normal"
+            android:gravity="center"
+            android:onClick="queryBusLine_Click"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_bus_line"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/mlife_bus_test_menu_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="#888888" />
+
+        <LinearLayout
+            android:id="@+id/llSearchBusStation"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/mlife_bus_menu_normal"
+            android:gravity="center"
+            android:onClick="searchBusStation_Click"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_bus_station"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/mlife_bus_test_menu_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#888888" />
+    <!-- 动态显示界面 -->
+
+    <FrameLayout
+        android:id="@+id/llBusContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+
+</LinearLayout>

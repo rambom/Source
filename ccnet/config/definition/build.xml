@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project InitialTargets="PrepareEnviroment" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="MsBuild.Community.Tasks.Targets"/>
+
+  <!--系统属性配置-->
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Platform Condition="$(Platform) == ''">Any CPU</Platform>
+    <BuildProjectReferences Condition="'$(BuildProjectReferences)' == ''">True</BuildProjectReferences>
+	<BuildProjectType Condition="'$(BuildProjectType)' == ''">win32app</BuildProjectType>
+    <DebugType Condition="'$(DebugType)' == ''">none</DebugType>
+    <ToolsVersion>2.0</ToolsVersion>
+  </PropertyGroup>
+
+  <!--编译项目文件-->
+  <Choose>
+    <When Condition="'$(BuildFile)' == ''">
+      <PropertyGroup>
+        <BuildProjectFile>*.sln</BuildProjectFile>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <BuildProjectFile>$(BuildFile)</BuildProjectFile>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <!--项目集合-->
+  <Choose>
+    <!--取绝对路径-->
+    <When Condition="Exists('$(SourceBaseDir)')">
+      <PropertyGroup>
+        <ProjectFileDir>$(SourceBaseDir)</ProjectFileDir>
+      </PropertyGroup>
+    </When>
+    <!--取相对路径-->
+    <When Condition="Exists('$(MsBuildBaseDir)\$(SourceBaseDir)')">
+      <PropertyGroup>
+        <ProjectFileDir>$(CCNetWorkingDirectory)\$(SourceBaseDir)</ProjectFileDir>
+      </PropertyGroup>
+    </When>
+    <!--默认为工作目录-->
+    <Otherwise>
+      <PropertyGroup>
+        <ProjectFileDir>$(CCNetWorkingDirectory)</ProjectFileDir>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <ItemGroup>
+    <ProjectToBuild Include="$(ProjectFileDir)\**\$(BuildProjectFile)"/>
+  </ItemGroup>
+
+  <!--环境准备-->
+  <Target Name="PrepareEnviroment">    
+    <Time Format="HHmmss">
+      <Output TaskParameter="FormattedTime" PropertyName="SysCurDate" />
+    </Time>
+    <CreateProperty Value="$(CCNetProject)-$(CCNetLabel)-$(SysCurDate).zip">
+      <Output TaskParameter="Value" PropertyName="ZipFileName" />
+    </CreateProperty>
+    <CreateProperty Value="$(CCNetWorkingDirectory)\build\$(CCNetProject)-$(CCNetLabel)-$(SysCurDate)">
+      <Output TaskParameter="Value" PropertyName="OutputPath" />
+    </CreateProperty>
+    <MakeDir Directories="$(PublishDir)" Condition="!Exists('$(PublishDir)')"/>
+
+  </Target>
+
+  <!--清除临时目录-->
+  <Target Name="ClearTempDir">
+    <RemoveDir Directories="$(OutputPath)" Condition="Exists('$(OutputPath)')"/>
+  </Target>
+
+  <!--文件打包-->
+  <Target Name="ZipFile">
+    <CreateItem Include="$(OutputPath)\**\*.*" Exclude="$(OutputPath)\**\?svn\**)">
+      <Output TaskParameter="Include" ItemName="PublishedFiles"/>
+    </CreateItem>
+    <Delete Files="$(PublishDir)\$(ZipFileName)"/>
+    <Zip Files="@(PublishedFiles)"
+         ZipLevel="9"
+         WorkingDirectory="$(CCNetWorkingDirectory)\build\"
+         ZipFileName="$(PublishDir)\$(ZipFileName)" />
+  </Target>
+  
+  <!--编译项目-->
+  <Target Name="CompileProject">    
+	<!--编译win32类应用程序-->
+    <MSBuild StopOnFirstFailure="True" Condition="'$(BuildProjectType)' == 'win32app'" Projects="@(ProjectToBuild)" Properties="Configuration=$(Configuration);Platform=$(Platform);DebugType=$(DebugType);OutputPath=$(OutputPath);BuildProjectReferences=$(BuildProjectReferences)"/>
+    <!--生成web应用程序-->
+	<MSBuild StopOnFirstFailure="True" Condition="'$(BuildProjectType)' == 'webapp'" Projects="@(ProjectToBuild)" Targets="ResolveReferences;Compile;_WPPCopyWebApplication" Properties="Configuration=$(Configuration);Platform=$(Platform);DebugType=$(DebugType);WebProjectOutputDir=$(OutputPath);OutputPath=$(OutputPath)\bin;BuildProjectReferences=$(BuildProjectReferences)"/>
+	<!--生成web站点-->
+	<AspNetCompiler Condition="'$(BuildProjectType)' == 'website'" Debug="false" Clean="true" Force="true" Updateable="true" PhysicalPath="$(SourceBaseDir)" TargetPath="$(OutputPath)" VirtualPath="/$(CCNetProject)"/>
+  </Target>
+
+  <!--生成项目-->
+  <Target Name="Build" DependsOnTargets="PrepareEnviroment">
+    <RemoveDir Directories="$(OutputPath)" Condition="Exists('$(OutputPath)')"/>
+	<CallTarget Targets="CompileProject"/>
+	<CallTarget Targets="ZipFile;ClearTempDir" RunEachTargetSeparately="true"/>
+    <OnError ExecuteTargets="ClearTempDir"/>
+  </Target>
+</Project>

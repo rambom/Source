@@ -1,0 +1,26 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--正常工作日触发器-->
+  <cb:define name="worktimeTrigger">
+
+    <!--每周壹至周五09:00 至 21:00间进行构建-->
+    <filterTrigger startTime="09:00" endTime="21:00" buildCondition="IfModificationExists">
+
+      <!--每60秒检查一次SVN是否有修改-->
+      <trigger type="intervalTrigger"
+       name="continuous"
+       seconds="60"
+       buildCondition="IfModificationExists"
+       initialSeconds="5"/>
+
+      <weekDays>
+        <weekDay>Monday</weekDay>
+        <weekDay>Tuesday</weekDay>
+        <weekDay>Wednesday</weekDay>
+        <weekDay>Thursday</weekDay>
+        <weekDay>Friday</weekDay>
+      </weekDays>
+    </filterTrigger>
+  </cb:define>
+
+</cb:config-template>

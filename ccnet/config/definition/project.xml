@@ -1,0 +1,90 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--项目标准配置-->
+  <cb:define name="standardConfigOfProject">
+    
+    <!--实始加载状态-->
+    <initialState>Stopped</initialState>
+    <!--启动模式-->
+    <startupMode>UseInitialState</startupMode>
+    <!--源码最大重试次数-->
+    <maxSourceControlRetries>5</maxSourceControlRetries>
+    <!--获取修改后延迟多少秒后集成-->
+    <modificationDelaySeconds>120</modificationDelaySeconds>
+    <!--集成报告基本目录-->
+    <artifactDirectory>$(artifactDir)</artifactDirectory>
+    <!--任务工作目录-->
+    <workingDirectory>$(workingDir)</workingDirectory>
+    <!--集成报告链接-->
+    <webURL>http://$(ccDashboardServer)/ccnet/server/local/project/$(projectName)/ViewLatestBuildReport.aspx</webURL>
+    <!--显示强制编译按钮-->
+    <showForceBuildButton>True</showForceBuildButton>
+    <!--显示开始/停止集成按钮-->
+    <showStartStopButton>false</showStartStopButton>
+    <!--达到最大源码修改次数停止编译-->
+    <stopProjectOnReachingMaxSourceControlRetries>False</stopProjectOnReachingMaxSourceControlRetries>
+    <!--保存集成概要-->
+    <writeSummaryFile>True</writeSummaryFile>
+    <!--继承项目安全-->
+    <security type="inheritedProjectSecurity" />
+    <!--发布版本标签使用日期格式-->
+    <labeller type="dateLabeller">
+      <dayFormat>00</dayFormat>
+      <monthFormat>00</monthFormat>
+      <revisionFormat>000</revisionFormat>
+      <yearFormat>0000</yearFormat>
+    </labeller>
+
+    <!--强制集成是是否需要填写备注-->
+    <askForForceBuildReason>Required</askForForceBuildReason>
+
+    <!--集成状态管理-->
+    <state type="state" directory="$(stateDir)"/>
+
+    <!--动态输入参数-->
+    <parameters>
+      <selectParameter description="编译类型">
+        <name>complieType</name>
+        <required>true</required>
+        <default>Release</default>
+        <display>编译类型</display>
+        <allowedValues>
+          <value name="release">Release</value>
+          <value name="debug">Debug</value>
+        </allowedValues>
+      </selectParameter>
+
+      <selectParameter description="编译平台">
+        <name>compliePlatform</name>
+        <required>true</required>
+        <default>Any CPU</default>
+        <display>编译平台</display>
+        <allowedValues>
+          <value name="any">Any CPU</value>
+          <value name="x86">x86</value>
+          <value name="x64">x64</value>
+          <value name="itanium">Itanium</value>
+        </allowedValues>
+      </selectParameter>
+	  
+    </parameters>
+  </cb:define>
+
+  <!--通用发布任务配置-->
+  <cb:define name="commonPublisher">
+    <!--允许查看集成历史-->
+    <modificationHistory onlyLogWhenChangesFound="true"/>
+
+    <!--集成统计开启-->
+    <statistics/>
+
+    <!--记录日志路径-->
+    <xmllogger logDir="$(logDir)"/>
+
+    <!--保存最近100次集成日志-->
+    <artifactcleanup cleanUpMethod="KeepLastXBuilds" cleanUpValue="100"/>
+
+    <!--合并日志报告-->
+    <merge/>
+  </cb:define>
+</cb:config-template>

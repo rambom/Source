@@ -1,0 +1,33 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--公共属性-->
+  <cb:include href="definition/properties.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--队列定义-->
+  <cb:include href="definition/queues.xml" xmlns:cb="urn:ccnet.config.builder"/>
+  
+  <!--触发器-->
+  <cb:include href="definition/triggers.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--代码管理器-->
+  <cb:include href="definition/source_manage.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--编译器-->
+  <cb:include href="definition/complier.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--邮件通知-->
+  <cb:include href="definition/email.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--项目标准配置-->
+  <cb:include href="definition/project.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--任务集合-->
+  <cb:include href="definition/tasks.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--捷关通项目-->
+  <cb:include href="pro_jet.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+  <!--保税加工辅助核销项目-->
+  <cb:include href="pro_dfk.xml" xmlns:cb="urn:ccnet.config.builder"/>
+
+</cb:config-template>

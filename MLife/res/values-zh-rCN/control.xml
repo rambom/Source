@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="mlife_bus_button_search">搜索</string>
+    <string name="mlife_bus_button_refresh">刷新</string>
+    <string name="mlife_bus_button_collect">收藏</string>
+    <string name="mlife_bus_button_switch">切换</string>
+    <string name="mlife_bus_station_text_hint">输入站台,如(工职院)</string>
+    <string name="mlife_bus_line_text_hint">输入线路,如(51)</string>
+    <string name="mlife_bus_loading">正在加载…</string>
+    <string name="mlife_bus_switch">正在切换…</string>
+    <string name="mlife_bus_refresh">正在刷新…</string>
+    <string name="mlife_bus_station_spacing">站距:</string>
+    <string name="mlife_bus_station_driection">方位:</string>
+    <string name="mlife_bus_favorite_time">收藏时间:</string>
+    <string name="mlife_bus_line_passTime">进站:</string>
+    <string name="mlife_bus_favorite_message">您还没有喜爱的收藏！</string>
+
+    <!-- 数据加载提示文字大小 -->
+    <dimen name="mlife_loading_text_size">20dip</dimen>
+    <!-- 公交标题文字大小 -->
+    <dimen name="mlife_bus_text_title_size">20dip</dimen>
+    <!-- 公交描述文字大小 -->
+    <dimen name="mlife_bus_text_desc_size">18dip</dimen>
+    <dimen name="mlife_bus_test_menu_size">20dip</dimen>
+
+    <string name="message_mlife_about_copyright">CopyRight © 2012 by xiaobier</string>
+    <string name="message_mlife_about_email">E-mail:longqibing@gmail.com</string>
+    <string name="message_mlife_about_im">QQ:171882044</string>
+
+</resources>

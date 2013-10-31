@@ -1,0 +1,1724 @@
+
+rings1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+seasonselect
+  rotate: false
+  xy: 2, 2
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+levelselect
+  rotate: false
+  xy: 2, 484
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+sideMenuBackground
+  rotate: false
+  xy: 804, 2
+  size: 183, 480
+  orig: 183, 480
+  offset: 0, 0
+  index: -1
+taiJiDoor
+  rotate: false
+  xy: 804, 484
+  size: 212, 212
+  orig: 212, 212
+  offset: 0, 0
+  index: -1
+taiJiUp
+  rotate: false
+  xy: 804, 698
+  size: 213, 211
+  orig: 213, 211
+  offset: 0, 0
+  index: -1
+levelFailFont
+  rotate: false
+  xy: 804, 911
+  size: 216, 86
+  orig: 216, 86
+  offset: 0, 0
+  index: -1
+fightArrowLong
+  rotate: false
+  xy: 2, 966
+  size: 338, 26
+  orig: 338, 26
+  offset: 0, 0
+  index: -1
+cloud
+  rotate: false
+  xy: 342, 966
+  size: 75, 50
+  orig: 75, 50
+  offset: 0, 0
+  index: -1
+renShenGuoMature
+  rotate: false
+  xy: 419, 966
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+renShenGuo
+  rotate: false
+  xy: 472, 966
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+feileiRingSmall
+  rotate: false
+  xy: 525, 966
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+woodTaiJiRunF1
+  rotate: false
+  xy: 575, 966
+  size: 40, 56
+  orig: 40, 56
+  offset: 0, 0
+  index: -1
+waterTaiJiRunF1
+  rotate: false
+  xy: 617, 966
+  size: 40, 56
+  orig: 40, 56
+  offset: 0, 0
+  index: -1
+fireTaiJiRunF1
+  rotate: false
+  xy: 659, 966
+  size: 40, 56
+  orig: 40, 56
+  offset: 0, 0
+  index: -1
+woodDemonRunF7
+  rotate: false
+  xy: 989, 2
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+woodDemonRunF6
+  rotate: false
+  xy: 989, 76
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+woodDemonRunF5
+  rotate: false
+  xy: 989, 150
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+woodDemonRunF4
+  rotate: false
+  xy: 989, 224
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+woodDemonRunF3
+  rotate: false
+  xy: 989, 298
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+woodDemonRunF2
+  rotate: false
+  xy: 989, 372
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+hideRunF5
+  rotate: false
+  xy: 701, 966
+  size: 33, 54
+  orig: 33, 54
+  offset: 0, 0
+  index: -1
+hideRunF4
+  rotate: false
+  xy: 736, 966
+  size: 33, 54
+  orig: 33, 54
+  offset: 0, 0
+  index: -1
+fireRunF5
+  rotate: false
+  xy: 771, 966
+  size: 31, 56
+  orig: 31, 56
+  offset: 0, 0
+  index: -1
+feiLeiRing
+  rotate: false
+  xy: 2, 994
+  size: 51, 25
+  orig: 51, 25
+  offset: 0, 0
+  index: -1
+feiDanRing
+  rotate: false
+  xy: 55, 994
+  size: 50, 25
+  orig: 50, 25
+  offset: 0, 0
+  index: -1
+btnTaiji
+  rotate: false
+  xy: 107, 994
+  size: 44, 26
+  orig: 44, 26
+  offset: 0, 0
+  index: -1
+fightArrow
+  rotate: false
+  xy: 153, 994
+  size: 40, 28
+  orig: 40, 28
+  offset: 0, 0
+  index: -1
+woodRing
+  rotate: false
+  xy: 195, 994
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+waterRing
+  rotate: false
+  xy: 234, 994
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+metalRing
+  rotate: false
+  xy: 273, 994
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+pageIndicatorFocused
+  rotate: false
+  xy: 989, 446
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+pageIndicator
+  rotate: false
+  xy: 312, 994
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+TaiJiStone
+  rotate: false
+  xy: 342, 1018
+  size: 69, 4
+  orig: 69, 4
+  offset: 0, 0
+  index: -1
+
+rings2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+info
+  rotate: false
+  xy: 2, 2
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+garden
+  rotate: false
+  xy: 2, 484
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+taiJiDown
+  rotate: false
+  xy: 804, 2
+  size: 213, 211
+  orig: 213, 211
+  offset: 0, 0
+  index: -1
+maskUp
+  rotate: false
+  xy: 804, 215
+  size: 213, 160
+  orig: 213, 160
+  offset: 0, 0
+  index: -1
+maskDown
+  rotate: false
+  xy: 804, 484
+  size: 213, 160
+  orig: 213, 160
+  offset: 0, 0
+  index: -1
+testPolygon
+  rotate: false
+  xy: 804, 646
+  size: 182, 174
+  orig: 182, 174
+  offset: 0, 0
+  index: -1
+btnWinterLocked
+  rotate: false
+  xy: 804, 822
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+btnGardenDown
+  rotate: false
+  xy: 804, 377
+  size: 206, 85
+  orig: 206, 85
+  offset: 0, 0
+  index: -1
+popo
+  rotate: false
+  xy: 978, 822
+  size: 37, 65
+  orig: 37, 65
+  offset: 0, 0
+  index: -1
+taiJiRunF2
+  rotate: false
+  xy: 978, 889
+  size: 40, 59
+  orig: 40, 59
+  offset: 0, 0
+  index: -1
+taiJiRunF1
+  rotate: false
+  xy: 978, 950
+  size: 40, 59
+  orig: 40, 59
+  offset: 0, 0
+  index: -1
+woodDemonRunF1
+  rotate: false
+  xy: 988, 646
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterDemonRunF7
+  rotate: false
+  xy: 988, 720
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+hideRunF3
+  rotate: false
+  xy: 2, 966
+  size: 33, 54
+  orig: 33, 54
+  offset: 0, 0
+  index: -1
+hideRunF2
+  rotate: false
+  xy: 37, 966
+  size: 33, 54
+  orig: 33, 54
+  offset: 0, 0
+  index: -1
+hideRunF1
+  rotate: false
+  xy: 72, 966
+  size: 33, 54
+  orig: 33, 54
+  offset: 0, 0
+  index: -1
+fireRunF4
+  rotate: false
+  xy: 107, 966
+  size: 31, 56
+  orig: 31, 56
+  offset: 0, 0
+  index: -1
+fireRunF3
+  rotate: false
+  xy: 140, 966
+  size: 31, 56
+  orig: 31, 56
+  offset: 0, 0
+  index: -1
+fireRunF2
+  rotate: false
+  xy: 173, 966
+  size: 31, 56
+  orig: 31, 56
+  offset: 0, 0
+  index: -1
+fireRunF1
+  rotate: false
+  xy: 206, 966
+  size: 31, 56
+  orig: 31, 56
+  offset: 0, 0
+  index: -1
+feiDan3Ring
+  rotate: false
+  xy: 239, 966
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+fireRing
+  rotate: false
+  xy: 281, 966
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+earthRing
+  rotate: false
+  xy: 281, 993
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+allRing
+  rotate: false
+  xy: 320, 966
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+
+rings3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+exitConfirmDialog
+  rotate: false
+  xy: 2, 2
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+background01
+  rotate: false
+  xy: 2, 484
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+btnWinter
+  rotate: false
+  xy: 804, 2
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+btnSummerLocked
+  rotate: false
+  xy: 804, 176
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+btnSummer
+  rotate: false
+  xy: 804, 484
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+btnSpring
+  rotate: false
+  xy: 804, 658
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+btnAutumnLocked
+  rotate: false
+  xy: 804, 832
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+btnGarden
+  rotate: false
+  xy: 804, 350
+  size: 206, 85
+  orig: 206, 85
+  offset: 0, 0
+  index: -1
+metalTaiJiRunF1
+  rotate: false
+  xy: 978, 2
+  size: 40, 57
+  orig: 40, 57
+  offset: 0, 0
+  index: -1
+earthTaiJiRunF1
+  rotate: false
+  xy: 978, 61
+  size: 40, 57
+  orig: 40, 57
+  offset: 0, 0
+  index: -1
+waterDemonRunF6
+  rotate: false
+  xy: 978, 176
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterDemonRunF5
+  rotate: false
+  xy: 978, 250
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterDemonRunF4
+  rotate: false
+  xy: 978, 484
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterDemonRunF3
+  rotate: false
+  xy: 978, 558
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterDemonRunF2
+  rotate: false
+  xy: 978, 658
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterDemonRunF1
+  rotate: false
+  xy: 978, 732
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+metalDemonRunF7
+  rotate: false
+  xy: 978, 832
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+metalDemonRunF6
+  rotate: false
+  xy: 978, 906
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+
+rings4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background00
+  rotate: false
+  xy: 2, 2
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+levelFailBackground
+  rotate: false
+  xy: 2, 484
+  size: 307, 480
+  orig: 307, 480
+  offset: 0, 0
+  index: -1
+levelUpBackground
+  rotate: false
+  xy: 311, 484
+  size: 360, 359
+  orig: 360, 359
+  offset: 0, 0
+  index: -1
+btnAutumn
+  rotate: false
+  xy: 804, 2
+  size: 172, 172
+  orig: 172, 172
+  offset: 0, 0
+  index: -1
+levelPassFace
+  rotate: false
+  xy: 804, 176
+  size: 144, 188
+  orig: 144, 188
+  offset: 0, 0
+  index: -1
+levelFailFace
+  rotate: false
+  xy: 673, 484
+  size: 144, 188
+  orig: 144, 188
+  offset: 0, 0
+  index: -1
+levelPassFont
+  rotate: false
+  xy: 311, 845
+  size: 241, 99
+  orig: 241, 99
+  offset: 0, 0
+  index: -1
+confirm
+  rotate: false
+  xy: 819, 484
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+cancel
+  rotate: false
+  xy: 673, 674
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+btnStartUp
+  rotate: false
+  xy: 804, 366
+  size: 163, 84
+  orig: 163, 84
+  offset: 0, 0
+  index: -1
+btnStartDown
+  rotate: false
+  xy: 803, 674
+  size: 163, 84
+  orig: 163, 84
+  offset: 0, 0
+  index: -1
+levelUpReplay
+  rotate: false
+  xy: 554, 845
+  size: 113, 113
+  orig: 113, 113
+  offset: 0, 0
+  index: -1
+levelUpNextLevel
+  rotate: false
+  xy: 673, 804
+  size: 113, 113
+  orig: 113, 113
+  offset: 0, 0
+  index: -1
+levelUpLevelSelect
+  rotate: false
+  xy: 803, 760
+  size: 113, 113
+  orig: 113, 113
+  offset: 0, 0
+  index: -1
+click
+  rotate: false
+  xy: 803, 875
+  size: 111, 111
+  orig: 111, 111
+  offset: 0, 0
+  index: -1
+sideMenuReset
+  rotate: false
+  xy: 673, 919
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+sideMenuMainMenu
+  rotate: false
+  xy: 918, 760
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+sideMenuLevelSelect
+  rotate: false
+  xy: 916, 875
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+woodHandF2
+  rotate: false
+  xy: 950, 176
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+woodHandF1
+  rotate: false
+  xy: 949, 484
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+woodRingOld
+  rotate: false
+  xy: 311, 946
+  size: 97, 65
+  orig: 97, 65
+  offset: 0, 0
+  index: -1
+levelLocked
+  rotate: false
+  xy: 410, 946
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+level3
+  rotate: false
+  xy: 482, 946
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+btnFeiLeiDown
+  rotate: false
+  xy: 554, 960
+  size: 75, 60
+  orig: 75, 60
+  offset: 0, 0
+  index: -1
+btnInfo
+  rotate: false
+  xy: 950, 301
+  size: 65, 63
+  orig: 65, 63
+  offset: 0, 0
+  index: -1
+failWoodF2
+  rotate: false
+  xy: 969, 366
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failWoodF1
+  rotate: false
+  xy: 968, 674
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+sideMenuSoundOn
+  rotate: false
+  xy: 949, 609
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+zoomOut
+  rotate: false
+  xy: 819, 614
+  size: 59, 57
+  orig: 59, 57
+  offset: 0, 0
+  index: -1
+zoomIn
+  rotate: false
+  xy: 880, 614
+  size: 59, 57
+  orig: 59, 57
+  offset: 0, 0
+  index: -1
+metalDemonRunF5
+  rotate: false
+  xy: 978, 2
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+metalDemonRunF4
+  rotate: false
+  xy: 978, 76
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterRunF5
+  rotate: false
+  xy: 631, 960
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+
+rings5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+help3
+  rotate: false
+  xy: 2, 2
+  size: 462, 244
+  orig: 462, 244
+  offset: 0, 0
+  index: -1
+help2
+  rotate: false
+  xy: 466, 2
+  size: 462, 244
+  orig: 462, 244
+  offset: 0, 0
+  index: -1
+help1
+  rotate: false
+  xy: 2, 248
+  size: 462, 244
+  orig: 462, 244
+  offset: 0, 0
+  index: -1
+TaiJiRing2
+  rotate: false
+  xy: 2, 494
+  size: 373, 180
+  orig: 373, 180
+  offset: 0, 0
+  index: -1
+MissileRing
+  rotate: false
+  xy: 2, 676
+  size: 373, 180
+  orig: 373, 180
+  offset: 0, 0
+  index: -1
+waterHandF2
+  rotate: false
+  xy: 930, 2
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+waterHandF1
+  rotate: false
+  xy: 377, 494
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+metalHandF2
+  rotate: false
+  xy: 377, 676
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+metalHandF1
+  rotate: false
+  xy: 2, 858
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 73, 858
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+fireHandF2
+  rotate: false
+  xy: 144, 858
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+fireHandF1
+  rotate: false
+  xy: 215, 858
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+earthHandF2
+  rotate: false
+  xy: 286, 858
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+earthHandF1
+  rotate: false
+  xy: 357, 858
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+allHandF2
+  rotate: false
+  xy: 466, 248
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+allHandF1
+  rotate: false
+  xy: 537, 248
+  size: 69, 123
+  orig: 69, 123
+  offset: 0, 0
+  index: -1
+apple
+  rotate: false
+  xy: 930, 127
+  size: 75, 112
+  orig: 75, 112
+  offset: 0, 0
+  index: -1
+demonDieF5
+  rotate: false
+  xy: 608, 248
+  size: 81, 88
+  orig: 81, 88
+  offset: 0, 0
+  index: -1
+demonDieF4
+  rotate: false
+  xy: 691, 248
+  size: 81, 88
+  orig: 81, 88
+  offset: 0, 0
+  index: -1
+demonDieF3
+  rotate: false
+  xy: 774, 248
+  size: 81, 88
+  orig: 81, 88
+  offset: 0, 0
+  index: -1
+demonDieF2
+  rotate: false
+  xy: 857, 248
+  size: 81, 88
+  orig: 81, 88
+  offset: 0, 0
+  index: -1
+demonDieF1
+  rotate: false
+  xy: 940, 248
+  size: 81, 88
+  orig: 81, 88
+  offset: 0, 0
+  index: -1
+metalFightWoodF3
+  rotate: false
+  xy: 466, 373
+  size: 89, 77
+  orig: 89, 77
+  offset: 0, 0
+  index: -1
+metalFightWoodF2
+  rotate: false
+  xy: 557, 373
+  size: 89, 77
+  orig: 89, 77
+  offset: 0, 0
+  index: -1
+metalFightWoodF1
+  rotate: false
+  xy: 648, 373
+  size: 89, 77
+  orig: 89, 77
+  offset: 0, 0
+  index: -1
+AllPowerfulRing
+  rotate: false
+  xy: 466, 452
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+fireFightMetalF3
+  rotate: false
+  xy: 739, 373
+  size: 82, 77
+  orig: 82, 77
+  offset: 0, 0
+  index: -1
+fireFightMetalF2
+  rotate: false
+  xy: 823, 373
+  size: 82, 77
+  orig: 82, 77
+  offset: 0, 0
+  index: -1
+fireFightMetalF1
+  rotate: false
+  xy: 907, 373
+  size: 82, 77
+  orig: 82, 77
+  offset: 0, 0
+  index: -1
+woodFightEarthF3
+  rotate: false
+  xy: 548, 452
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+woodFightEarthF2
+  rotate: false
+  xy: 631, 452
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+woodFightEarthF1
+  rotate: false
+  xy: 714, 452
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+waterFightFireF3
+  rotate: false
+  xy: 797, 452
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+waterFightFireF2
+  rotate: false
+  xy: 880, 452
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+waterFightFireF1
+  rotate: false
+  xy: 466, 534
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+earthFightWaterF3
+  rotate: false
+  xy: 466, 613
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+earthFightWaterF2
+  rotate: false
+  xy: 466, 692
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+earthFightWaterF1
+  rotate: false
+  xy: 466, 771
+  size: 81, 77
+  orig: 81, 77
+  offset: 0, 0
+  index: -1
+sideMenuGoOn
+  rotate: false
+  xy: 466, 850
+  size: 77, 79
+  orig: 77, 79
+  offset: 0, 0
+  index: -1
+allFightTaiJiDieF3
+  rotate: false
+  xy: 466, 931
+  size: 69, 80
+  orig: 69, 80
+  offset: 0, 0
+  index: -1
+allFightTaiJiDieF2
+  rotate: false
+  xy: 549, 534
+  size: 69, 80
+  orig: 69, 80
+  offset: 0, 0
+  index: -1
+allFightTaiJiDieF1
+  rotate: false
+  xy: 620, 534
+  size: 69, 80
+  orig: 69, 80
+  offset: 0, 0
+  index: -1
+level2
+  rotate: false
+  xy: 691, 534
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+level1
+  rotate: false
+  xy: 763, 534
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade6Locked
+  rotate: false
+  xy: 835, 534
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade6
+  rotate: false
+  xy: 907, 534
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade5Locked
+  rotate: false
+  xy: 549, 616
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade5
+  rotate: false
+  xy: 549, 688
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade4Locked
+  rotate: false
+  xy: 549, 760
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade4
+  rotate: false
+  xy: 549, 832
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade3Locked
+  rotate: false
+  xy: 549, 904
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade3
+  rotate: false
+  xy: 621, 616
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade2Locked
+  rotate: false
+  xy: 693, 616
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade2
+  rotate: false
+  xy: 765, 616
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grade1
+  rotate: false
+  xy: 837, 616
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+btnWoodDown
+  rotate: false
+  xy: 909, 616
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnWood
+  rotate: false
+  xy: 621, 688
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnWaterDown
+  rotate: false
+  xy: 621, 758
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnWater
+  rotate: false
+  xy: 621, 828
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnSoundOn
+  rotate: false
+  xy: 621, 898
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnSoundOff
+  rotate: false
+  xy: 691, 688
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnMetalDown
+  rotate: false
+  xy: 761, 688
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnMetal
+  rotate: false
+  xy: 831, 688
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnFireDown
+  rotate: false
+  xy: 901, 688
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnFire
+  rotate: false
+  xy: 691, 758
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnEarthDown
+  rotate: false
+  xy: 691, 828
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnEarth
+  rotate: false
+  xy: 691, 898
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnAllDown
+  rotate: false
+  xy: 761, 758
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnAll
+  rotate: false
+  xy: 831, 758
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+btnFeiLei
+  rotate: false
+  xy: 901, 758
+  size: 75, 60
+  orig: 75, 60
+  offset: 0, 0
+  index: -1
+btnFeiDanDown
+  rotate: false
+  xy: 761, 828
+  size: 75, 60
+  orig: 75, 60
+  offset: 0, 0
+  index: -1
+btnFeiDan
+  rotate: false
+  xy: 761, 890
+  size: 75, 60
+  orig: 75, 60
+  offset: 0, 0
+  index: -1
+btnEyeDown
+  rotate: false
+  xy: 761, 952
+  size: 75, 60
+  orig: 75, 60
+  offset: 0, 0
+  index: -1
+btnEye
+  rotate: false
+  xy: 838, 828
+  size: 75, 60
+  orig: 75, 60
+  offset: 0, 0
+  index: -1
+fireF3
+  rotate: false
+  xy: 838, 890
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+fireF2
+  rotate: false
+  xy: 838, 956
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+fireF1
+  rotate: false
+  xy: 904, 890
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+failWaterF2
+  rotate: false
+  xy: 963, 452
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+sideMenuSoundOff
+  rotate: false
+  xy: 915, 828
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+sideMenuHelp
+  rotate: false
+  xy: 904, 956
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+popoBreak
+  rotate: false
+  xy: 966, 956
+  size: 54, 65
+  orig: 54, 65
+  offset: 0, 0
+  index: -1
+metalDemonRunF3
+  rotate: false
+  xy: 428, 858
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+metalDemonRunF2
+  rotate: false
+  xy: 991, 373
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+metalDemonRunF1
+  rotate: false
+  xy: 979, 534
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+waterRunF4
+  rotate: false
+  xy: 979, 616
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+waterRunF3
+  rotate: false
+  xy: 971, 688
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+waterRunF2
+  rotate: false
+  xy: 978, 758
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+waterRunF1
+  rotate: false
+  xy: 977, 828
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+metalRunF5
+  rotate: false
+  xy: 970, 890
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+
+rings6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+failMetalF2
+  rotate: false
+  xy: 2, 2
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failFireF2
+  rotate: false
+  xy: 2, 81
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failEarthF2
+  rotate: false
+  xy: 2, 160
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failEarthF1
+  rotate: false
+  xy: 54, 2
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failFireF1
+  rotate: false
+  xy: 54, 2
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failMetalF1
+  rotate: false
+  xy: 54, 2
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+failWaterF1
+  rotate: false
+  xy: 54, 2
+  size: 50, 77
+  orig: 50, 77
+  offset: 0, 0
+  index: -1
+btnBackground
+  rotate: false
+  xy: 106, 2
+  size: 727, 74
+  orig: 727, 74
+  offset: 0, 0
+  index: -1
+fireDemonRunF7
+  rotate: false
+  xy: 54, 81
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+fireDemonRunF6
+  rotate: false
+  xy: 54, 155
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+fireDemonRunF5
+  rotate: false
+  xy: 106, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+fireDemonRunF4
+  rotate: false
+  xy: 106, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+fireDemonRunF3
+  rotate: false
+  xy: 137, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+fireDemonRunF2
+  rotate: false
+  xy: 137, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+fireDemonRunF1
+  rotate: false
+  xy: 168, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF7
+  rotate: false
+  xy: 168, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF6
+  rotate: false
+  xy: 199, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF5
+  rotate: false
+  xy: 199, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF4
+  rotate: false
+  xy: 230, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF3
+  rotate: false
+  xy: 230, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF2
+  rotate: false
+  xy: 261, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+earthDemonRunF1
+  rotate: false
+  xy: 261, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF7
+  rotate: false
+  xy: 292, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF6
+  rotate: false
+  xy: 292, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF5
+  rotate: false
+  xy: 323, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF4
+  rotate: false
+  xy: 323, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF3
+  rotate: false
+  xy: 354, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF2
+  rotate: false
+  xy: 354, 152
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+demonRunF1
+  rotate: false
+  xy: 385, 78
+  size: 29, 72
+  orig: 29, 72
+  offset: 0, 0
+  index: -1
+metalRunF4
+  rotate: false
+  xy: 416, 78
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+metalRunF3
+  rotate: false
+  xy: 416, 138
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+metalRunF2
+  rotate: false
+  xy: 448, 78
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+metalRunF1
+  rotate: false
+  xy: 448, 138
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+earthRunF5
+  rotate: false
+  xy: 480, 78
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+earthRunF4
+  rotate: false
+  xy: 480, 138
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+earthRunF3
+  rotate: false
+  xy: 512, 78
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+earthRunF2
+  rotate: false
+  xy: 512, 138
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+earthRunF1
+  rotate: false
+  xy: 544, 78
+  size: 30, 58
+  orig: 30, 58
+  offset: 0, 0
+  index: -1
+woodRunF5
+  rotate: false
+  xy: 385, 152
+  size: 29, 58
+  orig: 29, 58
+  offset: 0, 0
+  index: -1
+woodRunF4
+  rotate: false
+  xy: 544, 138
+  size: 29, 58
+  orig: 29, 58
+  offset: 0, 0
+  index: -1
+woodRunF3
+  rotate: false
+  xy: 576, 78
+  size: 29, 58
+  orig: 29, 58
+  offset: 0, 0
+  index: -1
+woodRunF2
+  rotate: false
+  xy: 576, 138
+  size: 29, 58
+  orig: 29, 58
+  offset: 0, 0
+  index: -1
+woodRunF1
+  rotate: false
+  xy: 607, 78
+  size: 29, 58
+  orig: 29, 58
+  offset: 0, 0
+  index: -1
+btnReset
+  rotate: false
+  xy: 638, 78
+  size: 59, 57
+  orig: 59, 57
+  offset: 0, 0
+  index: -1
+btnPause
+  rotate: false
+  xy: 638, 137
+  size: 59, 57
+  orig: 59, 57
+  offset: 0, 0
+  index: -1

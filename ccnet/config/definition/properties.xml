@@ -1,0 +1,66 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+  <!--系统环境
+      ccHome:cruise control安装主目录
+      buildHome:集成主目录
+	  publishHome:发布主目录
+      ccDashboardServer:集成服务器IP      
+  -->
+  <cb:define ccHome="D:/Program Files/CruiseControl.NET-1.8.2.0"
+  			 configHome="E:/GoogleCode/ccnet"
+             buildHome="$(configHome)/projects"
+             publishHome="$(configHome)/publish"
+             ccDashboardServer="192.168.10.198"
+             />
+
+  <!--源码管理器环境
+      sourceControlClientCmd:版本控制客户端命令路径
+      trunkUser:检出用户名
+      trunkPass:检出密码
+      autoGetSource:自动获取源代码(True|False)
+      trunkTimeout:检出超时(单位:分钟)
+      SourceCheckOutDir:源代码检出目录(默认为项目工作目录下的source目录)
+  -->
+  <cb:define sourceControlClientCmd="D:/Program Files/Apache-Subversion-1.7.7/bin/svn.exe"
+             trunkUser=""
+             trunkPass=""
+             autoGetSource="False"
+             trunkTimeout="10"
+             />
+
+  <!--编译环境
+      msbuildPath:编译程序路径
+      complieType:编译类型(Debug|Release)
+      platform:编译平台(x86|x64|Any CPU|Itanium)
+  -->
+  <cb:define msbuildPath="C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe"
+             complieType="Release"
+             platform="Any CPU"
+             />
+
+  <!--邮箱
+      smtpServer:发送邮件服务器
+      smtpPort:服务器端口
+      smtpAuthUser:发送验证用户
+      smtpAuthPass:发送验证密码
+  -->
+  <cb:define smtpServer="smtp.dcjet.com.cn"
+             smtpPort="25"
+             smtpAuthUser="wl.integrate@dcjet.com.cn"
+             smtpAuthPass="hello123"
+             />
+
+
+  <!--项目配置
+      ProjectDir:项目工作目录
+      artifactDir:集成报告目录
+      workingDir:集成工作主目录
+      stateDir:记录项目集成状态目录
+      logDir:集成日志目录
+  -->
+  <cb:define projectDir="$(buildHome)/$(ProjectName)"
+             artifactDir="$(ProjectDir)/artifact"
+             workingDir="$(ProjectDir)"
+             stateDir="$(ProjectDir)/state"
+             logDir="buildLogs"
+             />
+</cb:config-template>

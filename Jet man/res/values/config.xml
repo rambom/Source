@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+    <string name="jetAddressBookUrl">http://svn.dcjet.com.cn:8090/address.aspx</string>
+
+</resources>

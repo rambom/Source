@@ -1,0 +1,75 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--邮件通知模板-->
+  <cb:define name="email2someone">
+    <!--smtp主机-->
+    <mailhost>$(smtpServer)</mailhost>
+    <!--smtp端口-->
+    <mailport>$(smtpPort)</mailport>
+    <!--smtp服务验证用户-->
+    <mailhostUsername>$(smtpAuthUser)</mailhostUsername>
+    <!--smtp验证用户密码-->
+    <mailhostPassword>$(smtpAuthPass)</mailhostPassword>
+    <!--发件人-->
+    <from>build@dcjet.com.cn</from>
+    <!--使用SSL安全认证-->
+    <useSSL>false</useSSL>
+    <!--包含详细信息-->
+    <includeDetails>True</includeDetails>
+    <!--集成状态下的邮件主题-->
+    <subjectSettings>
+      <subject buildResult="Broken" value="Project of $(projectName) broke at build " />
+      <subject buildResult="StillBroken" value="Build is still broken for project $(projectName), fix failed." />
+      <subject buildResult="Exception" value="Serious problem of project $(projectName),please check status of network/sourcecontrol" />
+      <subject buildResult="Fixed" value="Project of $(projectName) has Fixed"/>
+      <subject buildResult="Success" value="Project of $(projectName) build Success"/>
+    </subjectSettings>
+
+    <!--自动通知修改人通过svn用户ID，将用户名加上邮箱后缀发送-->
+    <converters>
+      <regexConverter find="$" replace="@dcjet.com.cn" />
+    </converters>
+
+    <xslFiles>
+      <file>xsl\header.xsl</file>
+      <file>xsl\unittests.xsl</file>
+      <file>xsl\fit.xsl</file>
+      <file>xsl\fxcop-summary_1_36.xsl</file>   
+      <file>xsl\modifications.xsl</file>
+	  <file>xsl\compile-msbuild.xsl</file>  
+	  <file>xsl\compile.xsl</file>
+    </xslFiles>
+
+    <groups>
+
+      <!--联系人分组（开发者）总是通知-->
+      <group name="developers">
+        <notifications>
+          <notificationType>Always</notificationType>
+        </notifications>
+      </group>
+
+      <!--联系人分组(项目负责人)只在失败和出错时收到-->
+      <group name="teamleader">
+        <notifications>
+          <notificationType>Failed</notificationType>
+          <notificationType>Exception</notificationType>
+        </notifications>
+      </group>
+
+      <!--联系人分组(产品经理)只在成功和修复时收到-->
+      <group name="productManager">
+        <notifications notificationType="Successed">
+          <notificationType>Fixed</notificationType>
+        </notifications>
+      </group>
+
+      <!--联系人分组(上级领导)只在成功时收到-->
+      <group name="leader">
+        <notifications notificationType="Successed"/>
+      </group>
+    </groups>
+
+  </cb:define>
+
+</cb:config-template>

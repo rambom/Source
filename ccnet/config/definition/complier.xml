@@ -1,0 +1,26 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--msbuild编译器-->
+  <cb:define name="msbuild">
+    <msbuild>
+      <!--msbuild 路径-->
+      <executable>$(msbuildPath)</executable>
+      <!--编译文件路径-->
+      <workingDirectory>$(sourceCheckOutDir)</workingDirectory>
+      <!--编译文件-->
+      <projectFile>$(configHome)/config/definition/build.xml</projectFile>
+      <!--扩展参数-->
+      <buildArgs>/noconlog /v:n /p:BuildFile="$(projectFile)";BuildProjectType="$(ProjectType)";PublishDir="$(publishHome)/$(ProjectName)";SourceBaseDir="$(sourceCheckOutDir)";Configuration=$[complieType|$(complieType)];Platform="$[compliePlatform|$(platform)]"</buildArgs>
+      <!--要执行的任务-->
+      <targets>Build</targets>
+      <!--编译超时600秒-->
+      <timeout>600</timeout>
+      <!--日记记录组件位置-->
+      <logger>ThoughtWorks.CruiseControl.MsBuild.XmlLogger,$(ccHome)/Server/ThoughtWorks.CruiseControl.MsBuild.dll</logger>
+      <loggerParameters />
+      <priority>Normal</priority>
+    </msbuild>
+
+  </cb:define>
+
+</cb:config-template>

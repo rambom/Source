@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/tvLineName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:textColor="@color/bus_title"
+        android:textSize="@dimen/mlife_bus_text_title_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLineDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:textSize="@dimen/mlife_bus_text_desc_size" />
+
+</LinearLayout>

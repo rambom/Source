@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dip"
+    android:shrinkColumns="0"
+    android:stretchColumns="0" >
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:id="@+id/tvStationName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bus_title"
+            android:textSize="@dimen/mlife_bus_text_title_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mlife_bus_station_driection"
+            android:textSize="@dimen/mlife_bus_text_title_size" />
+
+        <TextView
+            android:id="@+id/tvStationDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bus_title"
+            android:textSize="@dimen/mlife_bus_text_title_size" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:id="@+id/tvStationDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mlife_bus_text_desc_size" />
+    </TableRow>
+
+</TableLayout>

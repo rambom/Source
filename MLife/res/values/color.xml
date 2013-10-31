@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="red">#fd8d8d</color>
+    <color name="green">#9cfda3</color>
+    <color name="blue">#8d9dfd</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="bus_title">#ffffff00</color>
+    <color name="mlife_bus_loading">#ffbdb76b</color>
+    <color name="mlife_bus_menu_light">#8C8E8C</color>
+    <color name="mlife_bus_menu_normal">#212121</color>
+    <color name="mlife_bus_menu_touch">#FF9200</color>
+
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ethan.mlife"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MLifeApp"
+        android:icon="@drawable/ic_bus"
+        android:label="Bus online" >
+
+        <!-- 主菜单 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+
+                <!--
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                -->
+            </intent-filter>
+        </activity>
+        <!-- 公交 -->
+        <activity
+            android:name=".activity.bus.MainActivity"
+            android:label="Bus online"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--
+                <action android:name="mlife.activity.bus" />
+                <category android:name="android.intent.category.DEFAULT" />
+                -->
+            </intent-filter>
+        </activity>
+
+        <!-- 我的公交 -->
+        <activity
+            android:name=".activity.bus.ListFavoriteActivity"
+            android:screenOrientation="portrait" />
+        <!-- 线路 -->
+        <activity
+            android:name=".activity.bus.ListLineActivity"
+            android:screenOrientation="portrait" />
+        <!-- 站台 -->
+        <activity
+            android:name=".activity.bus.ListStationActivity"
+            android:screenOrientation="portrait" />
+        <!-- 线路明细 -->
+        <activity
+            android:name=".activity.bus.DetailLineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="mlife.activity.bus.line" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 站台明细 -->
+        <activity
+            android:name=".activity.bus.DetailStationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="mlife.activity.bus.station" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests"
+        android:targetPackage="com.ethan.mlife" />
+
+</manifest>

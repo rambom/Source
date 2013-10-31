@@ -1,0 +1,70 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!-- projectName:项目名称，不可重复
+       projectFile:解决方案文件/项目工程文件/或不填(可使用通配符)
+	   projectType:项目类型(win32app:win32应用程序 website:网站/站点 webapp:web应用程序)
+       sourceTrunkUrl:源代码在版本管理器上的路径(请使用unicode路径)
+       sourceCheckOutDir:源代码所在绝对路径或相对路径(相对路径为以当前集成项目工作目录为基目录)
+  -->
+  <cb:scope projectName="Jet"
+            projectFile="windowUi.sln"
+			projectType="win32app"
+            sourceTrunkUrl="http://svn.dcjet.com.cn:7000/svn/dcjet/%E7%A0%94%E5%8F%91%E9%A1%B9%E7%9B%AE/08%20%E5%85%B6%E5%AE%83%E9%A1%B9%E7%9B%AE/01%20%E6%8D%B7%E5%85%B3%E9%80%9A"
+            sourceCheckOutDir="D:\Dcjet.svn\研发项目\08 其它项目\01 捷关通">
+
+    <project name="$(projectName)" queue="Q1_top" queuePriority="1">
+      <!--项目描述-->
+      <description>捷关通</description>
+
+      <!--项目分组目录-->
+      <category>DotNet</category>
+
+      <!--使用标准项目配置-->
+      <cb:standardConfigOfProject/>
+
+      <!--触发器配置-->
+      <triggers>
+        <!--只工作日触发-->
+        <cb:worktimeTrigger/>
+      </triggers>
+
+      <!--使用Svn源代码管理-->
+      <cb:subversion/>
+
+
+      <!--集成前-->
+      <prebuild/>
+
+
+      <!--集成中-->
+      <tasks>
+        <!--调用msbuild-->
+        <cb:msbuild/>
+
+        <!--单元测试-->
+        <!--<nunit/>-->
+
+        <!--覆盖率-->
+        <!--<ncover/>-->
+      </tasks>
+
+
+      <!--集成后-->
+      <publishers>
+
+        <!--基本发布任务-->
+        <cb:commonPublisher/>
+
+        <!--集成报告邮件通知-->
+        <email>
+          <cb:email2someone/>
+          <users>
+            <user name="qblong" group="developers" address="qblong@dcjet.com.cn"/>
+          </users>
+        </email>
+
+      </publishers>
+    </project>
+  </cb:scope>
+
+</cb:config-template>

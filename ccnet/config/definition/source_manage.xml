@@ -1,0 +1,61 @@
+﻿<cb:config-template xmlns:cb="urn:ccnet.config.builder">
+
+  <!--使用Svn源代码管理-->
+  <cb:define name="subversion">
+    <sourcecontrol type="svn">
+      <!--代码svn路径-->
+      <trunkUrl>$(sourceTrunkUrl)</trunkUrl>
+      <!--检出目录-->
+      <workingDirectory>$(sourceCheckOutDir)</workingDirectory>
+      <!--svn命令行工具路径-->
+      <executable>$(sourceControlClientCmd)</executable>
+      <!--检出用户名-->
+      <username>$(trunkUser)</username>
+      <!--检出用户密码-->
+      <password>$(trunkPass)</password>
+      <!--默认操作超时为10分钟-->
+      <timeout units="minutes">$(trunkTimeout)</timeout>
+      <!--登录使用缓存验证-->
+      <authCaching>Always</authCaching>
+      <!--自动获取源码-->
+      <autoGetSource>$(autoGetSource)</autoGetSource>
+      <!--检查trunk-->
+      <checkExternals>False</checkExternals>
+      <!--检查trunk递归-->
+      <checkExternalsRecursive>True</checkExternalsRecursive>
+      <!--获取源码前先删除-->
+      <cleanCopy>False</cleanCopy>
+      <!--是否先清理检出目录-->
+      <cleanUp>False</cleanUp>
+      <!--清除所有障碍物-->
+      <deleteObstructions>False</deleteObstructions>
+      <!--强制更新-->
+      <forceUpdate>False</forceUpdate>
+      <!--有冲突时先还原-->
+      <revert>False</revert>
+      <!--签入标签信息-->
+      <tagCommitMessage>CCNET build {0}</tagCommitMessage>
+      <tagNameFormat>{0}</tagNameFormat>
+      <tagOnSuccess>False</tagOnSuccess>
+      <tagWorkingCopy>False</tagWorkingCopy>
+      <!--指定版本号-->
+      <revisionNumbers>False</revisionNumbers>
+    </sourcecontrol>
+  </cb:define>
+
+  <!--文件系统时间戳-->
+  <cb:define name="localFileSystem">
+    <sourcecontrol type="filesystem">
+      <repositoryRoot>$(sourceDir)</repositoryRoot>
+      <autoGetSource>$[updateSource|$(autoGetSource)]</autoGetSource>
+      <ignoreMissingRoot>false</ignoreMissingRoot>
+      <checkRecursively>false</checkRecursively>
+    </sourcecontrol>
+  </cb:define>
+  
+  <!--没有源代码管理-->
+  <cb:define name="noSourceControl">
+    <sourcecontrol type="nullSourceControl" />
+  </cb:define>
+
+</cb:config-template>

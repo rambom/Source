@@ -1,0 +1,7 @@
+*******IP/电脑名,用户名,密码,要执行的文件路径*******
+
+172.16.1.99, edsthanfdf, test, d:\b.bat
+
+172.16.1.111, ethandfd, test, d:\bd.bat
+
+172.16.1.100, ethan1, test, d:\b.bat

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.net
+      http://www.springframework.net/xsd/spring-objects.xsd">
+
+  
+  <!-- .......................................接收配置<队列管理器名称：本地远程队列>......................................... -->
+  <!--场站至物流-->
+  <object id="dxpReceive-mq-cfs2blc" type="Eport.Blc.Common.Dxp.Mq.MqReceive,Eport.Blc.Common.Dxp" lazy-init="true">
+    <property name="dxpEncoding" value="UTF-8"/>
+    <property name="dxpBackupFlag" value="true"/>
+    <property name="dxpBackupPath" value="Backup/MQReceive"/>
+    <property name="dxpMapping">
+      <dictionary>
+        <entry key="default" value="Dev_QMSuzhou02:QLSuzhou02Cax02"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--企业至物流-->
+  <object id="dxpReceive-mq-cop2blc" type="Eport.Blc.Common.Dxp.Mq.MqReceive,Eport.Blc.Common.Dxp" lazy-init="true">
+    <property name="dxpEncoding" value="UTF-8"/>
+    <property name="dxpBackupFlag" value="true"/>
+    <property name="dxpBackupPath" value="Backup/MQReceive"/>
+    <property name="dxpMapping">
+      <dictionary>
+        <entry key="default" value="Dev_QMSuzhou02:QLSuzhou02Cax03"/>
+      </dictionary>
+    </property>
+  </object>
+  
+  
+  <!-- .......................................发送配置<队列管理器名称：本地远程队列>......................................... -->
+  
+  <!--物流至场站-->
+  <object id="dxpSend-mq-blc2cfs" type="Eport.Blc.Common.Dxp.Mq.MqSend,Eport.Blc.Common.Dxp" lazy-init="true">
+    <property name="dxpEncoding" value="UTF-8"/>
+    <property name="dxpBackupFlag" value="true"/>
+    <property name="dxpBackupPath" value="Backup/MQSend"/>
+    <property name="dxpMapping">
+      <dictionary>
+        <entry key="default" value="Dev_QMSuzhou02:QRSuzhou02Suzhou03Cax01"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <!--物流至企业-->
+  <object id="dxpSend-mq-blc2cop" type="Eport.Blc.Common.Dxp.Mq.MqSend,Eport.Blc.Common.Dxp" lazy-init="true">
+    <property name="dxpEncoding" value="UTF-8"/>
+    <property name="dxpBackupFlag" value="true"/>
+    <property name="dxpBackupPath" value="Backup/MQSend"/>
+    <property name="dxpMapping">
+      <dictionary>
+        <entry key="default" value="Dev_QMSuzhou02:QRSuzhou02Suzhou03Cax02"/>
+      </dictionary>
+    </property>
+  </object>
+
+</objects>

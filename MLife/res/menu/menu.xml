@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group>
+        <item
+            android:id="@+id/menuExit"
+            android:icon="@drawable/exit"
+            android:orderInCategory="4"
+            android:title="@string/menu_sys_exit">
+        </item>
+        <item
+            android:id="@+id/menuHome"
+            android:icon="@drawable/home"
+            android:orderInCategory="3"
+            android:title="@string/menu_sys_return">
+        </item>
+        <item
+            android:id="@+id/menuHelp"
+            android:icon="@drawable/help"
+            android:orderInCategory="1"
+            android:title="@string/menu_sys_help">
+        </item>
+        <item
+            android:id="@+id/menuAbout"
+            android:icon="@drawable/about"
+            android:orderInCategory="2"
+            android:title="@string/menu_sys_about">
+        </item>
+    </group>
+
+</menu>

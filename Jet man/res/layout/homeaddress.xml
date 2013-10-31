@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/widget32"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/widget35"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="10dip"
+	android:paddingTop="10dip"
+	android:text="模糊查询(姓名/手机号/固定电话/集团小号/邮件地址)"
+	android:textSize="13sp"
+	android:gravity="center" />
+<EditText
+	android:id="@+id/txtWhere"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:singleLine="true"
+	android:layout_marginTop="10dp"
+	android:textSize="18sp" />
+<LinearLayout
+	android:id="@+id/widget37"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+<Button
+	android:id="@+id/BtnUserCfg"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+	android:text="用户配置" />
+<Button
+	android:id="@+id/BtnUpdateDb"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+	android:text="本地更新" />
+<Button
+	android:id="@+id/BtnOnLineSearch"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+	android:text="在线查询" />
+<Button
+	android:id="@+id/BtnOffLineSearch"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+	android:text="离线查询" />
+
+</LinearLayout>
+
+<LinearLayout
+	android:id="@+id/listLinearLayout"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+<ListView
+	android:id="@id/android:list"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:drawSelectorOnTop="false"
+	android:scrollbars="vertical"/>
+</LinearLayout>
+ 
+</LinearLayout>

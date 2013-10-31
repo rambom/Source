@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="message_bus_query_failed">查询不到数据!</string>
+    <string name="message_mlife_list_item_click">opening soon,please hold!</string>
+    <string name="message_mlife_bus_no_more_switch">请向反方向切换!</string>
+
+</resources>

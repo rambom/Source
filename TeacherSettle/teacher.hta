@@ -1,0 +1,363 @@
+﻿<html>
+    <head>
+        <title>教师分配</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <HTA:APPLICATION ID="oHTA" COMMANDLINE="23" APPLICATIONNAME="Exam tools" SINGLEINSTANCE="yes" MAXIMIZEBUTTON="no" VERSION="1.0" SCROLL="yes" INNERBORDER="no" CONTEXTMENU="no" CAPTION="yes" SHOWINTASKBAR="yes" SINGLEINSTANCE="yes" SELECTION="yes" SYSMENU="yes" WINDOWSTATE="maximize" NAVIGABLE="no" />
+        <script type="text/javascript" language="javascript">
+            //每行显示10位老师
+            var intColumn = 10;
+            //所有老师
+            var allTeacher = new Array();
+            //删除标识
+            var strRemove = "remove";
+            //老师文件
+            var strTeacherFile = "teacher.txt";
+            //生成考场分配文件
+            var strTestFile = ".csv";
+            //老师分隔符
+            var strSeparate = ",";
+            //可选人数
+            var intAvaliableCount = 0;
+            //系统路径
+            var strSystemPath = "";
+            //删除样式
+            var strRemoveClass = "removeTeacher";
+            //参加样式
+            var strSelectClass = "selectTeacher";
+            //预留样式
+            var strNewClass = "newTeacher";
+            //开始分配
+            
+            /**
+             *分配教师
+             */
+            function run(){
+                var curDate = new Date();
+                var strDate = curDate.toLocaleString().replace(/:/g, "").replace(" ", "_");
+                var selectTeacher = new Array();
+                var avaliableTeacher = new Array();
+                var roomTeacher = new Array();
+                var intTeacherNum = parseInt($("txtTeacherNum").value, 0);
+                var intRoomNum = parseInt($("txtRoomNum").value, 0);
+                var intPerNum = parseInt($("txtPerRoom").value, 0);
+                if (isNaN(intTeacherNum) || isNaN(intRoomNum) || isNaN(intPerNum)) {
+                    alert("输入有误,请重试!");
+                    return false;
+                }
+                if (intAvaliableCount <= 0) {
+                    alert("监考教师不够!");
+                    return false;
+                }
+                //过滤不参加的老师
+                for (teacher in allTeacher) {
+                    if (allTeacher[teacher].search(strRemove) == -1) 
+                        avaliableTeacher.push(allTeacher[teacher]);
+                }
+                //从可选老师中抽取需要的人数
+                selectTeacher = getRandomTeacher(intTeacherNum, avaliableTeacher, false);
+                if (selectTeacher.length > 0) {
+                    var intTecherIndex = 0;
+                    for (i = 0; i < intRoomNum; i++) {
+                        var strTeacher = "";
+                        for (j = 0; j < intPerNum; j++) {
+                            intTecherIndex = i * intPerNum + j;
+                            strTeacher += intTecherIndex < selectTeacher.length ? "," + selectTeacher[intTecherIndex] : "";
+                        }
+                        roomTeacher.push(strTeacher.substr(1));
+                    }
+                    if (intRoomNum * intPerNum < selectTeacher.length) {//有多余老师，多分配1个给最后考场
+                        roomTeacher[intRoomNum - 1] = roomTeacher[intRoomNum - 1] + "," + selectTeacher[intRoomNum * intPerNum];
+                    }
+                    var fso = new ActiveXObject("Scripting.FileSystemObject");
+                    var strFilePath = strSystemPath + strDate + strTestFile;
+                    var testFile = fso.CreateTextFile(strFilePath, true);
+                    //添加列名
+                    testFile.WriteLine("考场号,老师");
+                    for (i = 0; i < intRoomNum; i++) {
+                        testFile.WriteLine(i + 1 + "," + roomTeacher[i]);
+                    }
+                    testFile.close();
+                }
+                //下载文件
+                downloadFile(strFilePath);
+            }
+            
+            /**
+             * 随机抽取指定个数监考老师
+             * @param {Object} intTeacherNum (抽取个数)
+             * @param {Object} arrayTeacher (老师集合)
+             * @param {Object} flag (true:返回索引,flase:返回值)
+             */
+            function getRandomTeacher(intTeacherNum, arrayTeacher, flag){
+                var arraySelectTeacher = new Array();
+                //抽取人数不够只抽取可选人数
+                intTeacherNum = intTeacherNum > arrayTeacher.length ? arrayTeacher.length : intTeacherNum;
+                for (i = 0; i < intTeacherNum; i++) {
+                    var teacherIndex = Math.round(Math.random() * (arrayTeacher.length - 1));
+                    if (flag) 
+                        arraySelectTeacher.push(teacherIndex);//返回索引号
+                    else 
+                        arraySelectTeacher.push(arrayTeacher[teacherIndex]);//返回值
+                    //已抽取，删除
+                    arrayTeacher.splice(teacherIndex, 1);
+                }
+                return arraySelectTeacher;
+            }
+            
+            /**
+             *程序启动事件
+             *
+             */
+            window.onload = function(){
+                if (initTeacherToMemory()) {
+                    //显示教师
+                    $("dvTeacher").style.display = "block";
+                    var tbTeacher = $("tbTeacher");
+                    //计算生成行数
+                    var intRows = parseInt(allTeacher.length / intColumn);
+                    //默认全部可选
+                    intAvaliableCount = allTeacher.length;
+                    //可选人数显示
+                    $("lbTeacherCount").innerText = intAvaliableCount;
+                    //不够一行的多加1行
+                    intRows = intRows * intColumn < allTeacher.length ? intRows + 1 : intRows;
+                    for (i = 0; i < intRows; i++) {
+                        newTr = tbTeacher.insertRow();
+                        for (j = 0; j < intColumn; j++) {
+                            teacherIndex = i * intColumn + j;
+                            newCell = newTr.insertCell();
+                            newCell.ondblclick = function(){
+                                return false;
+                            }
+                            if (teacherIndex < allTeacher.length) {
+                                newCell.innerText = allTeacher[teacherIndex];
+                                newCell.title = "单击取消";
+                                //添加单击事件
+                                newCell.attachEvent("onclick", eventClickTeacher);
+                            }
+                            else {
+                                //没有老师留空
+                                newCell.className = strNewClass;
+                                newCell.innerText = "new";
+                                newCell.attachEvent("onselectstart", function(){
+                                    return false;
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            /**
+             *加载老师列表至内存
+             *
+             */
+            function initTeacherToMemory(){
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                if ($("oHTA").commandLine) {//html application 方式运行
+                    //直接可以存取当前路径
+                    strSystemPath = "";
+                }
+                else {//浏览器方式运行
+                    strSystemPath = window.location.toString();
+                    //获取程序路径需解码，默认有特殊字符
+                    strSystemPath = decodeURIComponent(strSystemPath);
+                    //转换为绝对路径,去除"file:///"
+                    strSystemPath = strSystemPath.substring(8, strSystemPath.lastIndexOf("/") + 1);
+                }
+                
+                strFilePath = strSystemPath + strTeacherFile;
+                if (fso.FileExists(strFilePath)) {//文件存在
+                    //只读方式打开文件
+                    var fileReader = fso.OpenTextFile(strFilePath, 1);
+                    //跳过第一行注释
+                    fileReader.SkipLine();
+                    while (!fileReader.AtEndOfLine) {
+                        arrayTeacher = fileReader.ReadLine().split(strSeparate);
+                        for (i = 0; i < arrayTeacher.length; i++) {
+                            strTeacher = arrayTeacher[i].trim();
+                            if (strTeacher != "") 
+                                allTeacher.push(strTeacher);
+                        }
+                    }
+                    //关闭文件
+                    fileReader.close();
+                    return true;
+                }
+                else {
+                    alert("文件不存在：" + strTeacherFile);
+                }
+                return false;
+            }
+            
+            /**
+             *下载文件
+             * @param {Object} fileName
+             */
+            function downloadFile(fileName){
+                window.open(fileName, "_self");
+            }
+            
+            /**
+             * 去除空格
+             */
+            String.prototype.trim = function(){
+                return this.replace(/(^\s*)|(\s*$)/g, "");
+            }
+            
+            /**
+             * 获取html对象
+             * @param {Object} objectName
+             */
+            function $(objectName){
+                return document.getElementById(objectName);
+            }
+            
+            /**
+             * 单击老师事件
+             */
+            function eventClickTeacher(){
+                var myTd = event.srcElement;
+                //老师数组下标
+                var teacherIndex = myTd.parentElement.rowIndex * intColumn + myTd.cellIndex;
+                var strTeacher = allTeacher[teacherIndex];
+                if (myTd.className == strRemoveClass) {
+                    myTd.title = "单击取消";
+                    //重置背景色
+                    myTd.className = strSelectClass;
+                    //恢复可选
+                    strTeacher = strTeacher.replace(strRemove, "");
+                    //可选人数加1
+                    intAvaliableCount += 1;
+                }
+                else {
+                    myTd.title = "单击选择";
+                    //背景红色
+                    myTd.className = strRemoveClass;
+                    //标识为删除
+                    strTeacher = strRemove + strTeacher;
+                    //可选人数减1
+                    intAvaliableCount -= 1;
+                }
+                //更新教师信息
+                allTeacher[teacherIndex] = strTeacher;
+                //更新可选人数
+                $("lbTeacherCount").innerText = intAvaliableCount;
+            }
+        </script>
+        <style type="text/css">
+            td {
+                padding-bottom: 10px;
+                font-size: 12px;
+                text-align: center;
+                padding: 5px;
+            }
+            
+            body {
+                font-size: 12px;
+            }
+            
+            label {
+                font-size: 12px;
+            }
+            
+            span {
+                text-decoration: none;
+                border: 1px #888 solid;
+                color: #800080;
+                background-color: #ccc;
+                padding: 2px;
+                font-size: 13px;
+                border-bottom-color: #000;
+                border-right-color: #000;
+                cursor: hand;
+            } #tbTeacher td {
+                background-color: #6dfa29;
+                cursor: pointer;
+                text-align: center;
+                font-size: 13px;
+                font-family: "微软雅黑";
+            } #tbTeacher {
+                border: 2px #aaa inset;
+            } #tbTeacher td.newTeacher {
+                background-color: #aaa;
+                cursor: default;
+            } #tbTeacher td.selectTeacher {
+                background-color: #6dfa29;
+            } #tbTeacher td.removeTeacher {
+                background-color: red;
+            } #dvCondition {
+                background-color: #fff;
+                width: 260px;
+                height: 100px;
+                padding-top: 5px;
+                margin-top: 30px;
+                border: 1px #808080 solid;
+                border-bottom: 2px #000 outset;
+                border-right: 2px #000 outset;
+            }
+        </style>
+    </head>
+    <body style="background-color: #eee">
+        <center>
+            <div id="dvTeacher" style="display:none">
+                <table id="tbTeacher" cellpadding="0" cellspacing="5">
+                    <caption>
+                        可选<span id="lbTeacherCount" style="border:0;background-color:#eee;color:red;font-size:23px;font-weight:bold">0</span>位
+                    </caption>
+                </table>
+                <div onselectstart="return false;">
+                    <label style="color:#6dfa29">
+                        [绿色]
+                    </label>：参加
+                    <label style="color:red">
+                        [红色]
+                    </label>：不参加
+                </div>
+            </div>
+            <div id="dvCondition" onselectstart="javascript:return false;">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="txtTeacherNum">
+                                抽取数量：
+                            </label>
+                            <input type="text" id="txtTeacherNum" maxlength="3" onkeypress="if(event.keyCode<48 || event.keyCode>57) return false;" style="text-align: center"/>
+                            <label style="color: red; padding-left: 2px;">
+                                *
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtExamRoom">
+                                考场数量：
+                            </label>
+                            <input id="txtRoomNum" maxlength="3" onkeypress="if(event.keyCode<48 || event.keyCode>57) return false;" style="text-align: center"/>
+                            <label style="color: red; padding-left: 2px;">
+                                *
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="txtExamRoom">
+                                每场人数：
+                            </label>
+                            <input id="txtPerRoom" maxlength="1" onkeypress="if(event.keyCode<48 || event.keyCode>57) return false;" value="1" style="text-align: center"/>
+                            <label style="color: red; padding-left: 2px;">
+                                *
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span onselectstart="return false;" onclick="run()">开始速配</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+    </body>
+</html>
