@@ -1,4 +1,4 @@
-package com.ethan.mlife.task.bus;
+package com.ethan.mlife.task;
 
 import java.util.List;
 

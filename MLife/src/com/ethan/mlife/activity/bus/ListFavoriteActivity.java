@@ -25,7 +25,7 @@ import com.ethan.mlife.dao.MyBusFactory;
 import com.ethan.mlife.entity.FavoriteBus;
 import com.ethan.mlife.entity.Line;
 import com.ethan.mlife.entity.Station;
-import com.ethan.mlife.task.bus.FavoriteAsyncTask;
+import com.ethan.mlife.task.FavoriteAsyncTask;
 
 public class ListFavoriteActivity extends Activity {
 	/**

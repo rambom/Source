@@ -1,4 +1,4 @@
-package com.ethan.mlife.task.bus;
+package com.ethan.mlife.task;
 
 import java.util.List;
 
@@ -11,18 +11,18 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.ethan.mlife.R;
-import com.ethan.mlife.adapter.StationAdapter;
+import com.ethan.mlife.adapter.LineAdapter;
 import com.ethan.mlife.dao.MyBusFactory;
 import com.ethan.mlife.entity.Line;
 import com.ethan.mlife.entity.Station;
 
 /**
- * 站台信息异步处理任务
+ * 线路信息异步处理任务
  * 
  * @author Ethan
  * 
  */
-public class StationAsyncTask extends AsyncTask<Void, Void, List<Line>> {
+public class LineAsyncTask extends AsyncTask<Void, Void, List<Station>> {
 	/**
 	 * 进度条
 	 */
@@ -43,11 +43,11 @@ public class StationAsyncTask extends AsyncTask<Void, Void, List<Line>> {
 	/**
 	 * 查询条件
 	 */
-	private Station station;
+	private Line line;
 	/**
 	 * 数据适配器
 	 */
-	private StationAdapter stationAdapter;
+	private LineAdapter lineAdapter;
 
 	/**
 	 * @param waitFframe
@@ -56,42 +56,43 @@ public class StationAsyncTask extends AsyncTask<Void, Void, List<Line>> {
 	 *            功能按钮区域
 	 * @param listView
 	 *            显示列表
-	 * @param station
-	 *            查询条件
+	 * @param line
+	 *            请求地址
 	 * @param selectedItemPosition
 	 *            滚动条位置
-	 * @param stationAdapter
+	 * @param lineAdapter
 	 *            数据适配器
 	 */
-	public StationAsyncTask(LinearLayout waitFrame,
-			LinearLayout functionLayout, ListView listView, Station station,
-			int selectedItemPosition, StationAdapter stationAdapter) {
+	public LineAsyncTask(LinearLayout waitFrame, LinearLayout functionLayout,
+			ListView listView, Line line, int selectedItemPosition,
+			LineAdapter lineAdapter) {
 		this.waitFrame = waitFrame;
 		this.functionLayout = functionLayout;
 		this.listView = listView;
-		this.station = station;
+		this.line = line;
 		this.selectedItemPosition = selectedItemPosition;
-		this.stationAdapter = stationAdapter;
+		this.lineAdapter = lineAdapter;
 	}
 
 	@Override
-	protected List<Line> doInBackground(Void... params) {
+	protected List<Station> doInBackground(Void... params) {
 		// TODO Auto-generated method stub
-		return MyBusFactory.getMyBus().getBusDao().getStationLine(station);
+		return MyBusFactory.getMyBus().getBusDao().getLineStation(line);
 	}
 
 	@Override
-	protected void onPostExecute(List<Line> listLine) {
+	protected void onPostExecute(List<Station> listStation) {
 		// TODO Auto-generated method stub
-		if (null == listLine || listLine.isEmpty()) {
+
+		if (null == listStation || listStation.isEmpty()) {
 			Toast toast = Toast.makeText(functionLayout.getContext(),
 					R.string.message_bus_query_failed, Toast.LENGTH_SHORT);
 			toast.setGravity(Gravity.CENTER, 0, 0);
 			toast.show();
 		} else {
-			this.stationAdapter.getDataSource().clear();
-			this.stationAdapter.getDataSource().addAll(listLine);
-			this.stationAdapter.notifyDataSetChanged();
+			this.lineAdapter.getDataSource().clear();
+			this.lineAdapter.getDataSource().addAll(listStation);
+			this.lineAdapter.notifyDataSetChanged();
 			// 还原滚动条位置
 			listView.setSelection(this.selectedItemPosition);
 			functionLayout.setVisibility(LinearLayout.VISIBLE);
@@ -101,7 +102,6 @@ public class StationAsyncTask extends AsyncTask<Void, Void, List<Line>> {
 		// 启用listView
 		listView.setEnabled(true);
 		listView.setVisibility(ListView.VISIBLE);
-
 		// 启用功能按钮
 		((Button) this.functionLayout.findViewById(R.id.btnRefresh))
 				.setEnabled(true);

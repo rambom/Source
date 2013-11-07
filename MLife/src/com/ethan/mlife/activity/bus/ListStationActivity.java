@@ -19,7 +19,7 @@ import com.ethan.mlife.R;
 import com.ethan.mlife.adapter.BusStationAdapter;
 import com.ethan.mlife.common.Constants;
 import com.ethan.mlife.entity.Station;
-import com.ethan.mlife.task.bus.BusStationAsyncTask;
+import com.ethan.mlife.task.BusStationAsyncTask;
 
 public class ListStationActivity extends Activity {
 	/**

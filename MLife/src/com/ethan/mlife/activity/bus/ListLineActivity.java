@@ -19,7 +19,7 @@ import com.ethan.mlife.R;
 import com.ethan.mlife.adapter.BusLineAdapter;
 import com.ethan.mlife.common.Constants;
 import com.ethan.mlife.entity.Line;
-import com.ethan.mlife.task.bus.BusLineAsyncTask;
+import com.ethan.mlife.task.BusLineAsyncTask;
 
 public class ListLineActivity extends Activity implements OnScrollListener {
 	/**

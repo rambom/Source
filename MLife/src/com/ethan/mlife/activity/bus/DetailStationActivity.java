@@ -20,7 +20,7 @@ import com.ethan.mlife.dao.MyBusFactory;
 import com.ethan.mlife.entity.FavoriteBus;
 import com.ethan.mlife.entity.Line;
 import com.ethan.mlife.entity.Station;
-import com.ethan.mlife.task.bus.StationAsyncTask;
+import com.ethan.mlife.task.StationAsyncTask;
 import com.ethan.mlife.util.StringUtil;
 
 public class DetailStationActivity extends DetailBase {
