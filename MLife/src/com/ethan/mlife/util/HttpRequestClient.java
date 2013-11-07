@@ -71,7 +71,14 @@ public class HttpRequestClient {
 		HttpProtocolParams.setVersion(httpParams, HttpVersion.HTTP_1_1);
 		HttpProtocolParams.setContentCharset(httpParams, HTTP.UTF_8);
 		HttpProtocolParams.setUseExpectContinue(httpParams, true);
-
+		//HttpProtocolParams.setUserAgent(httpParams, "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36");
+		//httpParams.setParameter("Referer", "http://www.szjt.gov.cn/apts/APTSLine.aspx");
+		//httpParams.setParameter("Origin", "http://www.szjt.gov.cn");
+		//httpParams.setParameter("Host", "www.szjt.gov.cn");
+		//httpParams.setParameter("Content-Type", "application/x-www-form-urlencoded");
+		//httpParams.setParameter("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+		//httpParams.setParameter("Accept-Encoding", "gzip,deflate,sdch");
+		//httpParams.setParameter("Accept-Language","zh-CN,zh;q=0.8");
 		/* 从连接池中取连接的超时时间 */
 		ConnManagerParams.setTimeout(httpParams, 1000);
 		/* 连接超时 */
@@ -126,7 +133,7 @@ public class HttpRequestClient {
 				break;
 			case Post:
 				httpPost = new HttpPost(url.toString());
-				httpentity = new UrlEncodedFormEntity(params, encode);
+				httpentity = new UrlEncodedFormEntity(params);
 				httpPost.setEntity(httpentity);
 				httpRequest = httpPost;
 				break;
