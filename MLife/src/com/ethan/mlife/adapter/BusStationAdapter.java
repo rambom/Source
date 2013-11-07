@@ -1,4 +1,4 @@
-package com.ethan.mlife.adapter.bus;
+package com.ethan.mlife.adapter;
 
 import java.util.List;
 

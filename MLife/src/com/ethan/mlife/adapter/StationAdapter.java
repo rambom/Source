@@ -1,4 +1,4 @@
-package com.ethan.mlife.adapter.bus;
+package com.ethan.mlife.adapter;
 
 import java.util.List;
 
@@ -12,30 +12,21 @@ import android.widget.TextView;
 import com.ethan.mlife.R;
 import com.ethan.mlife.entity.Line;
 
-public class BusLineAdapter extends BaseAdapter {
+public class StationAdapter extends BaseAdapter {
 
 	private LayoutInflater inflater;
 	private List<Line> listLine;
-	private int layoutId = R.layout.viewbusline;;
-	/**
-	 * 页大小
-	 */
-	private int pageSize = 10;
-	/**
-	 * 显示记录数
-	 */
-	private int count = 0;
+	private int layoutId = R.layout.viewbusstationdetail;
 
-	public BusLineAdapter(Context context, List<Line> listLine) {
+	public StationAdapter(Context context, List<Line> listLine) {
 		this.listLine = listLine;
 		this.inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		this.initPageConfig();
 	}
 
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return this.count;
+		return listLine.size();
 	}
 
 	public Line getItem(int position) {
@@ -57,53 +48,36 @@ public class BusLineAdapter extends BaseAdapter {
 		return this.listLine;
 	}
 
-	/**
-	 * 加载分页配置
-	 */
-	public void initPageConfig() {
-		if (pageSize > listLine.size()) {
-			// 不够1页直接返回总条数
-			this.count = listLine.size();
-		} else {
-			// 第1页
-			this.count = pageSize;
-		}
-	}
-
-	/**
-	 * 翻页
-	 */
-	public void nextPage() {
-		if (this.count < this.listLine.size()) {
-			this.count = count + pageSize <= listLine.size() ? count + pageSize
-					: listLine.size();
-			this.notifyDataSetChanged();
-		}
-	}
-
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		BusLineAdapterView view;
+		StationAdapterView view;
 		if (null == convertView) {
 			convertView = inflater.inflate(layoutId, null);
-			view = new BusLineAdapterView();
-			view.tvLineName = (TextView) convertView
-					.findViewById(R.id.tvLineName);
+			view = new StationAdapterView();
+			view.tvStationLineId = (TextView) convertView
+					.findViewById(R.id.tvStationLineId);
+			view.tvStationSpacing = (TextView) convertView
+					.findViewById(R.id.tvStationSpacing);
+			view.tvVehicleNo = (TextView) convertView
+					.findViewById(R.id.tvVehicleNo);
 			view.tvLineDirection = (TextView) convertView
 					.findViewById(R.id.tvLineDirection);
 			convertView.setTag(view);
 		} else {
-			view = (BusLineAdapterView) convertView.getTag();
+			view = (StationAdapterView) convertView.getTag();
 		}
 		Line line = listLine.get(position);
-		view.tvLineName.setText(line.getLineNo());
+		view.tvStationLineId.setText(line.getLineNo());
+		view.tvStationSpacing.setText(line.getSpacing());
+		view.tvVehicleNo.setText(line.getVeNumber());
 		view.tvLineDirection.setText(line.getDirection());
-
 		return convertView;
 	}
 
-	private class BusLineAdapterView {
-		TextView tvLineName;
+	private class StationAdapterView {
+		TextView tvStationLineId;
+		TextView tvStationSpacing;
+		TextView tvVehicleNo;
 		TextView tvLineDirection;
 	}
 }

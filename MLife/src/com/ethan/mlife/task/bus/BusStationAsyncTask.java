@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.ethan.mlife.R;
-import com.ethan.mlife.adapter.bus.BusStationAdapter;
+import com.ethan.mlife.adapter.BusStationAdapter;
 import com.ethan.mlife.dao.MyBusFactory;
 import com.ethan.mlife.entity.Station;
 

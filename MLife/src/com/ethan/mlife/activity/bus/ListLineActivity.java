@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.ethan.mlife.R;
-import com.ethan.mlife.adapter.bus.BusLineAdapter;
+import com.ethan.mlife.adapter.BusLineAdapter;
 import com.ethan.mlife.common.Constants;
 import com.ethan.mlife.entity.Line;
 import com.ethan.mlife.task.bus.BusLineAsyncTask;

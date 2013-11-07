@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.ethan.mlife.R;
-import com.ethan.mlife.adapter.bus.LineAdapter;
+import com.ethan.mlife.adapter.LineAdapter;
 import com.ethan.mlife.dao.MyBusFactory;
 import com.ethan.mlife.entity.Line;
 import com.ethan.mlife.entity.Station;

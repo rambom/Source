@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.ethan.mlife.adapter.bus.FavoriteAdapter;
+import com.ethan.mlife.adapter.FavoriteAdapter;
 import com.ethan.mlife.dao.MyBusFactory;
 import com.ethan.mlife.entity.FavoriteBus;
 

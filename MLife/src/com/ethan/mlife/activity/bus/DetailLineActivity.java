@@ -13,7 +13,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 
 import com.ethan.mlife.R;
-import com.ethan.mlife.adapter.bus.LineAdapter;
+import com.ethan.mlife.adapter.LineAdapter;
 import com.ethan.mlife.common.Constants;
 import com.ethan.mlife.common.FavoriteBusStyle;
 import com.ethan.mlife.dao.MyBusFactory;
