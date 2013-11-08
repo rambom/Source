@@ -3,6 +3,7 @@
     android:id="@+id/llFunctionButton"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/tab_one_normal"
     android:gravity="right"
     android:paddingLeft="5dip"
     android:visibility="gone" >
