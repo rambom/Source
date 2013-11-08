@@ -38,12 +38,6 @@ public class MainActivity extends ActivityGroup implements OnGestureListener,
 	private LinearLayout line;
 	private LinearLayout station;
 	private GestureDetector gestureDetector;
-	private OnTouchListener touchListener = new OnTouchListener() {
-		public boolean onTouch(View v, MotionEvent e) {
-			v.setBackgroundResource(R.color.mlife_bus_menu_touch);
-			return false;
-		}
-	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +53,6 @@ public class MainActivity extends ActivityGroup implements OnGestureListener,
 		line = (LinearLayout) this.findViewById(R.id.llQueryBusLine);
 		station = (LinearLayout) this.findViewById(R.id.llSearchBusStation);
 
-		favorite.setOnTouchListener(touchListener);
-		line.setOnTouchListener(touchListener);
-		station.setOnTouchListener(touchListener);
 		gestureDetector = new GestureDetector(this);
 		container.setOnTouchListener(this);
 		container.setLongClickable(true);
@@ -82,9 +73,9 @@ public class MainActivity extends ActivityGroup implements OnGestureListener,
 
 	public void favoriteBus_Click(View v) {
 		container.removeAllViews();
-		v.setBackgroundResource(R.color.mlife_bus_menu_light);
-		line.setBackgroundResource(R.color.mlife_bus_menu_normal);
-		station.setBackgroundResource(R.color.mlife_bus_menu_normal);
+		v.setBackgroundResource(R.drawable.tab_two_highlight);
+		line.setBackgroundResource(R.drawable.tab_one_normal);
+		station.setBackgroundResource(R.drawable.tab_one_normal);
 		Intent intent = new Intent();
 		intent.setClass(this, ListFavoriteActivity.class);
 		container.addView(this.getLocalActivityManager()
@@ -94,9 +85,9 @@ public class MainActivity extends ActivityGroup implements OnGestureListener,
 
 	public void queryBusLine_Click(View v) {
 		container.removeAllViews();
-		v.setBackgroundResource(R.color.mlife_bus_menu_light);
-		favorite.setBackgroundResource(R.color.mlife_bus_menu_normal);
-		station.setBackgroundResource(R.color.mlife_bus_menu_normal);
+		v.setBackgroundResource(R.drawable.tab_two_highlight);
+		favorite.setBackgroundResource(R.drawable.tab_one_normal);
+		station.setBackgroundResource(R.drawable.tab_one_normal);
 		Intent intent = new Intent();
 		intent.setClass(this, ListLineActivity.class);
 		container.addView(this.getLocalActivityManager()
@@ -106,9 +97,9 @@ public class MainActivity extends ActivityGroup implements OnGestureListener,
 
 	public void searchBusStation_Click(View v) {
 		container.removeAllViews();
-		v.setBackgroundResource(R.color.mlife_bus_menu_light);
-		favorite.setBackgroundResource(R.color.mlife_bus_menu_normal);
-		line.setBackgroundResource(R.color.mlife_bus_menu_normal);
+		v.setBackgroundResource(R.drawable.tab_two_highlight);
+		favorite.setBackgroundResource(R.drawable.tab_one_normal);
+		line.setBackgroundResource(R.drawable.tab_one_normal);
 		Intent intent = new Intent();
 		intent.setClass(this, ListStationActivity.class);
 		container.addView(this.getLocalActivityManager()
