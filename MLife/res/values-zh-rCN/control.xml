@@ -22,7 +22,7 @@
     <dimen name="mlife_bus_text_title_size">20dip</dimen>
     <!-- 公交描述文字大小 -->
     <dimen name="mlife_bus_text_desc_size">18dip</dimen>
-    <dimen name="mlife_bus_test_menu_size">20dip</dimen>
+    <dimen name="mlife_bus_test_menu_size">12dip</dimen>
 
     <string name="message_mlife_about_copyright">CopyRight © 2012 by xiaobier</string>
     <string name="message_mlife_about_email">E-mail:longqibing@gmail.com</string>

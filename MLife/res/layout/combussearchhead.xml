@@ -15,8 +15,8 @@
 
     <Button
         android:id="@+id/btnSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="fill_parent"
         android:background="@drawable/search"
         android:onClick="btnSearch_Click" />
 

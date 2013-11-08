@@ -15,7 +15,7 @@
             android:id="@+id/tvFavoriteName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="5.0"
+            android:layout_weight="3"
             android:paddingBottom="2dip"
             android:textColor="@color/bus_title"
             android:textSize="@dimen/mlife_bus_text_title_size"
@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/delete"
-            android:focusable="false" 
-            android:onClick="deleteFavorite_Click"/>
+            android:focusable="false"
+            android:onClick="deleteFavorite_Click" />
     </LinearLayout>
 
     <TextView

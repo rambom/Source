@@ -3,17 +3,26 @@
     android:id="@+id/llBusMenu"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#000"
     android:gravity="center_vertical"
-    android:orientation="vertical"
-    android:background="#000" >
+    android:orientation="vertical" >
+
+    <!-- 动态显示界面 -->
+
+    <FrameLayout
+        android:id="@+id/llBusContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.98" >
+    </FrameLayout>
 
     <!-- 菜单栏 -->
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="38dip"
-        android:orientation="horizontal"
-        android:paddingTop="1dip" >
+        android:layout_height="50dip"
+        android:layout_weight="0.02"
+        android:orientation="horizontal" >
 
         <LinearLayout
             android:id="@+id/llFavoriteBus"
@@ -21,9 +30,16 @@
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:background="@color/mlife_bus_menu_normal"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:onClick="favoriteBus_Click"
             android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/m_favorite" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,6 +66,13 @@
             android:onClick="queryBusLine_Click"
             android:orientation="vertical" >
 
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/m_bus" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -74,7 +97,13 @@
             android:onClick="searchBusStation_Click"
             android:orientation="vertical" >
 
-            <TextView
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/m_station" />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_bus_station"
@@ -83,17 +112,5 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dip"
-        android:background="#888888" />
-    <!-- 动态显示界面 -->
-
-    <FrameLayout
-        android:id="@+id/llBusContainer"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    </FrameLayout>
 
 </LinearLayout>

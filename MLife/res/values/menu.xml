@@ -12,9 +12,9 @@
     <string name="action_bus_line_detail">mlife.activity.bus.line</string>
     <string name="action_bus_station_detail">mlife.activity.bus.station</string>
     <!-- 公交查询tab菜单 -->
-    <string name="menu_bus_line">Line</string>
+    <string name="menu_bus_line">Bus</string>
     <string name="menu_bus_station">Station</string>
-    <string name="menu_bus_favorite">iBus</string>
+    <string name="menu_bus_favorite">Me</string>
     <string name="menu_sys_exit">Exit</string>
     <string name="menu_sys_return">Return</string>
     <string name="menu_sys_help">Help</string>
