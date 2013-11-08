@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
@@ -14,12 +16,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 import com.ethan.mlife.R;
 import com.ethan.mlife.adapter.BusStationAdapter;
 import com.ethan.mlife.common.Constants;
 import com.ethan.mlife.entity.Station;
 import com.ethan.mlife.task.BusStationAsyncTask;
+import com.ethan.mlife.widget.EditTextDelete;
 
 public class ListStationActivity extends Activity {
 	/**
@@ -41,7 +46,7 @@ public class ListStationActivity extends Activity {
 	/**
 	 * 查询输入框
 	 */
-	private EditText etSearch;
+	private EditTextDelete etSearch;
 	/**
 	 * 数据刷新标识
 	 */
@@ -58,12 +63,20 @@ public class ListStationActivity extends Activity {
 		listView.setAdapter(busStationAdapter);
 		waitLayout = (LinearLayout) findViewById(R.id.llDataLoadingWait);
 		btnSearch = (Button) findViewById(R.id.btnSearch);
-		etSearch = (EditText) findViewById(R.id.etSearch);
+		etSearch = (EditTextDelete) findViewById(R.id.etSearch);
 		// 单击选择站台
 		listView.setOnItemClickListener(getListClickListener());
 		// 滑动分页事件
 		listView.setOnScrollListener(onScrollListener);
 		etSearch.setHint(R.string.mlife_bus_station_text_hint);
+		etSearch.setOnEditorActionListener(new OnEditorActionListener() {
+			public boolean onEditorAction(TextView arg0, int arg1, KeyEvent arg2) {
+				if (arg1 == EditorInfo.IME_ACTION_SEARCH) {
+					btnSearch_Click(arg0);
+				}
+				return false;
+			}
+		});
 	}
 
 	/**
