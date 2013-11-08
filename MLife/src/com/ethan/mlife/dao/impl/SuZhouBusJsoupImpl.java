@@ -1,10 +1,8 @@
 package com.ethan.mlife.dao.impl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 import org.apache.http.NameValuePair;
@@ -15,8 +13,6 @@ import org.jsoup.select.Elements;
 
 import android.util.Log;
 
-import com.ethan.mlife.MLifeApp;
-import com.ethan.mlife.R;
 import com.ethan.mlife.common.Constants;
 import com.ethan.mlife.dao.AbstractBusDao;
 import com.ethan.mlife.dao.MyBusFactory;
@@ -29,56 +25,6 @@ import com.ethan.mlife.util.HttpUtil;
  * 
  */
 public class SuZhouBusJsoupImpl extends AbstractBusDao {
-	/**
-	 * 线路查询post参数
-	 */
-	private static Map<String, String> busLinePostParams = new HashMap<String, String>();
-	/**
-	 * 站台查询post参数
-	 */
-	private static Map<String, String> busStationPostParams = new HashMap<String, String>();
-	/**
-	 * 公交列表数据行
-	 */
-	private static String busMainContentRow;
-	/**
-	 * 公交查询根站点
-	 */
-	public final String busBaseUrl = "http://www.szjt.gov.cn/apts/";
-	/**
-	 * 线路查询URL
-	 */
-	public final String busLineUrl = "http://www.szjt.gov.cn/apts/APTSLine.aspx";
-	/**
-	 * 站台查询URL
-	 */
-	public final String busStationUrl = "http://www.szjt.gov.cn/apts/default.aspx";
-
-	static {
-		busMainContentRow = MLifeApp.getContext().getString(
-				R.string.busMainContentRow);
-		// 加载线路查询请求参数
-		for (String str : MLifeApp.getContext().getResources()
-				.getStringArray(R.array.busLinePostParam)) {
-			String[] arr = str.split("#");
-			if (arr.length == 2) {
-				busLinePostParams.put(arr[0], arr[1]);
-			} else {
-				busLinePostParams.put(arr[0], "");
-			}
-		}
-
-		// 加载站台查询请求参数
-		for (String str : MLifeApp.getContext().getResources()
-				.getStringArray(R.array.busStationPostParam)) {
-			String[] arr = str.split("#");
-			if (arr.length == 2) {
-				busStationPostParams.put(arr[0], arr[1]);
-			} else {
-				busStationPostParams.put(arr[0], "");
-			}
-		}
-	}
 
 	/**
 	 * 获取线路列表
@@ -90,14 +36,8 @@ public class SuZhouBusJsoupImpl extends AbstractBusDao {
 		List<Line> listLine = new ArrayList<Line>();
 
 		try {
-			String strLinePostName = MLifeApp.getContext().getString(
-					R.string.busLinePostLineName);
-
-			if (busLinePostParams.containsKey(strLinePostName))
-				busLinePostParams.remove(strLinePostName);
-
 			// 设置查询线路编号
-			busLinePostParams.put(strLinePostName, line.getLineNo());
+			busLinePostParams.put(searchBusLinePostParamName, line.getLineNo());
 			Document doc = Jsoup.connect(busLineUrl).data(busLinePostParams)
 					.post();
 
@@ -151,16 +91,9 @@ public class SuZhouBusJsoupImpl extends AbstractBusDao {
 		List<Station> listStation = new ArrayList<Station>();
 
 		try {
-			String strStationPostName = MLifeApp.getContext().getString(
-					R.string.busStationPostStationName);
-
-			if (busStationPostParams.containsKey(strStationPostName))
-				busStationPostParams.remove(strStationPostName);
 
 			// 设置查询站台名称
-			busStationPostParams.put(
-					MLifeApp.getContext().getString(
-							R.string.busStationPostStationName),
+			busStationPostParams.put(searchBusStationPostParamName,
 					station.getName());
 
 			Document doc = Jsoup.connect(busStationUrl)

@@ -1,12 +1,12 @@
 package com.ethan.mlife.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.util.Log;
 
-import com.ethan.mlife.MLifeApp;
-import com.ethan.mlife.R;
 import com.ethan.mlife.dao.impl.BusLineDaoImpl;
 import com.ethan.mlife.dao.impl.BusStationDaoImpl;
 import com.ethan.mlife.dao.impl.FavoriteBusDaoImpl;
@@ -15,6 +15,51 @@ import com.ethan.mlife.entity.Line;
 import com.ethan.mlife.entity.Station;
 
 public abstract class AbstractBusDao implements BusDaoFacade {
+
+	protected final String searchBusLinePostParamName = "ctl00$MainContent$LineName";
+	protected final String searchBusStationPostParamName = "ctl00$MainContent$StandName";
+	/**
+	 * 公交列表数据行
+	 */
+	protected final String busMainContentRow = "#MainContent_DATA table tr";
+	/**
+	 * 公交查询根站点
+	 */
+	protected final String busBaseUrl = "http://www.szjt.gov.cn/apts/";
+	/**
+	 * 线路查询URL
+	 */
+	protected final String busLineUrl = "http://www.szjt.gov.cn/apts/APTSLine.aspx";
+	/**
+	 * 站台查询URL
+	 */
+	protected final String busStationUrl = "http://www.szjt.gov.cn/apts/default.aspx";
+
+	/**
+	 * 线路查询post参数
+	 */
+	protected Map<String, String> busLinePostParams = new HashMap<String, String>() {
+		{
+			put("__EVENTVALIDATION",
+					"/wEWAwKqoqGSCQL88Oh8AqX89aoKyqAwAoPE4PypYbz3R2ttNYt4zxvUDFooYoXfAtEIYco=");
+			put("__VIEWSTATE",
+					"/wEPDwUJNDk3MjU2MjgyD2QWAmYPZBYCAgMPZBYCAgEPZBYCAgYPDxYCHgdWaXNpYmxlaGRkZHapTNP3CXfovgzNbrenGu1IJMG2bmzLVnK/q4EqZuGO");
+			put("ctl00$MainContent$SearchLine", "");
+		}
+	};
+
+	/**
+	 * 站台查询post参数
+	 */
+	protected Map<String, String> busStationPostParams = new HashMap<String, String>() {
+		{
+			put("__EVENTVALIDATION",
+					"/wEWBQLrkI6ZCwLq+uyKCAKkmJj/DwL0+sTIDgLl5vKEDhQ3y1dkYoXYKt2VOj5zWAHRXEFo/Np0w92J0wQ5PEZ6");
+			put("__VIEWSTATE",
+					"/wEPDwULLTE5ODM5MjcxNzlkZMfyBOphBJoAHYrC/IbEut7PQzE+PqFM9pJfiegxEMcq");
+			put("ctl00$MainContent$SearchCode", "");
+		}
+	};
 	/**
 	 * 公交收藏操作
 	 */
@@ -30,13 +75,12 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	/**
 	 * url请求编码
 	 */
-	protected String urlEncode;
+	protected String urlEncode = "utf-8";
 
 	protected AbstractBusDao() {
 		favoriteBusDao = new FavoriteBusDaoImpl();
 		busLineDao = new BusLineDaoImpl();
 		busStationDao = new BusStationDaoImpl();
-		urlEncode = MLifeApp.getContext().getString(R.string.httpRequestEncode);
 	}
 
 	public abstract List<Line> getBusLine(Line line);
