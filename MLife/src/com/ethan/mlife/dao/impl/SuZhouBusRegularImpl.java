@@ -48,7 +48,7 @@ public class SuZhouBusRegularImpl extends AbstractBusDao {
 	 * 站台列表正则表达式
 	 */
 	private static Pattern busStationRowPattern = Pattern
-			.compile("<tr><td><a href=\"(.+?)\">(.+?)</a></td><td>(\\s?|.+?)</td><;td>(\\s?|.+?)</td><td>(\\s?|.+?)</td><td>(\\s?|.+?)</td><td>(\\s?|.+?)</td></tr>");;
+			.compile("<tr><td><a href=\"(.+?)\">(.+?)</a></td><td>(\\s?|.+?)</td><td>(\\s?|.+?)</td><td>(\\s?|.+?)</td><td>(\\s?|.+?)</td><td>(\\s?|.+?)</td></tr>");;
 	/**
 	 * 站台详细正则表达式
 	 */
