@@ -15,6 +15,7 @@
     <string name="menu_bus_line">线路</string>
     <string name="menu_bus_station">站台</string>
     <string name="menu_bus_favorite">我的</string>
+    <string name="menu_bus_more">更多</string>
     <string name="menu_sys_exit">退出</string>
     <string name="menu_sys_return">返回</string>
     <string name="menu_sys_help">帮助</string>
