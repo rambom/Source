@@ -20,9 +20,9 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dip"
+        android:layout_height="wrap_content"
         android:layout_weight="0.02"
-        android:background="@drawable/tab_one_normal"
+        android:background="@drawable/maintab_toolbar_bg"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -35,26 +35,22 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="top|center"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="2dp"
                 android:background="@drawable/m_favorite" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
                 android:gravity="center"
                 android:text="@string/menu_bus_favorite"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/mlife_bus_test_menu_size"
+                android:textSize="@dimen/mlife_bus_text_menu_size"
                 android:textStyle="bold" />
         </LinearLayout>
-
-        <View
-            android:layout_width="1dip"
-            android:layout_height="fill_parent"
-            android:background="#888888" />
 
         <LinearLayout
             android:id="@+id/llQueryBusLine"
@@ -66,25 +62,21 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="top|center"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="2dp"
                 android:background="@drawable/m_bus" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
                 android:text="@string/menu_bus_line"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/mlife_bus_test_menu_size"
+                android:textSize="@dimen/mlife_bus_text_menu_size"
                 android:textStyle="bold" />
         </LinearLayout>
-
-        <View
-            android:layout_width="1dip"
-            android:layout_height="fill_parent"
-            android:background="#888888" />
 
         <LinearLayout
             android:id="@+id/llSearchBusStation"
@@ -96,18 +88,45 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="top|center"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="2dp"
                 android:background="@drawable/m_station" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
                 android:text="@string/menu_bus_station"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/mlife_bus_test_menu_size"
+                android:textSize="@dimen/mlife_bus_text_menu_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSysMore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:onClick="sysMore_Click"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/m_more" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/menu_bus_more"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/mlife_bus_text_menu_size"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
