@@ -1,14 +1,18 @@
 ﻿use master
 go
+
 alter database [master] set TRUSTWORTHY  on
 go
--- 启用 SQL Server 的 CLR 功能
+
 exec sp_configure 'show advanced options',1;
 go
+
 reconfigure
 go
+
 exec sp_configure 'clr enabled',1;
 go
+
 reconfigure
 go
  
