@@ -27,8 +27,7 @@ go
 if object_id('dbo.fileToHex','FS') is not null
  drop function dbo.fileToHex;
 go
- 
--- 创建程序集
+
 if exists (select * from sys.assemblies where name='SCI')
  drop assembly SCI;
 go
