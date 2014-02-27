@@ -19,61 +19,61 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	protected final String searchBusLinePostParamName = "ctl00$MainContent$LineName";
 	protected final String searchBusStationPostParamName = "ctl00$MainContent$StandName";
 	/**
-	 * 公交列表数据行
+	 * 鍏氦鍒楄〃鏁版嵁琛�
 	 */
 	protected final String busMainContentRow = "#MainContent_DATA table tr";
 	/**
-	 * 公交查询根站点
+	 * 鍏氦鏌ヨ鏍圭珯鐐�
 	 */
 	protected final String busBaseUrl = "http://www.szjt.gov.cn/apts/";
 	/**
-	 * 线路查询URL
+	 * 绾胯矾鏌ヨURL
 	 */
 	protected final String busLineUrl = "http://www.szjt.gov.cn/apts/APTSLine.aspx";
 	/**
-	 * 站台查询URL
+	 * 绔欏彴鏌ヨURL
 	 */
 	protected final String busStationUrl = "http://www.szjt.gov.cn/apts/default.aspx";
 
 	/**
-	 * 线路查询post参数
+	 * 绾胯矾鏌ヨpost鍙傛暟
 	 */
 	protected Map<String, String> busLinePostParams = new HashMap<String, String>() {
 		{
 			put("__EVENTVALIDATION",
-					"/wEWAwKqoqGSCQL88Oh8AqX89aoKyqAwAoPE4PypYbz3R2ttNYt4zxvUDFooYoXfAtEIYco=");
+					"/wEWAwLeub7XBwL88Oh8AqX89aoK1GKT3VlKUTd/xyQgZexCetMuo/i/LRDnisAyha1YxN0=");
 			put("__VIEWSTATE",
-					"/wEPDwUJNDk3MjU2MjgyD2QWAmYPZBYCAgMPZBYCAgEPZBYCAgYPDxYCHgdWaXNpYmxlaGRkZHapTNP3CXfovgzNbrenGu1IJMG2bmzLVnK/q4EqZuGO");
+					"/wEPDwUJNDk3MjU2MjgyD2QWAmYPZBYCAgMPZBYCAgEPZBYCAgYPDxYCHgdWaXNpYmxlaGRkZLSbkOWJhbw7r9tBdPn33bPCSlJcKXww5ounfGoyhKl3");
 			put("ctl00$MainContent$SearchLine", "");
 		}
 	};
 
 	/**
-	 * 站台查询post参数
+	 * 绔欏彴鏌ヨpost鍙傛暟
 	 */
 	protected Map<String, String> busStationPostParams = new HashMap<String, String>() {
 		{
 			put("__EVENTVALIDATION",
-					"/wEWBQLrkI6ZCwLq+uyKCAKkmJj/DwL0+sTIDgLl5vKEDhQ3y1dkYoXYKt2VOj5zWAHRXEFo/Np0w92J0wQ5PEZ6");
+					"/wEWBQKWw5ntCwLq+uyKCAKkmJj/DwL0+sTIDgLl5vKEDljsKhZ4wQv+QX4Mur5a1YA5Wv4LH4UmUVklzGAJcHPX");
 			put("__VIEWSTATE",
-					"/wEPDwULLTE5ODM5MjcxNzlkZMfyBOphBJoAHYrC/IbEut7PQzE+PqFM9pJfiegxEMcq");
+					"/wEPDwULLTE5ODM5MjcxNzlkZMRDQaX2utUjbGHOIUP3iptC9gAY2I3YLCpB16qioLAI");
 			put("ctl00$MainContent$SearchCode", "");
 		}
 	};
 	/**
-	 * 公交收藏操作
+	 * 鍏氦鏀惰棌鎿嶄綔
 	 */
 	protected IFavoriteBusDao favoriteBusDao;
 	/**
-	 * 公交线路历史操作
+	 * 鍏氦绾胯矾鍘嗗彶鎿嶄綔
 	 */
 	protected IBusLineDao busLineDao;
 	/**
-	 * 公交站台历史操作
+	 * 鍏氦绔欏彴鍘嗗彶鎿嶄綔
 	 */
 	protected IBusStationDao busStationDao;
 	/**
-	 * url请求编码
+	 * url璇锋眰缂栫爜
 	 */
 	protected String urlEncode = "utf-8";
 
@@ -120,13 +120,13 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 				query.setCityRegion(MyBusFactory.getMyBus().getRegion());
 				query.setFavoriteName(listFavorite.get(0).getFavoriteName());
 				query.setBusType(listFavorite.get(0).getBusType());
-				// 删除已存在的数据
+				// 鍒犻櫎宸插瓨鍦ㄧ殑鏁版嵁
 				this.favoriteBusDao.delete(query);
 			}
 
 			for (FavoriteBus favorite : listFavorite) {
 				favorite.setCityRegion(MyBusFactory.getMyBus().getRegion());
-				// 添加收藏
+				// 娣诲姞鏀惰棌
 				this.favoriteBusDao.insert(favorite);
 				blnReturn = true;
 			}
@@ -151,7 +151,7 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 			query.setCityRegion(favorite.getCityRegion());
 			query.setFavoriteName(favorite.getFavoriteName());
 			query.setBusType(favorite.getBusType());
-			// 找到直接返回
+			// 鎵惧埌鐩存帴杩斿洖
 			return this.favoriteBusDao.query(query, null, null,
 					"visibility desc");
 		} catch (Exception ex) {
@@ -199,7 +199,7 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	}
 
 	/**
-	 * 删除线路历史
+	 * 鍒犻櫎绾胯矾鍘嗗彶
 	 * 
 	 * @param line
 	 * @return
@@ -216,7 +216,7 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	}
 
 	/**
-	 * 删除站台历史
+	 * 鍒犻櫎绔欏彴鍘嗗彶
 	 * 
 	 * @param station
 	 * @return
@@ -233,7 +233,7 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	}
 
 	/**
-	 * 保存线路查询历史
+	 * 淇濆瓨绾胯矾鏌ヨ鍘嗗彶
 	 * 
 	 * @param line
 	 * @return
@@ -256,7 +256,7 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	}
 
 	/**
-	 * 保存站台查询历史
+	 * 淇濆瓨绔欏彴鏌ヨ鍘嗗彶
 	 * 
 	 * @param station
 	 * @return
