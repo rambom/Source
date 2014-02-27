@@ -17,16 +17,6 @@ public final class R {
         public static final int push_right_in=0x7f040005;
         public static final int push_right_out=0x7f040006;
     }
-    public static final class array {
-        /**  线路查询请求参数 
- 线路查询请求参数 
-         */
-        public static final int busLinePostParam=0x7f070000;
-        /**  站台查询请求参数 
- 站台查询请求参数 
-         */
-        public static final int busStationPostParam=0x7f070001;
-    }
     public static final class attr {
     }
     public static final class color {
@@ -43,85 +33,101 @@ public final class R {
         public static final int white=0x7f050003;
     }
     public static final class dimen {
-        public static final int mlife_bus_test_menu_size=0x7f080003;
         /**  公交描述文字大小 
  公交描述文字大小 
          */
-        public static final int mlife_bus_text_desc_size=0x7f080002;
+        public static final int mlife_bus_text_desc_size=0x7f070002;
+        public static final int mlife_bus_text_menu_size=0x7f070003;
         /**  公交标题文字大小 
  公交标题文字大小 
          */
-        public static final int mlife_bus_text_title_size=0x7f080001;
+        public static final int mlife_bus_text_title_size=0x7f070001;
         /**  数据加载提示文字大小 
  数据加载提示文字大小 
          */
-        public static final int mlife_loading_text_size=0x7f080000;
+        public static final int mlife_loading_text_size=0x7f070000;
     }
     public static final class drawable {
         public static final int about=0x7f020000;
-        public static final int change=0x7f020001;
-        public static final int delete=0x7f020002;
-        public static final int dialogcorner=0x7f020003;
-        public static final int exit=0x7f020004;
-        public static final int fav=0x7f020005;
-        public static final int help=0x7f020006;
-        public static final int home=0x7f020007;
-        public static final int ic_bus=0x7f020008;
-        public static final int ic_contacts=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int ic_tax=0x7f02000b;
-        public static final int ic_train=0x7f02000c;
-        public static final int refresh=0x7f02000d;
-        public static final int search=0x7f02000e;
-        public static final int tab_one_normal=0x7f02000f;
-        public static final int tab_two_highlight=0x7f020010;
+        public static final int btndelete_selector=0x7f020001;
+        public static final int change=0x7f020002;
+        public static final int delete=0x7f020003;
+        public static final int dialogcorner=0x7f020004;
+        public static final int edtphone_style=0x7f020005;
+        public static final int exit=0x7f020006;
+        public static final int fav=0x7f020007;
+        public static final int help=0x7f020008;
+        public static final int home=0x7f020009;
+        public static final int home_btn_bg=0x7f02000a;
+        public static final int hzdl_cancel_n=0x7f02000b;
+        public static final int hzdl_cancel_p=0x7f02000c;
+        public static final int ic_bus=0x7f02000d;
+        public static final int ic_contacts=0x7f02000e;
+        public static final int ic_launcher=0x7f02000f;
+        public static final int ic_tax=0x7f020010;
+        public static final int ic_train=0x7f020011;
+        public static final int m_bus=0x7f020012;
+        public static final int m_favorite=0x7f020013;
+        public static final int m_more=0x7f020014;
+        public static final int m_station=0x7f020015;
+        public static final int maintab_toolbar_bg=0x7f020016;
+        public static final int refresh=0x7f020017;
+        public static final int search=0x7f020018;
+        public static final int tab_one_normal=0x7f020019;
+        public static final int tab_two_highlight=0x7f02001a;
+        public static final int telinput_normal=0x7f02001b;
+        public static final int telinput_perss=0x7f02001c;
+        public static final int top_title_bg=0x7f02001d;
     }
     public static final class id {
-        public static final int btnCollect=0x7f0b000b;
-        public static final int btnRefresh=0x7f0b0009;
-        public static final int btnSearch=0x7f0b0007;
-        public static final int btnSwitch=0x7f0b000a;
-        public static final int etSearch=0x7f0b0006;
-        public static final int flDataLoading=0x7f0b000c;
-        public static final int ibDeleteFavorite=0x7f0b001e;
-        public static final int img=0x7f0b001b;
-        public static final int listDataView=0x7f0b000d;
-        public static final int llAbout=0x7f0b0000;
-        public static final int llAboutContent=0x7f0b0002;
-        public static final int llBusContainer=0x7f0b0014;
-        public static final int llBusFavorite=0x7f0b0015;
-        public static final int llBusLine=0x7f0b0017;
-        public static final int llBusLineDetail=0x7f0b0018;
-        public static final int llBusMenu=0x7f0b0010;
-        public static final int llBusSearch=0x7f0b0005;
-        public static final int llBusStation=0x7f0b0019;
-        public static final int llBusStationDetail=0x7f0b001a;
-        public static final int llDataLoadingWait=0x7f0b000e;
-        public static final int llFavoriteBus=0x7f0b0011;
-        public static final int llFavoriteMessage=0x7f0b0016;
-        public static final int llFunctionButton=0x7f0b0008;
-        public static final int llHelp=0x7f0b0003;
-        public static final int llQueryBusLine=0x7f0b0012;
-        public static final int llSearchBusStation=0x7f0b0013;
-        public static final int menuAbout=0x7f0b002c;
-        public static final int menuExit=0x7f0b0029;
-        public static final int menuHelp=0x7f0b002b;
-        public static final int menuHome=0x7f0b002a;
-        public static final int title=0x7f0b001c;
-        public static final int tvAboutTitle=0x7f0b0001;
-        public static final int tvFavoriteDemo=0x7f0b001f;
-        public static final int tvFavoriteName=0x7f0b001d;
-        public static final int tvHelpContent=0x7f0b0004;
-        public static final int tvLineDirection=0x7f0b0021;
-        public static final int tvLineName=0x7f0b0020;
-        public static final int tvLoadingData=0x7f0b000f;
-        public static final int tvPassTime=0x7f0b0023;
-        public static final int tvStationDescription=0x7f0b0026;
-        public static final int tvStationDirection=0x7f0b0025;
-        public static final int tvStationLineId=0x7f0b0027;
-        public static final int tvStationName=0x7f0b0022;
-        public static final int tvStationSpacing=0x7f0b0028;
-        public static final int tvVehicleNo=0x7f0b0024;
+        public static final int btnClear=0x7f0a0011;
+        public static final int btnCollect=0x7f0a000b;
+        public static final int btnRefresh=0x7f0a0009;
+        public static final int btnSearch=0x7f0a0007;
+        public static final int btnSwitch=0x7f0a000a;
+        public static final int edtInput=0x7f0a0010;
+        public static final int etSearch=0x7f0a0006;
+        public static final int flDataLoading=0x7f0a000c;
+        public static final int ibDeleteFavorite=0x7f0a0021;
+        public static final int img=0x7f0a001e;
+        public static final int listDataView=0x7f0a000d;
+        public static final int llAbout=0x7f0a0000;
+        public static final int llAboutContent=0x7f0a0002;
+        public static final int llBusContainer=0x7f0a0013;
+        public static final int llBusFavorite=0x7f0a0018;
+        public static final int llBusLine=0x7f0a001a;
+        public static final int llBusLineDetail=0x7f0a001b;
+        public static final int llBusMenu=0x7f0a0012;
+        public static final int llBusSearch=0x7f0a0005;
+        public static final int llBusStation=0x7f0a001c;
+        public static final int llBusStationDetail=0x7f0a001d;
+        public static final int llDataLoadingWait=0x7f0a000e;
+        public static final int llFavoriteBus=0x7f0a0014;
+        public static final int llFavoriteMessage=0x7f0a0019;
+        public static final int llFunctionButton=0x7f0a0008;
+        public static final int llHelp=0x7f0a0003;
+        public static final int llQueryBusLine=0x7f0a0015;
+        public static final int llSearchBusStation=0x7f0a0016;
+        public static final int llSysMore=0x7f0a0017;
+        public static final int menuAbout=0x7f0a002f;
+        public static final int menuExit=0x7f0a002c;
+        public static final int menuHelp=0x7f0a002e;
+        public static final int menuHome=0x7f0a002d;
+        public static final int title=0x7f0a001f;
+        public static final int tvAboutTitle=0x7f0a0001;
+        public static final int tvFavoriteDemo=0x7f0a0022;
+        public static final int tvFavoriteName=0x7f0a0020;
+        public static final int tvHelpContent=0x7f0a0004;
+        public static final int tvLineDirection=0x7f0a0024;
+        public static final int tvLineName=0x7f0a0023;
+        public static final int tvLoadingData=0x7f0a000f;
+        public static final int tvPassTime=0x7f0a0026;
+        public static final int tvStationDescription=0x7f0a0029;
+        public static final int tvStationDirection=0x7f0a0028;
+        public static final int tvStationLineId=0x7f0a002a;
+        public static final int tvStationName=0x7f0a0025;
+        public static final int tvStationSpacing=0x7f0a002b;
+        public static final int tvVehicleNo=0x7f0a0027;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -129,120 +135,77 @@ public final class R {
         public static final int combussearchhead=0x7f030002;
         public static final int comfuncbutton=0x7f030003;
         public static final int comloadingdata=0x7f030004;
-        public static final int homebus=0x7f030005;
-        public static final int homebusfavorite=0x7f030006;
-        public static final int homebusline=0x7f030007;
-        public static final int homebuslinedetail=0x7f030008;
-        public static final int homebusstation=0x7f030009;
-        public static final int homebusstationdetail=0x7f03000a;
-        public static final int homemlife=0x7f03000b;
-        public static final int viewbusfavorite=0x7f03000c;
-        public static final int viewbusline=0x7f03000d;
-        public static final int viewbuslinedetail=0x7f03000e;
-        public static final int viewbusstation=0x7f03000f;
-        public static final int viewbusstationdetail=0x7f030010;
-        public static final int zoomin=0x7f030011;
-        public static final int zoomout=0x7f030012;
+        public static final int edit_delete=0x7f030005;
+        public static final int homebus=0x7f030006;
+        public static final int homebusfavorite=0x7f030007;
+        public static final int homebusline=0x7f030008;
+        public static final int homebuslinedetail=0x7f030009;
+        public static final int homebusstation=0x7f03000a;
+        public static final int homebusstationdetail=0x7f03000b;
+        public static final int homemlife=0x7f03000c;
+        public static final int viewbusfavorite=0x7f03000d;
+        public static final int viewbusline=0x7f03000e;
+        public static final int viewbuslinedetail=0x7f03000f;
+        public static final int viewbusstation=0x7f030010;
+        public static final int viewbusstationdetail=0x7f030011;
+        public static final int zoomin=0x7f030012;
+        public static final int zoomout=0x7f030013;
     }
     public static final class menu {
-        public static final int menu=0x7f0a0000;
+        public static final int menu=0x7f090000;
     }
     public static final class string {
-        public static final int action_bus_line_detail=0x7f060023;
-        public static final int action_bus_station_detail=0x7f060024;
+        public static final int action_bus_line_detail=0x7f060017;
+        public static final int action_bus_station_detail=0x7f060018;
         /**  菜单action 
  菜单action 
          */
-        public static final int action_menu_mlife_bus=0x7f060022;
-        public static final int app_name=0x7f06001d;
-        /**  查询线路内容正则表达式 
- 查询线路内容正则表达式 
-         */
-        public static final int busLineContentPattern=0x7f060005;
-        /**  线路详细正则表达式 
- 线路详细正则表达式 
-         */
-        public static final int busLineDetailPattern=0x7f060007;
-        /**  线路guid编号正则表达式 
- 线路guid编号正则表达式 
-         */
-        public static final int busLineGuidPattern=0x7f060008;
-        /**  线路号请求参数名 
- 线路号请求参数名 
-         */
-        public static final int busLinePostLineName=0x7f060002;
-        /**  线路1行正则表达式 
- 线路1行正则表达式 
-         */
-        public static final int busLineRowPattern=0x7f060006;
-        public static final int busLoadTestData=0x7f060000;
-        /**  查询内容标签ID 
- 查询内容标签ID 
-         */
-        public static final int busMainContentRow=0x7f060004;
-        /**  查询站台内容正则表达式 
- 查询站台内容正则表达式 
-         */
-        public static final int busStationContentPattern=0x7f060009;
-        /**  站台详细正则表达式 
- 站台详细正则表达式 
-         */
-        public static final int busStationDetailPattern=0x7f06000b;
-        /**  站台名请求参数名 
- 站台名请求参数名 
-         */
-        public static final int busStationPostStationName=0x7f060003;
-        /**  站台1行正则表达式 
- 站台1行正则表达式 
-         */
-        public static final int busStationRowPattern=0x7f06000a;
-        /**  请求编码方式 
- 请求编码方式 
-         */
-        public static final int httpRequestEncode=0x7f060001;
-        public static final int menu_bus_favorite=0x7f060027;
+        public static final int action_menu_mlife_bus=0x7f060016;
+        public static final int app_name=0x7f060011;
+        public static final int menu_bus_favorite=0x7f06001b;
         /**  公交查询tab菜单 
  公交查询tab菜单 
          */
-        public static final int menu_bus_line=0x7f060025;
-        public static final int menu_bus_station=0x7f060026;
+        public static final int menu_bus_line=0x7f060019;
+        public static final int menu_bus_more=0x7f06001c;
+        public static final int menu_bus_station=0x7f06001a;
         /**  程序主菜单 
  程序主菜单 
          */
-        public static final int menu_mlife_address=0x7f06001e;
-        public static final int menu_mlife_bus=0x7f06001f;
-        public static final int menu_mlife_tax=0x7f060020;
-        public static final int menu_mlife_train=0x7f060021;
-        public static final int menu_sys_about=0x7f06002b;
-        public static final int menu_sys_exit=0x7f060028;
-        public static final int menu_sys_help=0x7f06002a;
-        public static final int menu_sys_return=0x7f060029;
-        public static final int message_bus_query_failed=0x7f06002c;
-        public static final int message_mlife_about_copyright=0x7f06001a;
-        public static final int message_mlife_about_email=0x7f06001b;
-        public static final int message_mlife_about_im=0x7f06001c;
-        public static final int message_mlife_bus_detail=0x7f060031;
-        public static final int message_mlife_bus_favorite=0x7f06002f;
-        public static final int message_mlife_bus_help=0x7f060030;
-        public static final int message_mlife_bus_no_more_switch=0x7f06002e;
-        public static final int message_mlife_list_item_click=0x7f06002d;
-        public static final int mlife_bus_button_collect=0x7f06000e;
-        public static final int mlife_bus_button_refresh=0x7f06000d;
-        public static final int mlife_bus_button_search=0x7f06000c;
-        public static final int mlife_bus_button_switch=0x7f06000f;
-        public static final int mlife_bus_favorite_message=0x7f060019;
-        public static final int mlife_bus_favorite_time=0x7f060017;
-        public static final int mlife_bus_line_passTime=0x7f060018;
-        public static final int mlife_bus_line_text_hint=0x7f060011;
-        public static final int mlife_bus_loading=0x7f060012;
-        public static final int mlife_bus_refresh=0x7f060014;
-        public static final int mlife_bus_station_driection=0x7f060016;
-        public static final int mlife_bus_station_spacing=0x7f060015;
-        public static final int mlife_bus_station_text_hint=0x7f060010;
-        public static final int mlife_bus_switch=0x7f060013;
+        public static final int menu_mlife_address=0x7f060012;
+        public static final int menu_mlife_bus=0x7f060013;
+        public static final int menu_mlife_tax=0x7f060014;
+        public static final int menu_mlife_train=0x7f060015;
+        public static final int menu_sys_about=0x7f060020;
+        public static final int menu_sys_exit=0x7f06001d;
+        public static final int menu_sys_help=0x7f06001f;
+        public static final int menu_sys_return=0x7f06001e;
+        public static final int message_bus_query_failed=0x7f060021;
+        public static final int message_mlife_about_copyright=0x7f06000e;
+        public static final int message_mlife_about_email=0x7f06000f;
+        public static final int message_mlife_about_im=0x7f060010;
+        public static final int message_mlife_bus_detail=0x7f060026;
+        public static final int message_mlife_bus_favorite=0x7f060024;
+        public static final int message_mlife_bus_help=0x7f060025;
+        public static final int message_mlife_bus_no_more_switch=0x7f060023;
+        public static final int message_mlife_list_item_click=0x7f060022;
+        public static final int mlife_bus_button_collect=0x7f060002;
+        public static final int mlife_bus_button_refresh=0x7f060001;
+        public static final int mlife_bus_button_search=0x7f060000;
+        public static final int mlife_bus_button_switch=0x7f060003;
+        public static final int mlife_bus_favorite_message=0x7f06000d;
+        public static final int mlife_bus_favorite_time=0x7f06000b;
+        public static final int mlife_bus_line_passTime=0x7f06000c;
+        public static final int mlife_bus_line_text_hint=0x7f060005;
+        public static final int mlife_bus_loading=0x7f060006;
+        public static final int mlife_bus_refresh=0x7f060008;
+        public static final int mlife_bus_station_driection=0x7f06000a;
+        public static final int mlife_bus_station_spacing=0x7f060009;
+        public static final int mlife_bus_station_text_hint=0x7f060004;
+        public static final int mlife_bus_switch=0x7f060007;
     }
     public static final class style {
-        public static final int busInfoText=0x7f090001;
-        public static final int searchButton=0x7f090000;
+        public static final int busInfoText=0x7f080001;
+        public static final int searchButton=0x7f080000;
     }
 }
