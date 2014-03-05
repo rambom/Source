@@ -251,5 +251,4 @@
                 Response.Write("</table>");
             }
     %>
-    <hr style="color:#005EAC;height: 2px;" /><center><span style="color:blue">CopyRight © 2011 <a href="http://www.dcjet.com.cn">神州数码捷通科技有限公司 </a></span><br /><span style="color:blue">mail: <a href="mailto:qblong@dcjet.com.cn">qblong@dcjet.com.cn </a></span></center></body></html>
-</div>
+    <hr style="color:#005EAC;height: 2px;" /></div><center><span style="color:blue">CopyRight © 2011 <a href="http://www.dcjet.com.cn">神州数码捷通科技有限公司 </a></span><br /><span style="color:blue">mail: <a href="mailto:qblong@dcjet.com.cn">qblong@dcjet.com.cn </a></span></center></body></html>
