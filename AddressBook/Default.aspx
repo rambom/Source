@@ -10,6 +10,8 @@
 		function DialNumber(name,number) {if(!uexCall) {return;} if(confirm("打电话:"+name+"\n\n"+number))uexCall.call(number);}
 		window.uexOnload = function(){uexWidgetOne.cbError = function(inOpId,inErrorCode,inErrorDes){alert(inErrorDes);}}
 		function ChangeBackground(obj,style,count) {var targetObj=document.getElementById(obj);count=parseInt(count)+1;if(count<5) {if(style==1) {targetObj.style.backgroundColor="#FECCCB";style=0;}else {targetObj.style.backgroundColor="#FFFFFF";style=1;}setTimeout(function () {ChangeBackground(obj,style,count);},200);}}
+		function getCookie(NameOfCookie) {if (document.cookie.length > 0){begin = document.cookie.indexOf(NameOfCookie+"=");if (begin != -1){begin += NameOfCookie.length+1;end = document.cookie.indexOf(";", begin); if (end == -1) end = document.cookie.length;return unescape(document.cookie.substring(begin, end)); } } return null;}
+	    function useCookie(){var username=getCookie("username"); var password=getCookie("password"); if(username!=null){document.getElementById("txtSvnUser").value =username;}if(password!=null){document.getElementById("txtSvnPwd").value =password;}}   
 	</script>
     <script language="c#" runat="server">
         private System.Data.DataRow[] dataRows;
@@ -66,10 +68,17 @@
 
             if(1 == intFlag)
             {
+				strSvnPwd = string.Empty;
                 Response.Write(string.Format("<span>[{0}]</span>",strErrMsg));
             }
             else if(System.IO.File.Exists(strFilePath))
             {
+			    //record the user login info
+				Response.Cookies["username"].Value = strSvnUser;
+				Response.Cookies["username"].Expires=DateTime.MaxValue; 
+				Response.Cookies["password"].Value = strSvnPwd;
+				Response.Cookies["password"].Expires=DateTime.MaxValue; 
+				
                 updateTime = System.IO.File.GetLastWriteTime(strFilePath).ToString("yyyy/MM/dd HH:mm:ss");
                 Aspose.Cells.Workbook workbook = new Aspose.Cells.Workbook();
 
@@ -169,14 +178,14 @@
         }
     </script>
 </head>
-<body><div class="head"><div style="<%=blnDisplay ? "float:left":""%>">Address Book Of Dcjet<p style="width:210px;font-size:13px;margin-top:3px;color:#ccc;border-top:dotted 1px">[<%=updateTime %>]&nbsp;updated</p></div>
+<body onload="useCookie()"><div class="head"><div style="<%=blnDisplay ? "float:left":""%>">Address Book Of Dcjet<p style="width:210px;font-size:13px;margin-top:3px;color:#ccc;border-top:dotted 1px">[<%=updateTime %>]&nbsp;updated</p></div>
 <% 
 	if(blnDisplay){
 	Response.Write(string.Format("<div style=\"float:left\" id=\"dvApp\"><a target=\"_self\" href=\"{0}\"><img title=\"app for android\" alt=\"app for android\" src=\"resource/android.png\" /></a><a target=\"_self\" href=\"{1}\"><img alt=\"app for ios\" title=\"app for ios\" src=\"resource/apple.png\" /></a><a target=\"_self\" href=\"{2}\"><img style=\"margin-left:9px;\" title=\"app for windows phone\" alt=\"app for windows phone\" src=\"resource/win8.png\" /></a></div>",System.IO.File.Exists(Server.MapPath(androidAppFile)) ? androidAppFile:"#", System.IO.File.Exists(Server.MapPath(iosAppFile)) ? iosAppFile:"#",System.IO.File.Exists(Server.MapPath(wpAppFile)) ? wpAppFile:"#"));
 	}if(blnDisplay && !phoneAccessFlag){
 	Response.Write(string.Format("<div><img style=\"margin-left:20px;\" src=\"resource/qrcode.png\" title=\"catch by phone\"/></div>"));
 	}
-%></div>
+%></div><div style="clear:both;">
     <form id="form1" name="form1" method="post" action="<%=Request.RawUrl%>">
     <p>
         帐号(SVN用户名)<br />
@@ -243,3 +252,4 @@
             }
     %>
     <hr style="color:#005EAC;height: 2px;" /><center><span style="color:blue">CopyRight © 2011 <a href="http://www.dcjet.com.cn">神州数码捷通科技有限公司 </a></span><br /><span style="color:blue">mail: <a href="mailto:qblong@dcjet.com.cn">qblong@dcjet.com.cn </a></span></center></body></html>
+</div>
