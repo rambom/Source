@@ -14,6 +14,12 @@ namespace WhiteUiAutomation
     {
         static void Main(string[] args)
         {
+            test2();
+            Console.ReadKey();
+        }
+
+        static void test1()
+        {
             ProcessStartInfo process = new ProcessStartInfo(@"WindowsFormsApplication1.exe");
             Application app = Application.AttachOrLaunch(process);
             Window window = app.GetWindow("Form1", InitializeOption.NoCache);
@@ -30,6 +36,27 @@ namespace WhiteUiAutomation
             btnSearch.AndAutomationId("button1");
             Button button = window.Get<Button>(btnSearch);
             button.Click();
+        }
+
+        static void test2()
+        {
+            Application app = Application.Attach("CnEport.SuperPass.UIModule.Eport");
+            Window window = app.GetWindow(SearchCriteria.ByAutomationId("AppForm"), InitializeOption.NoCache);
+
+            SearchCriteria searchGName = SearchCriteria.ByClassName("WindowsForms10.EDIT.app.0.202c666");
+            searchGName.AndControlType(typeof(TextBox), WindowsFramework.WinForms);
+            //searchGName.AndAutomationId("GName");
+            //searchGName.AndByText("规格型号");
+            StringBuilder sb = new StringBuilder();
+            foreach (TextBox a in window.GetMultiple(searchGName))
+            {
+                sb.AppendFormat("name:{0} id:{1} helpText:{2}\n", a.Name, a.Id, a.HelpText);
+                if (a.HelpText.IndexOf("规格型号") > -1)
+                {
+                    a.Text = "testtest";
+                }
+            }
+            System.IO.File.WriteAllText("textbox.txt", sb.ToString());
         }
     }
 }
