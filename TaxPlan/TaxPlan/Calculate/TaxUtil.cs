@@ -152,12 +152,20 @@ namespace TaxPlan.Calculate
             //年终奖税
             var bonusTaxResult = CalculateBonusTax(bonus);
 
-            for (int i = bonusTaxResult.TaxRate.Level; i >= 1; i--)
+            int originTaxLevel = bonusTaxResult.TaxRate.Level;
+
+            for (int i = originTaxLevel; i >= 1; i--)
             {
                 var taxRate = GetTaxRateByLevel(i);
                 var bonusLess = taxRate.Max * 12 > bonus ? taxRate.Max * 12 - bonus : 0;
-
-                bonus = salary - taxLimit > bonusLess ? bonus + bonusLess : salary > taxLimit ? bonus + salary - taxLimit : bonus;
+                if (originTaxLevel == i)
+                {
+                    bonus = salary - taxLimit > bonusLess ? bonus + bonusLess : salary > taxLimit ? bonus + salary - taxLimit : bonus;
+                }
+                else
+                {
+                    bonus = taxRate.Max * 12;
+                }
 
                 salary = totalSalary - bonus;
 
