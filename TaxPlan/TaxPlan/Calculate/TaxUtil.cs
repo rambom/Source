@@ -110,12 +110,13 @@ namespace TaxPlan.Calculate
         }
 
         /// <summary>
-        /// 计算年终终和月薪最佳税率
+        /// 计算年终奖和月薪最佳税额
         /// </summary>
         /// <param name="salary"></param>
         /// <param name="bonus"></param>
+        /// <param name="dealStyle">分配方式(0:最优税额 1:年终奖优先)</param>
         /// <returns></returns>
-        public static IDictionary<string, TaxResult> CalculateBestTax(decimal salary, decimal bonus)
+        public static IDictionary<string, TaxResult> CalculateBestTax(decimal salary, decimal bonus, int dealStyle)
         {
             if (salary < taxLimit)
             {
@@ -125,7 +126,12 @@ namespace TaxPlan.Calculate
                 salary = newSalary;
             }
 
-            var bestBonusTaxResult = CalculateBestTaxOfBonus(salary, bonus);
+            if (dealStyle == 1)
+            {
+                return CalculateBestTaxOfBonus(salary, bonus, dealStyle);
+            }
+
+            var bestBonusTaxResult = CalculateBestTaxOfBonus(salary, bonus, dealStyle);
             var bestSalaryTaxResult = CalculateBestTaxOfSalary(salary, bonus);
 
             decimal bestBonusTaxSalaryTotal = 0;
@@ -144,7 +150,14 @@ namespace TaxPlan.Calculate
             return bestBonusTaxSalaryTotal >= bestSalaryTaxSalaryTotal ? bestBonusTaxResult : bestSalaryTaxResult;
         }
 
-        private static IDictionary<string, TaxResult> CalculateBestTaxOfBonus(decimal salary, decimal bonus)
+        /// <summary>
+        /// 计算年终奖最佳税额
+        /// </summary>
+        /// <param name="salary">月薪</param>
+        /// <param name="bonus">奖金</param>
+        /// <param name="dealStyle">分配方式(0:最优税额 1:年终奖优先)</param>
+        /// <returns></returns>
+        private static IDictionary<string, TaxResult> CalculateBestTaxOfBonus(decimal salary, decimal bonus, int dealStyle)
         {
             var totalSalary = salary + bonus;
             //月税
@@ -154,30 +167,51 @@ namespace TaxPlan.Calculate
 
             int originTaxLevel = bonusTaxResult.TaxRate.Level;
 
-            for (int i = originTaxLevel; i >= 1; i--)
+            if (1 == dealStyle)
             {
-                var taxRate = GetTaxRateByLevel(i);
-                var bonusLess = taxRate.Max * 12 > bonus ? taxRate.Max * 12 - bonus : 0;
-                if (originTaxLevel == i)
+                for (int i = originTaxLevel - 1; i >= 1 && originTaxLevel > 1; i--)
                 {
-                    bonus = salary - taxLimit > bonusLess ? bonus + bonusLess : salary > taxLimit ? bonus + salary - taxLimit : bonus;
+                    var taxRate = GetTaxRateByLevel(i);
+
+                    var newSalaryTaxResult = CalculateSlaryTax(bonus - taxRate.Max * 12 + salary);
+
+                    var newBonusTaxResult = CalculateBonusTax(taxRate.Max * 12);
+
+                    //税后收入更多
+                    if (newSalaryTaxResult.TaxSalary + newBonusTaxResult.TaxSalary > salaryTaxResult.TaxSalary + bonusTaxResult.TaxSalary)
+                    {
+                        salaryTaxResult = newSalaryTaxResult;
+                        bonusTaxResult = newBonusTaxResult;
+                    }
                 }
-                else
+            }
+            else
+            {
+                for (int i = originTaxLevel; i >= 1; i--)
                 {
-                    bonus = taxRate.Max * 12;
-                }
+                    var taxRate = GetTaxRateByLevel(i);
+                    var bonusLess = taxRate.Max * 12 > bonus ? taxRate.Max * 12 - bonus : 0;
+                    if (originTaxLevel == i)
+                    {
+                        bonus = salary - taxLimit > bonusLess ? bonus + bonusLess : salary > taxLimit ? bonus + salary - taxLimit : bonus;
+                    }
+                    else
+                    {
+                        bonus = taxRate.Max * 12;
+                    }
 
-                salary = totalSalary - bonus;
+                    salary = totalSalary - bonus;
 
-                var newSalaryTaxResult = CalculateSlaryTax(salary);
+                    var newSalaryTaxResult = CalculateSlaryTax(salary);
 
-                var newBonusTaxResult = CalculateBonusTax(bonus);
+                    var newBonusTaxResult = CalculateBonusTax(bonus);
 
-                //税后收入更多
-                if (newSalaryTaxResult.TaxSalary + newBonusTaxResult.TaxSalary > salaryTaxResult.TaxSalary + bonusTaxResult.TaxSalary)
-                {
-                    salaryTaxResult = newSalaryTaxResult;
-                    bonusTaxResult = newBonusTaxResult;
+                    //税后收入更多
+                    if (newSalaryTaxResult.TaxSalary + newBonusTaxResult.TaxSalary > salaryTaxResult.TaxSalary + bonusTaxResult.TaxSalary)
+                    {
+                        salaryTaxResult = newSalaryTaxResult;
+                        bonusTaxResult = newBonusTaxResult;
+                    }
                 }
             }
 
