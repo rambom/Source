@@ -20,33 +20,44 @@ namespace DealComment
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
+            //单行注释匹配
+            const string strPatternCommentLine = @"\/\/.*";
+            //多行注释匹配
+            const string strPatternCommentBlock = @"\/\*(.|[\r\n])*?\*/";
+            //空行匹配
+            const string strPatternBlank = @"\n[\s| ]*\r";
+            //去除region块
+            const string strRegionPattern = @"#[(region)|(endregion) ]{1,1}.*";
+
+            string[] arrFile = null;
             try
             {
-                string strPath = this.txtFile.Text;
-                if (File.Exists(strPath))
+                if (Directory.Exists(this.txtFile.Text))
                 {
-                    //单行注释匹配
-                    const string strPatternCommentLine = @"\/\/.*";
-                    //多行注释匹配
-                    const string strPatternCommentBlock = @"\/\*(.|[\r\n])*?\*/";
-                    //空行匹配
-                    const string strPatternBlank = @"\n[\s| ]*\r";
-                    //去除region块
-                    const string strRegionPattern = @"#[(region)|(endregion) ]{1,1}.*";
+                    arrFile = Directory.GetFiles(this.txtFile.Text, "*.*", SearchOption.AllDirectories);
+                }
+                else if (File.Exists(this.txtFile.Text))
+                {
+                    arrFile = new string[] { this.txtFile.Text };
+                }
 
-                    var strNewFilePath = Path.Combine(Path.GetDirectoryName(strPath), "new" + Path.GetFileName(strPath));
+                if (arrFile != null)
+                {
+                    foreach (var strPath in arrFile)
+                    {
+                        var strNewFilePath = Path.Combine(Path.GetDirectoryName(strPath), "new_" + Path.GetFileName(strPath));
 
-                    var strFileContent = File.ReadAllText(strPath, Encoding.UTF8);
-                    //去除单行注释
-                    strFileContent = Regex.Replace(strFileContent, strPatternCommentLine, "\r", RegexOptions.IgnoreCase);
-                    //去除多行注释
-                    strFileContent = Regex.Replace(strFileContent, strPatternCommentBlock, "\r", RegexOptions.IgnoreCase);
-                    //去除region块
-                    strFileContent = Regex.Replace(strFileContent, strRegionPattern, "\r", RegexOptions.IgnoreCase);
-                    //去空行
-                    strFileContent = Regex.Replace(strFileContent, strPatternBlank, "", RegexOptions.IgnoreCase).Trim();
-                    File.WriteAllText(strNewFilePath, strFileContent, Encoding.UTF8);
-
+                        var strFileContent = File.ReadAllText(strPath, Encoding.UTF8);
+                        //去除单行注释
+                        strFileContent = Regex.Replace(strFileContent, strPatternCommentLine, "\r", RegexOptions.IgnoreCase);
+                        //去除多行注释
+                        strFileContent = Regex.Replace(strFileContent, strPatternCommentBlock, "\r", RegexOptions.IgnoreCase);
+                        //去除region块
+                        strFileContent = Regex.Replace(strFileContent, strRegionPattern, "\r", RegexOptions.IgnoreCase);
+                        //去空行
+                        strFileContent = Regex.Replace(strFileContent, strPatternBlank, "", RegexOptions.IgnoreCase).Trim();
+                        File.WriteAllText(strNewFilePath, strFileContent, Encoding.UTF8);
+                    }
                     MessageBox.Show(@"Well Done!");
                 }
                 else
@@ -59,7 +70,7 @@ namespace DealComment
                 MessageBox.Show(@"System error:" + ex.Message);
             }
         }
-        
+
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
             this.txtFile.Text = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
