@@ -41,9 +41,9 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	protected Map<String, String> busLinePostParams = new HashMap<String, String>() {
 		{
 			put("__EVENTVALIDATION",
-					"/wEWAwLZi+7ABAL88Oh8AqX89aoKVJoV4zpUp4emFejE9/7pXtFgzQ3x2PHjaMh9lXvOycg=");
+					"/wEWAwLC6/qEDgL88Oh8AqX89aoKYSqjSGRgG6uatob0mRtv8UxGdjgHvVdIogSh29pwM0M=");
 			put("__VIEWSTATE",
-					"/wEPDwUJNDk3MjU2MjgyD2QWAmYPZBYCAgMPZBYCAgEPZBYCAgYPDxYCHgdWaXNpYmxlaGRkZNSq3M6FLiH9uhezHaCZYWZQT/9VbteYCJ3RkqvkKG66");
+					"/wEPDwUJNDk3MjU2MjgyD2QWAmYPZBYCAgMPZBYCAgEPZBYCAgYPDxYCHgdWaXNpYmxlaGRkZJjIjf9wec64bUk0awl8Fmu9ZpeMHtOkmveJctfcLWzs");
 			put("__VIEWSTATEGENERATOR","964EC381");
 			put("ctl00$MainContent$SearchLine", "");
 		}
@@ -55,9 +55,9 @@ public abstract class AbstractBusDao implements BusDaoFacade {
 	protected Map<String, String> busStationPostParams = new HashMap<String, String>() {
 		{
 			put("__EVENTVALIDATION",
-					"/wEWBQK6nJHcDALq+uyKCAKkmJj/DwL0+sTIDgLl5vKEDvindE2r3vtxq5WVToydjyw1GG2bBhxf5PKESZQkjG7q");
+					"/wEWBQL6h4/dDQLq+uyKCAKkmJj/DwL0+sTIDgLl5vKEDqsVOHq8YTmi6g8ib2Iu2KAp+9fekWJmmAKeMsAka2pX");
 			put("__VIEWSTATE",
-					"/wEPDwULLTE5ODM5MjcxNzlkZAarGhVuaOo6kWpg07frRDR8KfqjRjhW6hrk7U7NvYf5");
+					"/wEPDwULLTE5ODM5MjcxNzlkZJjyY5yRvvioUwya4OEEvzuY1eO2+x5v1FdJc7CCQmFT");
 			put("__VIEWSTATEGENERATOR","7BCA6D38");
 			put("ctl00$MainContent$SearchCode", "");
 		}
