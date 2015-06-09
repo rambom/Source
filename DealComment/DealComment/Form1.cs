@@ -30,11 +30,13 @@ namespace DealComment
             const string strRegionPattern = @"#[(region)|(endregion) ]{1,1}.*";
 
             string[] arrFile = null;
+            StringBuilder sbResult = new StringBuilder();
             try
             {
+
                 if (Directory.Exists(this.txtFile.Text))
                 {
-                    arrFile = Directory.GetFiles(this.txtFile.Text, "*.*", SearchOption.AllDirectories);
+                    arrFile = Directory.GetFiles(this.txtFile.Text, string.IsNullOrEmpty(txtExtension.Text) ? "*.*" : txtExtension.Text.Trim(), SearchOption.AllDirectories);
                 }
                 else if (File.Exists(this.txtFile.Text))
                 {
@@ -56,7 +58,13 @@ namespace DealComment
                         strFileContent = Regex.Replace(strFileContent, strRegionPattern, "\r", RegexOptions.IgnoreCase);
                         //去空行
                         strFileContent = Regex.Replace(strFileContent, strPatternBlank, "", RegexOptions.IgnoreCase).Trim();
-                        File.WriteAllText(strNewFilePath, strFileContent, Encoding.UTF8);
+
+                        if (!chkMerge.Checked)
+                            File.WriteAllText(strNewFilePath, strFileContent, Encoding.UTF8);
+                        else
+                        {
+                            File.AppendAllText(string.Format("DealComment-{0}.txt", DateTime.Now.ToString("yyyyMMddhhmmss")), strFileContent + "\n", Encoding.UTF8);
+                        }
                     }
                     MessageBox.Show(@"Well Done!");
                 }
