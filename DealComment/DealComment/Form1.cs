@@ -16,6 +16,7 @@ namespace DealComment
         public Form1()
         {
             InitializeComponent();
+            this.comboEncoding.SelectedIndex = 0;
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -31,6 +32,8 @@ namespace DealComment
 
             string[] arrFile = null;
             StringBuilder sbResult = new StringBuilder();
+            string encoding = this.comboEncoding.SelectedItem.ToString().ToLower();
+            encoding = "default".Equals(encoding) ? Encoding.Default.BodyName : encoding;
             try
             {
 
@@ -49,7 +52,7 @@ namespace DealComment
                     {
                         var strNewFilePath = Path.Combine(Path.GetDirectoryName(strPath), "new_" + Path.GetFileName(strPath));
 
-                        var strFileContent = File.ReadAllText(strPath, Encoding.UTF8);
+                        var strFileContent = File.ReadAllText(strPath, Encoding.GetEncoding(encoding));
                         //去除单行注释
                         strFileContent = Regex.Replace(strFileContent, strPatternCommentLine, "\r", RegexOptions.IgnoreCase);
                         //去除多行注释
