@@ -6,9 +6,6 @@
     <style type="text/css">.textbox{border:groove 1px #ccc}#dvApp img{margin-left:3px;border:0px;}body{font-size:12px;color:#005EAC;font-family:微软雅黑;}table{font-family:verdana,arial,sans-serif;font-size:15;line-height:1.9em;margin-top:10px;width:100%;}td{white-space:nowrap;cursor:pointer;color:#00a;text-align:center;padding:0.6em;}.head{height:50px;width:100%;background-color:#005EAC;color:#fff;font-size:18px;font-weight:bold;padding:5px 0px 1px 3px;}span{color:Red;font-size:13px;margin:0px 0px 5px 0px;}td div{padding:5px 0px 5px 0px;border-bottom:dashed 1px black}</style>
     <script language="javascript" type="text/javascript">
         function CheckInput() {var arr=new Array();document.getElementById('txtWhere').value.replace(/(^\s*)|(\s*$)/g, '');var strUser = document.getElementById('txtSvnUser').value.replace(/(^\s*)|(\s*$)/g, ''); var strPass = document.getElementById('txtSvnPwd').value.replace(/(^\s*)|(\s*$)/g, ''); var strWhere = document.getElementById('txtWhere').value.replace(/(^\s*)|(\s*$)/g, '');if (strUser == '')arr.push('txtSvnUser');else if(strPass == '')arr.push('txtSvnPwd');else if(strWhere == '')arr.push('txtWhere');if(arr.length==0){return true;}else{ChangeBackground(arr[0],1,0);return false;}}
-    	function SendEmail(name,email) {if(!uexEmail) {return;} var subject = ""; var content = ""; var attachMent = ""; if(confirm("发邮件:"+name+"\n\n"+email))uexEmail.open(email,subject,content,attachMent);}
-		function DialNumber(name,number) {if(!uexCall) {return;} if(confirm("打电话:"+name+"\n\n"+number))uexCall.call(number);}
-		window.uexOnload = function(){uexWidgetOne.cbError = function(inOpId,inErrorCode,inErrorDes){alert(inErrorDes);}}
 		function ChangeBackground(obj,style,count) {var targetObj=document.getElementById(obj);count=parseInt(count)+1;if(count<5) {if(style==1) {targetObj.style.backgroundColor="#FECCCB";style=0;}else {targetObj.style.backgroundColor="#FFFFFF";style=1;}setTimeout(function () {ChangeBackground(obj,style,count);},200);}}
 		function getCookie(NameOfCookie) {if (document.cookie.length > 0){begin = document.cookie.indexOf(NameOfCookie+"=");if (begin != -1){begin += NameOfCookie.length+1;end = document.cookie.indexOf(";", begin); if (end == -1) end = document.cookie.length;return unescape(document.cookie.substring(begin, end)); } } return null;}
 	    function useCookie(){var username=getCookie("username"); var password=getCookie("password"); if(username!=null){document.getElementById("txtSvnUser").value =username;}if(password!=null){document.getElementById("txtSvnPwd").value =password;}}   
@@ -62,7 +59,7 @@
             strWhere = strWhere.Trim();
             string strErrMsg;
 
-            string strUrl = @"http://svn.dcjet.com.cn:7000/svn/dcjet/98%20%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95/%E6%8D%B7%E9%80%9A%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95.xls";
+            string strUrl = @"http://svnjet.dcjet.com.cn:8088/svn/jet/98%20%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95/%E6%8D%B7%E9%80%9A%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95.xls";
 
             int intFlag = this.DownloadSvnFile(strSvnUser, strSvnPwd, strUrl, strFilePath, out strErrMsg);
 
@@ -216,9 +213,9 @@
 							string strValue = item.ToString().Trim();
 							if (string.IsNullOrEmpty(strValue)) continue;
 							if (item.ToString().IndexOf('@') >= 0)
-								builder.AppendFormat("<div onclick=\"SendEmail('{0}','{1}')\"><a href='mailto:{1}'>{1}</a></div>", row[0],strValue);
+								builder.AppendFormat("<div><a href='mailto:{1}'>{1}</a></div>", row[0],strValue);
 							else if(Regex.IsMatch(strValue,@"^\d+$"))
-								builder.AppendFormat("<div onclick=\"DialNumber('{0}','{1}')\">{1}</div>", row[0],strValue);
+								builder.AppendFormat("<div><a href='tel:{1}'>{1}</a></div>", row[0],strValue);
 							else
 								builder.AppendFormat("<div>{0}</div>", strValue);
 						}
@@ -230,9 +227,9 @@
 						{
 							string strValue = item.ToString().Trim();
 							if (item.ToString().IndexOf('@') >= 0)
-								builder.AppendFormat("<td onclick=\"SendEmail('{0}','{1}')\"><a href='mailto:{1}'>{1}</a></td>", row[0],strValue);
+								builder.AppendFormat("<td><a href='mailto:{1}'>{1}</a></td>", row[0],strValue);
 							else if(Regex.IsMatch(strValue,@"^\d+$"))
-								builder.AppendFormat("<td onclick=\"DialNumber('{0}','{1}')\">{1}</td>", row[0],strValue);
+								builder.AppendFormat("<td><a href='tel:{1}'>{1}</a></td>", row[0],strValue);
 							else
 								builder.AppendFormat("<td>{0}</td>", strValue);	
 						}

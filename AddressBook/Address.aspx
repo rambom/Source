@@ -5,9 +5,6 @@
     <style type="text/css">body{font-size:12px;color:#005EAC;font-family:微软雅黑;}table{font-family:verdana,arial,sans-serif;font-size:15;line-height:1.7em;margin-top:10px;width:100%;}td{cursor:pointer;color:#00a;text-align:center;padding:0.3em;}.head{background-color:#005EAC;color:#fff;font-size:18px;font-weight:bold;padding:10px;}span{color:Red;font-size:13px;margin:0px 0px 5px 0px;}</style>
     <script language="javascript" type="text/javascript">
         function CheckInput() {var strWhere = document.getElementById('hidDownload').value = '0'; document.getElementById('txtWhere').value.replace(/(^\s*)|(\s*$)/g, ''); var strUser = document.getElementById('txtSvnUser').value.replace(/(^\s*)|(\s*$)/g, ''); var strPass = document.getElementById('txtSvnPwd').value.replace(/(^\s*)|(\s*$)/g, ''); if (strUser == '' || strPass == '' || strWhere == '') return false; else return true; }
-    	function SendEmail(name,email) {if(!uexEmail) {return;} var subject = ""; var content = "testtest"; var attachMent = ""; if(confirm("发邮件给:"+name+"\n\r"+email))uexEmail.open(email,subject,content,attachMent);}
-		function DialNumber(name,number) {if(!uexCall) {return;} if(confirm("打电话给:"+name+"\n\r"+number))uexCall.call(number);}
-		window.uexOnload = function(){uexWidgetOne.cbError = function(inOpId,inErrorCode,inErrorDes){alert(inErrorDes);}}
 	</script>
     <script language="c#" runat="server">
         private System.Data.DataRow[] dataRows;
@@ -30,7 +27,7 @@
             strWhere = strWhere.Trim();
             string strErrMsg;
 
-            string strUrl = @"http://localhost:7000/svn/dcjet/98%20%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95/%E6%8D%B7%E9%80%9A%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95.xls";
+            string strUrl = @"http://svnjet.dcjet.com.cn:8088/svn/jet/98%20%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95/%E6%8D%B7%E9%80%9A%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95.xls";
 
             //addressBook file path
             string strFilePath = Server.MapPath("~/resource/DcjetAddressBook.xls");
@@ -170,9 +167,9 @@
                         string strValue = item.ToString().Trim();
                         {
                             if (item.ToString().IndexOf('@') >= 0)
-                                builder.AppendFormat("<td onclick=\"SendEmail('{0}','{1}')\"><a href='mailto:{1}'>{1}</a></td>", row[0],strValue);
+                                builder.AppendFormat("<td><a href='mailto:{1}'>{1}</a></td>", row[0],strValue);
                             else if(Regex.IsMatch(strValue,@"^\d+$"))
-								builder.AppendFormat("<td onclick=\"DialNumber('{0}','{1}')\">{1}</td>", row[0],strValue);
+								builder.AppendFormat("<td>{1}</td>", row[0],strValue);
 							else
                                 builder.AppendFormat("<td>{0}</td>", strValue);
                         }
