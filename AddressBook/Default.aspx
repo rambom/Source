@@ -6,7 +6,7 @@
     <style type="text/css">.textbox{border:groove 1px #ccc}#dvApp img{margin-left:3px;border:0px;}body{font-size:12px;color:#005EAC;font-family:微软雅黑;}table{font-family:verdana,arial,sans-serif;font-size:15;line-height:1.9em;margin-top:10px;width:100%;}td{white-space:nowrap;cursor:pointer;color:#00a;text-align:center;padding:0.6em;}.head{height:50px;width:100%;background-color:#005EAC;color:#fff;font-size:18px;font-weight:bold;padding:5px 0px 1px 3px;}span{color:Red;font-size:13px;margin:0px 0px 5px 0px;}td div{padding:5px 0px 5px 0px;border-bottom:dashed 1px black}</style>
     <script language="javascript" type="text/javascript">
         function CheckInput() {var arr=new Array();document.getElementById('txtWhere').value.replace(/(^\s*)|(\s*$)/g, '');var strUser = document.getElementById('txtSvnUser').value.replace(/(^\s*)|(\s*$)/g, ''); var strPass = document.getElementById('txtSvnPwd').value.replace(/(^\s*)|(\s*$)/g, ''); var strWhere = document.getElementById('txtWhere').value.replace(/(^\s*)|(\s*$)/g, '');if (strUser == '')arr.push('txtSvnUser');else if(strPass == '')arr.push('txtSvnPwd');else if(strWhere == '')arr.push('txtWhere');if(arr.length==0){return true;}else{ChangeBackground(arr[0],1,0);return false;}}
-		function ChangeBackground(obj,style,count) {var targetObj=document.getElementById(obj);count=parseInt(count)+1;if(count<5) {if(style==1) {targetObj.style.backgroundColor="#FECCCB";style=0;}else {targetObj.style.backgroundColor="#FFFFFF";style=1;}setTimeout(function () {ChangeBackground(obj,style,count);},200);}}
+        function ChangeBackground(obj,style,count) {var targetObj=document.getElementById(obj);count=parseInt(count)+1;if(count<5) {if(style==1) {targetObj.style.backgroundColor="#FECCCB";style=0;}else {targetObj.style.backgroundColor="#FFFFFF";style=1;}setTimeout(function () {ChangeBackground(obj,style,count);},200);}}
 		function getCookie(NameOfCookie) {if (document.cookie.length > 0){begin = document.cookie.indexOf(NameOfCookie+"=");if (begin != -1){begin += NameOfCookie.length+1;end = document.cookie.indexOf(";", begin); if (end == -1) end = document.cookie.length;return unescape(document.cookie.substring(begin, end)); } } return null;}
 	    function useCookie(){var username=getCookie("username"); var password=getCookie("password"); if(username!=null){document.getElementById("txtSvnUser").value =username;}if(password!=null){document.getElementById("txtSvnPwd").value =password;}}   
 	</script>
@@ -59,7 +59,7 @@
             strWhere = strWhere.Trim();
             string strErrMsg;
 
-            string strUrl = @"http://svnjet.dcjet.com.cn:8088/svn/jet/98%20%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95/%E6%8D%B7%E9%80%9A%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95.xls";
+            string strUrl = @"http://192.168.10.179:8088/svn/jet/98%20%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95/%E6%8D%B7%E9%80%9A%E5%85%AC%E5%8F%B8%E9%80%9A%E8%AE%AF%E5%BD%95.xls";
 
             int intFlag = this.DownloadSvnFile(strSvnUser, strSvnPwd, strUrl, strFilePath, out strErrMsg);
 
@@ -178,7 +178,7 @@
 <body onload="useCookie()"><div class="head"><div style="<%=blnDisplay ? "float:left":""%>">Address Book Of Dcjet<p style="width:210px;font-size:13px;margin-top:3px;color:#ccc;border-top:dotted 1px">[<%=updateTime %>]&nbsp;updated</p></div>
 <% 
 	if(blnDisplay){
-	Response.Write(string.Format("<div style=\"float:left\" id=\"dvApp\"><a target=\"_self\" href=\"{0}\"><img title=\"app for android\" alt=\"app for android\" src=\"resource/android.png\" /></a><a target=\"_self\" href=\"{1}\"><img alt=\"app for ios\" title=\"app for ios\" src=\"resource/apple.png\" /></a><a target=\"_self\" href=\"{2}\"><img style=\"margin-left:9px;\" title=\"app for windows phone\" alt=\"app for windows phone\" src=\"resource/win8.png\" /></a></div>",System.IO.File.Exists(Server.MapPath(androidAppFile)) ? androidAppFile:"#", System.IO.File.Exists(Server.MapPath(iosAppFile)) ? iosAppFile:"#",System.IO.File.Exists(Server.MapPath(wpAppFile)) ? wpAppFile:"#"));
+	Response.Write(string.Format("<div style=\"float:left\" id=\"dvApp\"><a target=\"_self\" href=\"{0}\"><img title=\"app for android\" alt=\"app for android\" src=\"resource/android.png\" /></a></div>",System.IO.File.Exists(Server.MapPath(androidAppFile)) ? androidAppFile:"#"));
 	}if(blnDisplay && !phoneAccessFlag){
 	Response.Write(string.Format("<div><img style=\"margin-left:20px;\" src=\"resource/qrcode.png\" title=\"catch by phone\"/></div>"));
 	}
