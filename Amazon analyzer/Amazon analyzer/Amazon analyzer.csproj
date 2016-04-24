@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Oracle.DataAccess">
-      <HintPath>bin\Debug\bin\Oracle.DataAccess.dll</HintPath>
+      <HintPath>lib\Oracle.DataAccess.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="db.sql" />
+    <Content Include="lib\Oracle.DataAccess.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
