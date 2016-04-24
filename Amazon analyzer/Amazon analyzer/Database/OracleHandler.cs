@@ -522,7 +522,7 @@ namespace Amazon_analyzer.Database
             }
 
             FileStream fileStream = new FileStream(strTxtFile, FileMode.Open, FileAccess.Read, FileShare.None);
-            StreamReader streamReader = new StreamReader(fileStream, Encoding.Default);
+            StreamReader streamReader = new StreamReader(fileStream, Encoding.UTF8);
 
             OracleBulkInsert oracleBulkInsert = new OracleBulkInsert(strConnectionString, strTableName, columnMapping, extraMapping, intStartRow, strRowNumberColumn, intBatchSize, intTimeOut);
 
