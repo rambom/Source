@@ -104,6 +104,9 @@
   <ItemGroup>
     <None Include="Resources\amazon_logo_500500._V323939215_.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="db.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
