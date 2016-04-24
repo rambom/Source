@@ -730,10 +730,10 @@ namespace Amazon_analyzer
 
                 bool flag = db.FastImportTextToDb(conn_string, 1000, timeout, path, head, delimited, table, columnMap, null, 2, "", out importRows, out spentTime, out strErr);
 
+                totalRows += importRows;
+                totalTime += spentTime;
                 if (flag)
                 {
-                    totalRows += importRows;
-                    totalTime += spentTime;
                     sender.ReportProgress(tabInx, string.Format("已处理{0}条数据，用时{1}秒", totalRows
                         , totalTime / 1000));
                 }
