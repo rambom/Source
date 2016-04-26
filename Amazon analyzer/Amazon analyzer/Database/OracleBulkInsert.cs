@@ -763,7 +763,7 @@ namespace Amazon_analyzer.Database
         private void SetValueFromTextFile(int rowIndex, IList<OracleParameter> parameters)
         {
             if (string.IsNullOrEmpty(this._textLine)) return;
-            string[] arryList = this._textLine.Split(this._delimited, StringSplitOptions.None);
+            string[] arryList = this._textLine.ToLower().Split(this._delimited, StringSplitOptions.None);
             foreach (var parameter in parameters)
             {
                 int intIndex = this._dicSourceColumnIndex[parameter.ParameterName];

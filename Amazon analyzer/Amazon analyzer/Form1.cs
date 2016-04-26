@@ -20,6 +20,7 @@ namespace Amazon_analyzer
         int timeout = int.Parse(ConfigurationManager.AppSettings["timeout"]);
         string asinUrl = ConfigurationManager.AppSettings["asin_url"];
         IDataBase db = new OracleHandler(conn_string);
+        int minimumWidth = 200;
         public Form1()
         {
             InitializeComponent();
@@ -103,48 +104,85 @@ namespace Amazon_analyzer
             this.dataGridView8.AutoGenerateColumns = false;
             this.dataGridView8.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView8.CellContentClick += dataGridView_CellContentClick;
+            foreach (DataGridViewColumn col in this.dataGridView1.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
+            foreach (DataGridViewColumn col in this.dataGridView2.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            } 
+            foreach (DataGridViewColumn col in this.dataGridView3.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
+            foreach (DataGridViewColumn col in this.dataGridView4.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
+            foreach (DataGridViewColumn col in this.dataGridView5.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
+            foreach (DataGridViewColumn col in this.dataGridView6.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
+            foreach (DataGridViewColumn col in this.dataGridView7.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
+            foreach (DataGridViewColumn col in this.dataGridView8.Columns)
+            {
+                col.MinimumWidth = minimumWidth;
+            }
         }
-
+        
+        public string getOrderBy(DataGridView grid)
+        {
+            if (grid.SortedColumn == null || grid.SortOrder == SortOrder.None) { return string.Empty; }
+            return string.Format("{0} {1}", grid.SortedColumn.DataPropertyName, grid.SortOrder == SortOrder.Descending ? "desc" : "asc");
+        }
         int pager1_EventPaging(Control.EventPagingArg e)
         {
 
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["top_asin_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox9.Text))
+            if (!string.IsNullOrEmpty(textBox9.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label9.Text);
-                param.Add(new DataParameter(label9.Text, DbType.String, 50, textBox9.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label9.Text.Trim());
+                param.Add(new DataParameter(label9.Text.Trim(), DbType.String, 50, textBox9.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox10.Text))
+            if (!string.IsNullOrEmpty(textBox10.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label10.Text);
-                param.Add(new DataParameter(label10.Text, DbType.String, 50, textBox10.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label10.Text.Trim());
+                param.Add(new DataParameter(label10.Text.Trim(), DbType.String, 50, textBox10.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox11.Text))
+            if (!string.IsNullOrEmpty(textBox11.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label11.Text);
-                param.Add(new DataParameter(label11.Text, DbType.String, 50, textBox11.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label11.Text.Trim());
+                param.Add(new DataParameter(label11.Text.Trim(), DbType.String, 50, textBox11.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox12.Text))
+            if (!string.IsNullOrEmpty(textBox12.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label12.Text);
-                param.Add(new DataParameter(label12.Text, DbType.String, 50, textBox12.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label12.Text.Trim());
+                param.Add(new DataParameter(label12.Text.Trim(), DbType.String, 50, textBox12.Text.Trim()));
             }
 
-            if (!string.IsNullOrEmpty(textBox43.Text))
+            if (!string.IsNullOrEmpty(textBox43.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label43.Text);
-                param.Add(new DataParameter(label43.Text, DbType.String, 50, textBox43.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label43.Text.Trim());
+                param.Add(new DataParameter(label43.Text.Trim(), DbType.String, 50, textBox43.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox42.Text))
+            if (!string.IsNullOrEmpty(textBox42.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label42.Text);
-                param.Add(new DataParameter(label42.Text, DbType.String, 50, textBox42.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label42.Text.Trim());
+                param.Add(new DataParameter(label42.Text.Trim(), DbType.String, 50, textBox42.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager1.PageCurrent - 1) * this.pager1.PageSize, (this.pager1.PageCurrent) * this.pager1.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView1), (this.pager1.PageCurrent - 1) * this.pager1.PageSize, (this.pager1.PageCurrent) * this.pager1.PageSize);
             this.dataGridView1.DataSource = dt;
             return (int)rowsCount;
         }
@@ -155,25 +193,25 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["top_seller_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox13.Text))
+            if (!string.IsNullOrEmpty(textBox13.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label13.Text);
-                param.Add(new DataParameter(label13.Text, DbType.String, 50, textBox13.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label13.Text.Trim());
+                param.Add(new DataParameter(label13.Text.Trim(), DbType.String, 50, textBox13.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox14.Text))
+            if (!string.IsNullOrEmpty(textBox14.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label14.Text);
-                param.Add(new DataParameter(label14.Text, DbType.String, 50, textBox14.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label14.Text.Trim());
+                param.Add(new DataParameter(label14.Text.Trim(), DbType.String, 50, textBox14.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox15.Text))
+            if (!string.IsNullOrEmpty(textBox15.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label15.Text);
-                param.Add(new DataParameter(label15.Text, DbType.String, 50, textBox15.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label15.Text.Trim());
+                param.Add(new DataParameter(label15.Text.Trim(), DbType.String, 50, textBox15.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox16.Text))
+            if (!string.IsNullOrEmpty(textBox16.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label16.Text);
-                param.Add(new DataParameter(label16.Text, DbType.String, 50, textBox16.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label16.Text.Trim());
+                param.Add(new DataParameter(label16.Text.Trim(), DbType.String, 50, textBox16.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
@@ -187,15 +225,15 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["top_brand_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox17.Text))
+            if (!string.IsNullOrEmpty(textBox17.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label17.Text);
-                param.Add(new DataParameter(label17.Text, DbType.String, 50, textBox17.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label17.Text.Trim());
+                param.Add(new DataParameter(label17.Text.Trim(), DbType.String, 50, textBox17.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox18.Text))
+            if (!string.IsNullOrEmpty(textBox18.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label18.Text);
-                param.Add(new DataParameter(label18.Text, DbType.String, 50, textBox18.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label18.Text.Trim());
+                param.Add(new DataParameter(label18.Text.Trim(), DbType.String, 50, textBox18.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
@@ -209,20 +247,20 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["top_subcategory_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox19.Text))
+            if (!string.IsNullOrEmpty(textBox19.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label19.Text);
-                param.Add(new DataParameter(label19.Text, DbType.String, 50, textBox19.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label19.Text.Trim());
+                param.Add(new DataParameter(label19.Text.Trim(), DbType.String, 50, textBox19.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox20.Text))
+            if (!string.IsNullOrEmpty(textBox20.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label20.Text);
-                param.Add(new DataParameter(label20.Text, DbType.String, 50, textBox20.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label20.Text.Trim());
+                param.Add(new DataParameter(label20.Text.Trim(), DbType.String, 50, textBox20.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox21.Text))
+            if (!string.IsNullOrEmpty(textBox21.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label21.Text);
-                param.Add(new DataParameter(label21.Text, DbType.String, 50, textBox21.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label21.Text.Trim());
+                param.Add(new DataParameter(label21.Text.Trim(), DbType.String, 50, textBox21.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
@@ -236,35 +274,35 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["mover_shaker_asin_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox22.Text))
+            if (!string.IsNullOrEmpty(textBox22.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label22.Text);
-                param.Add(new DataParameter(label22.Text, DbType.String, 50, textBox22.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label22.Text.Trim());
+                param.Add(new DataParameter(label22.Text.Trim(), DbType.String, 50, textBox22.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox23.Text))
+            if (!string.IsNullOrEmpty(textBox23.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label23.Text);
-                param.Add(new DataParameter(label23.Text, DbType.String, 50, textBox23.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label23.Text.Trim());
+                param.Add(new DataParameter(label23.Text.Trim(), DbType.String, 50, textBox23.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox24.Text))
+            if (!string.IsNullOrEmpty(textBox24.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label24.Text);
-                param.Add(new DataParameter(label24.Text, DbType.String, 50, textBox24.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label24.Text.Trim());
+                param.Add(new DataParameter(label24.Text.Trim(), DbType.String, 50, textBox24.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox25.Text))
+            if (!string.IsNullOrEmpty(textBox25.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label25.Text);
-                param.Add(new DataParameter(label25.Text, DbType.String, 50, textBox25.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label25.Text.Trim());
+                param.Add(new DataParameter(label25.Text.Trim(), DbType.String, 50, textBox25.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox26.Text))
+            if (!string.IsNullOrEmpty(textBox26.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label26.Text);
-                param.Add(new DataParameter(label26.Text, DbType.String, 50, textBox26.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label26.Text.Trim());
+                param.Add(new DataParameter(label26.Text.Trim(), DbType.String, 50, textBox26.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox27.Text))
+            if (!string.IsNullOrEmpty(textBox27.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label27.Text);
-                param.Add(new DataParameter(label27.Text, DbType.String, 50, textBox27.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label27.Text.Trim());
+                param.Add(new DataParameter(label27.Text.Trim(), DbType.String, 50, textBox27.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
@@ -278,15 +316,15 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["mover_shaker_brand_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox28.Text))
+            if (!string.IsNullOrEmpty(textBox28.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label28.Text);
-                param.Add(new DataParameter(label28.Text, DbType.String, 50, textBox28.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label28.Text.Trim());
+                param.Add(new DataParameter(label28.Text.Trim(), DbType.String, 50, textBox28.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox29.Text))
+            if (!string.IsNullOrEmpty(textBox29.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label29.Text);
-                param.Add(new DataParameter(label29.Text, DbType.String, 50, textBox29.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label29.Text.Trim());
+                param.Add(new DataParameter(label29.Text.Trim(), DbType.String, 50, textBox29.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
@@ -300,35 +338,35 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["top_asin_with_limited_match_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox31.Text))
+            if (!string.IsNullOrEmpty(textBox31.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label31.Text);
-                param.Add(new DataParameter(label31.Text, DbType.String, 50, textBox31.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label31.Text.Trim());
+                param.Add(new DataParameter(label31.Text.Trim(), DbType.String, 50, textBox31.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox32.Text))
+            if (!string.IsNullOrEmpty(textBox32.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label32.Text);
-                param.Add(new DataParameter(label32.Text, DbType.String, 50, textBox32.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label32.Text.Trim());
+                param.Add(new DataParameter(label32.Text.Trim(), DbType.String, 50, textBox32.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox34.Text))
+            if (!string.IsNullOrEmpty(textBox34.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label34.Text);
-                param.Add(new DataParameter(label34.Text, DbType.String, 50, textBox34.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label34.Text.Trim());
+                param.Add(new DataParameter(label34.Text.Trim(), DbType.String, 50, textBox34.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox33.Text))
+            if (!string.IsNullOrEmpty(textBox33.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label33.Text);
-                param.Add(new DataParameter(label33.Text, DbType.String, 50, textBox33.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label33.Text.Trim());
+                param.Add(new DataParameter(label33.Text.Trim(), DbType.String, 50, textBox33.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox35.Text))
+            if (!string.IsNullOrEmpty(textBox35.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label35.Text);
-                param.Add(new DataParameter(label35.Text, DbType.String, 50, textBox35.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label35.Text.Trim());
+                param.Add(new DataParameter(label35.Text.Trim(), DbType.String, 50, textBox35.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox30.Text))
+            if (!string.IsNullOrEmpty(textBox30.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label30.Text);
-                param.Add(new DataParameter(label30.Text, DbType.String, 50, textBox30.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label30.Text.Trim());
+                param.Add(new DataParameter(label30.Text.Trim(), DbType.String, 50, textBox30.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
@@ -342,35 +380,35 @@ namespace Amazon_analyzer
             string strCondition = "";
             string tableName = ConfigurationManager.AppSettings["top_conversion_rate_table"];
             List<DataParameter> param = new List<DataParameter>();
-            if (!string.IsNullOrEmpty(textBox37.Text))
+            if (!string.IsNullOrEmpty(textBox37.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label37.Text);
-                param.Add(new DataParameter(label37.Text, DbType.String, 50, textBox37.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label37.Text.Trim());
+                param.Add(new DataParameter(label37.Text.Trim(), DbType.String, 50, textBox37.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox38.Text))
+            if (!string.IsNullOrEmpty(textBox38.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label38.Text);
-                param.Add(new DataParameter(label38.Text, DbType.String, 50, textBox38.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label38.Text.Trim());
+                param.Add(new DataParameter(label38.Text.Trim(), DbType.String, 50, textBox38.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox40.Text))
+            if (!string.IsNullOrEmpty(textBox40.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label40.Text);
-                param.Add(new DataParameter(label40.Text, DbType.String, 50, textBox40.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label40.Text.Trim());
+                param.Add(new DataParameter(label40.Text.Trim(), DbType.String, 50, textBox40.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox39.Text))
+            if (!string.IsNullOrEmpty(textBox39.Text.Trim()))
             {
-                strCondition += string.Format(" and {0}=:{0}", this.label39.Text);
-                param.Add(new DataParameter(label39.Text, DbType.String, 50, textBox39.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label39.Text.Trim());
+                param.Add(new DataParameter(label39.Text.Trim(), DbType.String, 50, textBox39.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox41.Text))
+            if (!string.IsNullOrEmpty(textBox41.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label41.Text);
-                param.Add(new DataParameter(label41.Text, DbType.String, 50, textBox41.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label41.Text.Trim());
+                param.Add(new DataParameter(label41.Text.Trim(), DbType.String, 50, textBox41.Text.Trim()));
             }
-            if (!string.IsNullOrEmpty(textBox36.Text))
+            if (!string.IsNullOrEmpty(textBox36.Text.Trim()))
             {
-                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label36.Text);
-                param.Add(new DataParameter(label36.Text, DbType.String, 50, textBox36.Text.Trim()));
+                strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label36.Text.Trim());
+                param.Add(new DataParameter(label36.Text.Trim(), DbType.String, 50, textBox36.Text.Trim()));
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);

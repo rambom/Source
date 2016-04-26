@@ -647,7 +647,7 @@ namespace Amazon_analyzer.Database
 
             if (!string.IsNullOrEmpty(pagedOrderColumns))
             {
-                pagedOrderColumns += "order by " + pagedOrderColumns + "";
+                pagedOrderColumns = " order by " + pagedOrderColumns + "";
             }
             string strReturn = "select * from (select temp.*,rownum as num from " +
                                 " ( " +

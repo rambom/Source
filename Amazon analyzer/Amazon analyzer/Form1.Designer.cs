@@ -40,6 +40,22 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MARKETPLACE_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GL_PRODUCT_GROUP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CATEGORY_DESC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GL_PRODUCT_GROUP_DESC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBCATEGORY_DESC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ASIN = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.ITEM_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BRAND_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORDERED_GMS_USD_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FBA_ORDERED_GMS_USD_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORDERED_UNITS_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FBA_ORDERED_UNITS_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GMS_RANK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GLANCE_VIEW_COUNT_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNITS_CONVERSION_RATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
             this.textBox42 = new System.Windows.Forms.TextBox();
@@ -149,6 +165,22 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORDERED_UNITS_LAST4WK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FBA_ORDERED_UNITS_LAST4WK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.textBox27 = new System.Windows.Forms.TextBox();
@@ -195,6 +227,23 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox30 = new System.Windows.Forms.TextBox();
@@ -216,6 +265,22 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox36 = new System.Windows.Forms.TextBox();
@@ -244,22 +309,6 @@
             this.backgroundWorker6 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker7 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker8 = new System.ComponentModel.BackgroundWorker();
-            this.MARKETPLACE_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GL_PRODUCT_GROUP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORY_DESC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GL_PRODUCT_GROUP_DESC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBCATEGORY_DESC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ASIN = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.ITEM_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BRAND_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORDERED_GMS_USD_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FBA_ORDERED_GMS_USD_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORDERED_UNITS_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FBA_ORDERED_UNITS_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GMS_RANK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GLANCE_VIEW_COUNT_TTM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UNITS_CONVERSION_RATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pager1 = new Amazon_analyzer.Control.Pager();
             this.pager2 = new Amazon_analyzer.Control.Pager();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -281,55 +330,6 @@
             this.object_9a42c604_22f5_44d2_bd85_897b96082b7a = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigator6 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORDERED_UNITS_LAST4WK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FBA_ORDERED_UNITS_LAST4WK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -421,6 +421,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
@@ -442,12 +443,159 @@
             this.GMS_RANK,
             this.GLANCE_VIEW_COUNT_TTM,
             this.UNITS_CONVERSION_RATE});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 258);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 253);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1254, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(1262, 425);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // MARKETPLACE_ID
+            // 
+            this.MARKETPLACE_ID.DataPropertyName = "MARKETPLACE_ID";
+            this.MARKETPLACE_ID.FillWeight = 74.60815F;
+            this.MARKETPLACE_ID.HeaderText = "MARKETPLACE_ID";
+            this.MARKETPLACE_ID.Name = "MARKETPLACE_ID";
+            this.MARKETPLACE_ID.ReadOnly = true;
+            this.MARKETPLACE_ID.Width = 130;
+            // 
+            // GL_PRODUCT_GROUP
+            // 
+            this.GL_PRODUCT_GROUP.DataPropertyName = "GL_PRODUCT_GROUP";
+            this.GL_PRODUCT_GROUP.FillWeight = 75.92999F;
+            this.GL_PRODUCT_GROUP.HeaderText = "GL_PRODUCT_GROUP";
+            this.GL_PRODUCT_GROUP.Name = "GL_PRODUCT_GROUP";
+            this.GL_PRODUCT_GROUP.ReadOnly = true;
+            this.GL_PRODUCT_GROUP.Width = 144;
+            // 
+            // CATEGORY_DESC
+            // 
+            this.CATEGORY_DESC.DataPropertyName = "CATEGORY_DESC";
+            this.CATEGORY_DESC.FillWeight = 52.36113F;
+            this.CATEGORY_DESC.HeaderText = "CATEGORY_DESC";
+            this.CATEGORY_DESC.Name = "CATEGORY_DESC";
+            this.CATEGORY_DESC.ReadOnly = true;
+            this.CATEGORY_DESC.Width = 123;
+            // 
+            // GL_PRODUCT_GROUP_DESC
+            // 
+            this.GL_PRODUCT_GROUP_DESC.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
+            this.GL_PRODUCT_GROUP_DESC.HeaderText = "GL_PRODUCT_GROUP_DESC";
+            this.GL_PRODUCT_GROUP_DESC.Name = "GL_PRODUCT_GROUP_DESC";
+            this.GL_PRODUCT_GROUP_DESC.ReadOnly = true;
+            this.GL_PRODUCT_GROUP_DESC.Width = 179;
+            // 
+            // SUBCATEGORY_DESC
+            // 
+            this.SUBCATEGORY_DESC.DataPropertyName = "SUBCATEGORY_DESC";
+            this.SUBCATEGORY_DESC.FillWeight = 56.53527F;
+            this.SUBCATEGORY_DESC.HeaderText = "SUBCATEGORY_DESC";
+            this.SUBCATEGORY_DESC.Name = "SUBCATEGORY_DESC";
+            this.SUBCATEGORY_DESC.ReadOnly = true;
+            this.SUBCATEGORY_DESC.Width = 144;
+            // 
+            // ASIN
+            // 
+            this.ASIN.ActiveLinkColor = System.Drawing.Color.White;
+            this.ASIN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ASIN.DataPropertyName = "ASIN";
+            this.ASIN.FillWeight = 21.41263F;
+            this.ASIN.HeaderText = "ASIN";
+            this.ASIN.Name = "ASIN";
+            this.ASIN.ReadOnly = true;
+            this.ASIN.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ASIN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ASIN.Width = 60;
+            // 
+            // ITEM_NAME
+            // 
+            this.ITEM_NAME.DataPropertyName = "ITEM_NAME";
+            this.ITEM_NAME.FillWeight = 32.617F;
+            this.ITEM_NAME.HeaderText = "ITEM_NAME";
+            this.ITEM_NAME.Name = "ITEM_NAME";
+            this.ITEM_NAME.ReadOnly = true;
+            this.ITEM_NAME.Width = 95;
+            // 
+            // BRAND_NAME
+            // 
+            this.BRAND_NAME.DataPropertyName = "BRAND_NAME";
+            this.BRAND_NAME.FillWeight = 32.92808F;
+            this.BRAND_NAME.HeaderText = "BRAND_NAME";
+            this.BRAND_NAME.Name = "BRAND_NAME";
+            this.BRAND_NAME.ReadOnly = true;
+            this.BRAND_NAME.Width = 102;
+            // 
+            // ORDERED_GMS_USD_TTM
+            // 
+            this.ORDERED_GMS_USD_TTM.DataPropertyName = "ORDERED_GMS_USD_TTM";
+            this.ORDERED_GMS_USD_TTM.FillWeight = 49.86136F;
+            this.ORDERED_GMS_USD_TTM.HeaderText = "ORDERED_GMS_USD_TTM";
+            this.ORDERED_GMS_USD_TTM.Name = "ORDERED_GMS_USD_TTM";
+            this.ORDERED_GMS_USD_TTM.ReadOnly = true;
+            this.ORDERED_GMS_USD_TTM.Width = 165;
+            // 
+            // FBA_ORDERED_GMS_USD_TTM
+            // 
+            this.FBA_ORDERED_GMS_USD_TTM.DataPropertyName = "FBA_ORDERED_GMS_USD_TTM";
+            this.FBA_ORDERED_GMS_USD_TTM.FillWeight = 52.31409F;
+            this.FBA_ORDERED_GMS_USD_TTM.HeaderText = "FBA_ORDERED_GMS_USD_TTM";
+            this.FBA_ORDERED_GMS_USD_TTM.Name = "FBA_ORDERED_GMS_USD_TTM";
+            this.FBA_ORDERED_GMS_USD_TTM.ReadOnly = true;
+            this.FBA_ORDERED_GMS_USD_TTM.Width = 193;
+            // 
+            // ORDERED_UNITS_TTM
+            // 
+            this.ORDERED_UNITS_TTM.DataPropertyName = "ORDERED_UNITS_TTM";
+            this.ORDERED_UNITS_TTM.FillWeight = 35.99643F;
+            this.ORDERED_UNITS_TTM.HeaderText = "ORDERED_UNITS_TTM";
+            this.ORDERED_UNITS_TTM.Name = "ORDERED_UNITS_TTM";
+            this.ORDERED_UNITS_TTM.ReadOnly = true;
+            this.ORDERED_UNITS_TTM.Width = 151;
+            // 
+            // FBA_ORDERED_UNITS_TTM
+            // 
+            this.FBA_ORDERED_UNITS_TTM.DataPropertyName = "FBA_ORDERED_UNITS_TTM";
+            this.FBA_ORDERED_UNITS_TTM.FillWeight = 38.64383F;
+            this.FBA_ORDERED_UNITS_TTM.HeaderText = "FBA_ORDERED_UNITS_TTM";
+            this.FBA_ORDERED_UNITS_TTM.Name = "FBA_ORDERED_UNITS_TTM";
+            this.FBA_ORDERED_UNITS_TTM.ReadOnly = true;
+            this.FBA_ORDERED_UNITS_TTM.Width = 179;
+            // 
+            // ASP
+            // 
+            this.ASP.DataPropertyName = "ASP";
+            this.ASP.FillWeight = 10.16696F;
+            this.ASP.HeaderText = "ASP";
+            this.ASP.Name = "ASP";
+            this.ASP.ReadOnly = true;
+            this.ASP.Width = 53;
+            // 
+            // GMS_RANK
+            // 
+            this.GMS_RANK.DataPropertyName = "GMS_RANK";
+            this.GMS_RANK.FillWeight = 16.32583F;
+            this.GMS_RANK.HeaderText = "GMS_RANK";
+            this.GMS_RANK.Name = "GMS_RANK";
+            this.GMS_RANK.ReadOnly = true;
+            this.GMS_RANK.Width = 88;
+            // 
+            // GLANCE_VIEW_COUNT_TTM
+            // 
+            this.GLANCE_VIEW_COUNT_TTM.DataPropertyName = "GLANCE_VIEW_COUNT_TTM";
+            this.GLANCE_VIEW_COUNT_TTM.FillWeight = 31.4195F;
+            this.GLANCE_VIEW_COUNT_TTM.HeaderText = "GLANCE_VIEW_COUNT_TTM";
+            this.GLANCE_VIEW_COUNT_TTM.Name = "GLANCE_VIEW_COUNT_TTM";
+            this.GLANCE_VIEW_COUNT_TTM.ReadOnly = true;
+            this.GLANCE_VIEW_COUNT_TTM.Width = 179;
+            // 
+            // UNITS_CONVERSION_RATE
+            // 
+            this.UNITS_CONVERSION_RATE.DataPropertyName = "UNITS_CONVERSION_RATE";
+            this.UNITS_CONVERSION_RATE.FillWeight = 28.01687F;
+            this.UNITS_CONVERSION_RATE.HeaderText = "UNITS_CONVERSION_RATE";
+            this.UNITS_CONVERSION_RATE.Name = "UNITS_CONVERSION_RATE";
+            this.UNITS_CONVERSION_RATE.ReadOnly = true;
+            this.UNITS_CONVERSION_RATE.Width = 179;
             // 
             // groupBox9
             // 
@@ -1565,6 +1713,151 @@
             this.dataGridView5.Size = new System.Drawing.Size(1254, 425);
             this.dataGridView5.TabIndex = 8;
             // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "MARKETPLACE_ID";
+            this.dataGridViewTextBoxColumn10.FillWeight = 74.60815F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "MARKETPLACE_ID";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "GL_PRODUCT_GROUP";
+            this.dataGridViewTextBoxColumn11.FillWeight = 75.92999F;
+            this.dataGridViewTextBoxColumn11.HeaderText = "GL_PRODUCT_GROUP";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 144;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
+            this.dataGridViewTextBoxColumn25.HeaderText = "GL_PRODUCT_GROUP_DESC";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn25.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "CATEGORY_DESC";
+            this.dataGridViewTextBoxColumn12.FillWeight = 52.36113F;
+            this.dataGridViewTextBoxColumn12.HeaderText = "CATEGORY_DESC";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 123;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "SUBCATEGORY_DESC";
+            this.dataGridViewTextBoxColumn26.FillWeight = 56.53527F;
+            this.dataGridViewTextBoxColumn26.HeaderText = "SUBCATEGORY_DESC";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn26.Width = 144;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.ActiveLinkColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "ASIN";
+            this.dataGridViewTextBoxColumn27.FillWeight = 21.41263F;
+            this.dataGridViewTextBoxColumn27.HeaderText = "ASIN";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            this.dataGridViewTextBoxColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn27.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn28.FillWeight = 32.617F;
+            this.dataGridViewTextBoxColumn28.HeaderText = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            this.dataGridViewTextBoxColumn28.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "BRAND_NAME";
+            this.dataGridViewTextBoxColumn29.FillWeight = 32.92808F;
+            this.dataGridViewTextBoxColumn29.HeaderText = "BRAND_NAME";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.dataGridViewTextBoxColumn29.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "ORDERED_GMS_USD_LAST4WK";
+            this.dataGridViewTextBoxColumn30.FillWeight = 49.86136F;
+            this.dataGridViewTextBoxColumn30.HeaderText = "ORDERED_GMS_USD_LAST4WK";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            this.dataGridViewTextBoxColumn30.Width = 193;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "INCREASED_GMS_LAST4WK";
+            this.dataGridViewTextBoxColumn31.FillWeight = 52.31409F;
+            this.dataGridViewTextBoxColumn31.HeaderText = "INCREASED_GMS_LAST4WK";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.dataGridViewTextBoxColumn31.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "INCREASED_PERCENT";
+            this.dataGridViewTextBoxColumn32.FillWeight = 35.99643F;
+            this.dataGridViewTextBoxColumn32.HeaderText = "INCREASED_PERCENT";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.Width = 151;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "FBA_ORDERED_GMS_USD_LAST4WK";
+            this.dataGridViewTextBoxColumn33.FillWeight = 38.64383F;
+            this.dataGridViewTextBoxColumn33.HeaderText = "FBA_ORDERED_GMS_USD_LAST4WK";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.Width = 221;
+            // 
+            // ORDERED_UNITS_LAST4WK
+            // 
+            this.ORDERED_UNITS_LAST4WK.DataPropertyName = "ORDERED_UNITS_LAST4WK";
+            this.ORDERED_UNITS_LAST4WK.HeaderText = "ORDERED_UNITS_LAST4WK";
+            this.ORDERED_UNITS_LAST4WK.Name = "ORDERED_UNITS_LAST4WK";
+            this.ORDERED_UNITS_LAST4WK.ReadOnly = true;
+            this.ORDERED_UNITS_LAST4WK.Width = 179;
+            // 
+            // FBA_ORDERED_UNITS_LAST4WK
+            // 
+            this.FBA_ORDERED_UNITS_LAST4WK.DataPropertyName = "FBA_ORDERED_UNITS_LAST4WK";
+            this.FBA_ORDERED_UNITS_LAST4WK.HeaderText = "FBA_ORDERED_UNITS_LAST4WK";
+            this.FBA_ORDERED_UNITS_LAST4WK.Name = "FBA_ORDERED_UNITS_LAST4WK";
+            this.FBA_ORDERED_UNITS_LAST4WK.ReadOnly = true;
+            this.FBA_ORDERED_UNITS_LAST4WK.Width = 207;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "ASP";
+            this.dataGridViewTextBoxColumn34.FillWeight = 10.16696F;
+            this.dataGridViewTextBoxColumn34.HeaderText = "ASP";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            this.dataGridViewTextBoxColumn34.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "INCREASED_GMS_RANK";
+            this.dataGridViewTextBoxColumn37.FillWeight = 28.01687F;
+            this.dataGridViewTextBoxColumn37.HeaderText = "INCREASED_GMS_RANK";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            this.dataGridViewTextBoxColumn37.Width = 158;
+            // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.label27);
@@ -2050,6 +2343,159 @@
             this.dataGridView7.Size = new System.Drawing.Size(1254, 425);
             this.dataGridView7.TabIndex = 11;
             // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "MARKETPLACE_ID";
+            this.dataGridViewTextBoxColumn46.FillWeight = 74.60815F;
+            this.dataGridViewTextBoxColumn46.HeaderText = "MARKETPLACE_ID";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            this.dataGridViewTextBoxColumn46.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "GL_PRODUCT_GROUP";
+            this.dataGridViewTextBoxColumn47.FillWeight = 75.92999F;
+            this.dataGridViewTextBoxColumn47.HeaderText = "GL_PRODUCT_GROUP";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Width = 144;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
+            this.dataGridViewTextBoxColumn48.HeaderText = "GL_PRODUCT_GROUP_DESC";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            this.dataGridViewTextBoxColumn48.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "CATEGORY_DESC";
+            this.dataGridViewTextBoxColumn49.FillWeight = 52.36113F;
+            this.dataGridViewTextBoxColumn49.HeaderText = "CATEGORY_DESC";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.Width = 123;
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "SUBCATEGORY_DESC";
+            this.dataGridViewTextBoxColumn50.FillWeight = 56.53527F;
+            this.dataGridViewTextBoxColumn50.HeaderText = "SUBCATEGORY_DESC";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
+            this.dataGridViewTextBoxColumn50.Width = 144;
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.ActiveLinkColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn51.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "ASIN";
+            this.dataGridViewTextBoxColumn51.FillWeight = 21.41263F;
+            this.dataGridViewTextBoxColumn51.HeaderText = "ASIN";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            this.dataGridViewTextBoxColumn51.ReadOnly = true;
+            this.dataGridViewTextBoxColumn51.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn51.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn51.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.DataPropertyName = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn52.FillWeight = 32.617F;
+            this.dataGridViewTextBoxColumn52.HeaderText = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            this.dataGridViewTextBoxColumn52.ReadOnly = true;
+            this.dataGridViewTextBoxColumn52.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.DataPropertyName = "BRAND_NAME";
+            this.dataGridViewTextBoxColumn53.FillWeight = 32.92808F;
+            this.dataGridViewTextBoxColumn53.HeaderText = "BRAND_NAME";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            this.dataGridViewTextBoxColumn53.ReadOnly = true;
+            this.dataGridViewTextBoxColumn53.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            this.dataGridViewTextBoxColumn54.DataPropertyName = "OFFER_COUNT";
+            this.dataGridViewTextBoxColumn54.FillWeight = 49.86136F;
+            this.dataGridViewTextBoxColumn54.HeaderText = "OFFER_COUNT";
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            this.dataGridViewTextBoxColumn54.ReadOnly = true;
+            this.dataGridViewTextBoxColumn54.Width = 109;
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            this.dataGridViewTextBoxColumn55.DataPropertyName = "ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn55.FillWeight = 52.31409F;
+            this.dataGridViewTextBoxColumn55.HeaderText = "ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            this.dataGridViewTextBoxColumn55.ReadOnly = true;
+            this.dataGridViewTextBoxColumn55.Width = 165;
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            this.dataGridViewTextBoxColumn56.DataPropertyName = "FBA_ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn56.FillWeight = 35.99643F;
+            this.dataGridViewTextBoxColumn56.HeaderText = "FBA_ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            this.dataGridViewTextBoxColumn56.ReadOnly = true;
+            this.dataGridViewTextBoxColumn56.Width = 193;
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            this.dataGridViewTextBoxColumn57.DataPropertyName = "ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn57.FillWeight = 38.64383F;
+            this.dataGridViewTextBoxColumn57.HeaderText = "ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            this.dataGridViewTextBoxColumn57.ReadOnly = true;
+            this.dataGridViewTextBoxColumn57.Width = 151;
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.DataPropertyName = "FBA_ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn58.HeaderText = "FBA_ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            this.dataGridViewTextBoxColumn58.ReadOnly = true;
+            this.dataGridViewTextBoxColumn58.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            this.dataGridViewTextBoxColumn60.DataPropertyName = "ASP";
+            this.dataGridViewTextBoxColumn60.FillWeight = 10.16696F;
+            this.dataGridViewTextBoxColumn60.HeaderText = "ASP";
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            this.dataGridViewTextBoxColumn60.ReadOnly = true;
+            this.dataGridViewTextBoxColumn60.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            this.dataGridViewTextBoxColumn61.DataPropertyName = "GMS_RANK";
+            this.dataGridViewTextBoxColumn61.FillWeight = 28.01687F;
+            this.dataGridViewTextBoxColumn61.HeaderText = "GMS_RANK";
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            this.dataGridViewTextBoxColumn61.ReadOnly = true;
+            this.dataGridViewTextBoxColumn61.Width = 88;
+            // 
+            // Column23
+            // 
+            this.Column23.DataPropertyName = "GLANCE_VIEW_COUNT_TTM";
+            this.Column23.HeaderText = "GLANCE_VIEW_COUNT_TTM";
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
+            this.Column23.Width = 179;
+            // 
+            // Column24
+            // 
+            this.Column24.DataPropertyName = "UNITS_CONVERSION_RATE";
+            this.Column24.HeaderText = "UNITS_CONVERSION_RATE";
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            this.Column24.Width = 179;
+            // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.label30);
@@ -2281,6 +2727,151 @@
             this.dataGridView8.RowTemplate.Height = 23;
             this.dataGridView8.Size = new System.Drawing.Size(1254, 425);
             this.dataGridView8.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.DataPropertyName = "MARKETPLACE_ID";
+            this.dataGridViewTextBoxColumn59.FillWeight = 74.60815F;
+            this.dataGridViewTextBoxColumn59.HeaderText = "MARKETPLACE_ID";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            this.dataGridViewTextBoxColumn59.ReadOnly = true;
+            this.dataGridViewTextBoxColumn59.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            this.dataGridViewTextBoxColumn62.DataPropertyName = "GL_PRODUCT_GROUP";
+            this.dataGridViewTextBoxColumn62.FillWeight = 75.92999F;
+            this.dataGridViewTextBoxColumn62.HeaderText = "GL_PRODUCT_GROUP";
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
+            this.dataGridViewTextBoxColumn62.ReadOnly = true;
+            this.dataGridViewTextBoxColumn62.Width = 144;
+            // 
+            // dataGridViewTextBoxColumn63
+            // 
+            this.dataGridViewTextBoxColumn63.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
+            this.dataGridViewTextBoxColumn63.HeaderText = "GL_PRODUCT_GROUP_DESC";
+            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
+            this.dataGridViewTextBoxColumn63.ReadOnly = true;
+            this.dataGridViewTextBoxColumn63.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn64
+            // 
+            this.dataGridViewTextBoxColumn64.DataPropertyName = "CATEGORY_DESC";
+            this.dataGridViewTextBoxColumn64.FillWeight = 52.36113F;
+            this.dataGridViewTextBoxColumn64.HeaderText = "CATEGORY_DESC";
+            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
+            this.dataGridViewTextBoxColumn64.ReadOnly = true;
+            this.dataGridViewTextBoxColumn64.Width = 123;
+            // 
+            // dataGridViewTextBoxColumn65
+            // 
+            this.dataGridViewTextBoxColumn65.DataPropertyName = "SUBCATEGORY_DESC";
+            this.dataGridViewTextBoxColumn65.FillWeight = 56.53527F;
+            this.dataGridViewTextBoxColumn65.HeaderText = "SUBCATEGORY_DESC";
+            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
+            this.dataGridViewTextBoxColumn65.ReadOnly = true;
+            this.dataGridViewTextBoxColumn65.Width = 144;
+            // 
+            // dataGridViewTextBoxColumn66
+            // 
+            this.dataGridViewTextBoxColumn66.ActiveLinkColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn66.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn66.DataPropertyName = "ASIN";
+            this.dataGridViewTextBoxColumn66.FillWeight = 21.41263F;
+            this.dataGridViewTextBoxColumn66.HeaderText = "ASIN";
+            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
+            this.dataGridViewTextBoxColumn66.ReadOnly = true;
+            this.dataGridViewTextBoxColumn66.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn66.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn66.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn67
+            // 
+            this.dataGridViewTextBoxColumn67.DataPropertyName = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn67.FillWeight = 32.617F;
+            this.dataGridViewTextBoxColumn67.HeaderText = "ITEM_NAME";
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            this.dataGridViewTextBoxColumn67.ReadOnly = true;
+            this.dataGridViewTextBoxColumn67.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            this.dataGridViewTextBoxColumn68.DataPropertyName = "BRAND_NAME";
+            this.dataGridViewTextBoxColumn68.FillWeight = 32.92808F;
+            this.dataGridViewTextBoxColumn68.HeaderText = "BRAND_NAME";
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            this.dataGridViewTextBoxColumn68.ReadOnly = true;
+            this.dataGridViewTextBoxColumn68.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            this.dataGridViewTextBoxColumn69.DataPropertyName = "GLANCE_VIEW_COUNT_TTM";
+            this.dataGridViewTextBoxColumn69.FillWeight = 49.86136F;
+            this.dataGridViewTextBoxColumn69.HeaderText = "GLANCE_VIEW_COUNT_TTM";
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            this.dataGridViewTextBoxColumn69.ReadOnly = true;
+            this.dataGridViewTextBoxColumn69.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn70
+            // 
+            this.dataGridViewTextBoxColumn70.DataPropertyName = "ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn70.FillWeight = 52.31409F;
+            this.dataGridViewTextBoxColumn70.HeaderText = "ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
+            this.dataGridViewTextBoxColumn70.ReadOnly = true;
+            this.dataGridViewTextBoxColumn70.Width = 165;
+            // 
+            // dataGridViewTextBoxColumn71
+            // 
+            this.dataGridViewTextBoxColumn71.DataPropertyName = "FBA_ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn71.FillWeight = 35.99643F;
+            this.dataGridViewTextBoxColumn71.HeaderText = "FBA_ORDERED_GMS_USD_TTM";
+            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
+            this.dataGridViewTextBoxColumn71.ReadOnly = true;
+            this.dataGridViewTextBoxColumn71.Width = 193;
+            // 
+            // dataGridViewTextBoxColumn72
+            // 
+            this.dataGridViewTextBoxColumn72.DataPropertyName = "ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn72.FillWeight = 38.64383F;
+            this.dataGridViewTextBoxColumn72.HeaderText = "ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
+            this.dataGridViewTextBoxColumn72.ReadOnly = true;
+            this.dataGridViewTextBoxColumn72.Width = 151;
+            // 
+            // dataGridViewTextBoxColumn73
+            // 
+            this.dataGridViewTextBoxColumn73.DataPropertyName = "FBA_ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn73.HeaderText = "FBA_ORDERED_UNITS_TTM";
+            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
+            this.dataGridViewTextBoxColumn73.ReadOnly = true;
+            this.dataGridViewTextBoxColumn73.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn74
+            // 
+            this.dataGridViewTextBoxColumn74.DataPropertyName = "ASP";
+            this.dataGridViewTextBoxColumn74.FillWeight = 10.16696F;
+            this.dataGridViewTextBoxColumn74.HeaderText = "ASP";
+            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
+            this.dataGridViewTextBoxColumn74.ReadOnly = true;
+            this.dataGridViewTextBoxColumn74.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn77
+            // 
+            this.dataGridViewTextBoxColumn77.DataPropertyName = "UNITS_CONVERSION_RATE";
+            this.dataGridViewTextBoxColumn77.HeaderText = "UNITS_CONVERSION_RATE";
+            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
+            this.dataGridViewTextBoxColumn77.ReadOnly = true;
+            this.dataGridViewTextBoxColumn77.Width = 179;
+            // 
+            // dataGridViewTextBoxColumn75
+            // 
+            this.dataGridViewTextBoxColumn75.DataPropertyName = "GMS_RANK";
+            this.dataGridViewTextBoxColumn75.FillWeight = 28.01687F;
+            this.dataGridViewTextBoxColumn75.HeaderText = "GMS_RANK";
+            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
+            this.dataGridViewTextBoxColumn75.ReadOnly = true;
+            this.dataGridViewTextBoxColumn75.Width = 88;
             // 
             // groupBox16
             // 
@@ -2514,153 +3105,6 @@
             // 
             this.backgroundWorker8.WorkerReportsProgress = true;
             this.backgroundWorker8.WorkerSupportsCancellation = true;
-            // 
-            // MARKETPLACE_ID
-            // 
-            this.MARKETPLACE_ID.DataPropertyName = "MARKETPLACE_ID";
-            this.MARKETPLACE_ID.FillWeight = 74.60815F;
-            this.MARKETPLACE_ID.HeaderText = "MARKETPLACE_ID";
-            this.MARKETPLACE_ID.Name = "MARKETPLACE_ID";
-            this.MARKETPLACE_ID.ReadOnly = true;
-            this.MARKETPLACE_ID.Width = 130;
-            // 
-            // GL_PRODUCT_GROUP
-            // 
-            this.GL_PRODUCT_GROUP.DataPropertyName = "GL_PRODUCT_GROUP";
-            this.GL_PRODUCT_GROUP.FillWeight = 75.92999F;
-            this.GL_PRODUCT_GROUP.HeaderText = "GL_PRODUCT_GROUP";
-            this.GL_PRODUCT_GROUP.Name = "GL_PRODUCT_GROUP";
-            this.GL_PRODUCT_GROUP.ReadOnly = true;
-            this.GL_PRODUCT_GROUP.Width = 144;
-            // 
-            // CATEGORY_DESC
-            // 
-            this.CATEGORY_DESC.DataPropertyName = "CATEGORY_DESC";
-            this.CATEGORY_DESC.FillWeight = 52.36113F;
-            this.CATEGORY_DESC.HeaderText = "CATEGORY_DESC";
-            this.CATEGORY_DESC.Name = "CATEGORY_DESC";
-            this.CATEGORY_DESC.ReadOnly = true;
-            this.CATEGORY_DESC.Width = 123;
-            // 
-            // GL_PRODUCT_GROUP_DESC
-            // 
-            this.GL_PRODUCT_GROUP_DESC.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
-            this.GL_PRODUCT_GROUP_DESC.HeaderText = "GL_PRODUCT_GROUP_DESC";
-            this.GL_PRODUCT_GROUP_DESC.Name = "GL_PRODUCT_GROUP_DESC";
-            this.GL_PRODUCT_GROUP_DESC.ReadOnly = true;
-            this.GL_PRODUCT_GROUP_DESC.Width = 179;
-            // 
-            // SUBCATEGORY_DESC
-            // 
-            this.SUBCATEGORY_DESC.DataPropertyName = "SUBCATEGORY_DESC";
-            this.SUBCATEGORY_DESC.FillWeight = 56.53527F;
-            this.SUBCATEGORY_DESC.HeaderText = "SUBCATEGORY_DESC";
-            this.SUBCATEGORY_DESC.Name = "SUBCATEGORY_DESC";
-            this.SUBCATEGORY_DESC.ReadOnly = true;
-            this.SUBCATEGORY_DESC.Width = 144;
-            // 
-            // ASIN
-            // 
-            this.ASIN.ActiveLinkColor = System.Drawing.Color.White;
-            this.ASIN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ASIN.DataPropertyName = "ASIN";
-            this.ASIN.FillWeight = 21.41263F;
-            this.ASIN.HeaderText = "ASIN";
-            this.ASIN.Name = "ASIN";
-            this.ASIN.ReadOnly = true;
-            this.ASIN.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ASIN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ASIN.Width = 60;
-            // 
-            // ITEM_NAME
-            // 
-            this.ITEM_NAME.DataPropertyName = "ITEM_NAME";
-            this.ITEM_NAME.FillWeight = 32.617F;
-            this.ITEM_NAME.HeaderText = "ITEM_NAME";
-            this.ITEM_NAME.Name = "ITEM_NAME";
-            this.ITEM_NAME.ReadOnly = true;
-            this.ITEM_NAME.Width = 95;
-            // 
-            // BRAND_NAME
-            // 
-            this.BRAND_NAME.DataPropertyName = "BRAND_NAME";
-            this.BRAND_NAME.FillWeight = 32.92808F;
-            this.BRAND_NAME.HeaderText = "BRAND_NAME";
-            this.BRAND_NAME.Name = "BRAND_NAME";
-            this.BRAND_NAME.ReadOnly = true;
-            this.BRAND_NAME.Width = 102;
-            // 
-            // ORDERED_GMS_USD_TTM
-            // 
-            this.ORDERED_GMS_USD_TTM.DataPropertyName = "ORDERED_GMS_USD_TTM";
-            this.ORDERED_GMS_USD_TTM.FillWeight = 49.86136F;
-            this.ORDERED_GMS_USD_TTM.HeaderText = "ORDERED_GMS_USD_TTM";
-            this.ORDERED_GMS_USD_TTM.Name = "ORDERED_GMS_USD_TTM";
-            this.ORDERED_GMS_USD_TTM.ReadOnly = true;
-            this.ORDERED_GMS_USD_TTM.Width = 165;
-            // 
-            // FBA_ORDERED_GMS_USD_TTM
-            // 
-            this.FBA_ORDERED_GMS_USD_TTM.DataPropertyName = "FBA_ORDERED_GMS_USD_TTM";
-            this.FBA_ORDERED_GMS_USD_TTM.FillWeight = 52.31409F;
-            this.FBA_ORDERED_GMS_USD_TTM.HeaderText = "FBA_ORDERED_GMS_USD_TTM";
-            this.FBA_ORDERED_GMS_USD_TTM.Name = "FBA_ORDERED_GMS_USD_TTM";
-            this.FBA_ORDERED_GMS_USD_TTM.ReadOnly = true;
-            this.FBA_ORDERED_GMS_USD_TTM.Width = 193;
-            // 
-            // ORDERED_UNITS_TTM
-            // 
-            this.ORDERED_UNITS_TTM.DataPropertyName = "ORDERED_UNITS_TTM";
-            this.ORDERED_UNITS_TTM.FillWeight = 35.99643F;
-            this.ORDERED_UNITS_TTM.HeaderText = "ORDERED_UNITS_TTM";
-            this.ORDERED_UNITS_TTM.Name = "ORDERED_UNITS_TTM";
-            this.ORDERED_UNITS_TTM.ReadOnly = true;
-            this.ORDERED_UNITS_TTM.Width = 151;
-            // 
-            // FBA_ORDERED_UNITS_TTM
-            // 
-            this.FBA_ORDERED_UNITS_TTM.DataPropertyName = "FBA_ORDERED_UNITS_TTM";
-            this.FBA_ORDERED_UNITS_TTM.FillWeight = 38.64383F;
-            this.FBA_ORDERED_UNITS_TTM.HeaderText = "FBA_ORDERED_UNITS_TTM";
-            this.FBA_ORDERED_UNITS_TTM.Name = "FBA_ORDERED_UNITS_TTM";
-            this.FBA_ORDERED_UNITS_TTM.ReadOnly = true;
-            this.FBA_ORDERED_UNITS_TTM.Width = 179;
-            // 
-            // ASP
-            // 
-            this.ASP.DataPropertyName = "ASP";
-            this.ASP.FillWeight = 10.16696F;
-            this.ASP.HeaderText = "ASP";
-            this.ASP.Name = "ASP";
-            this.ASP.ReadOnly = true;
-            this.ASP.Width = 53;
-            // 
-            // GMS_RANK
-            // 
-            this.GMS_RANK.DataPropertyName = "GMS_RANK";
-            this.GMS_RANK.FillWeight = 16.32583F;
-            this.GMS_RANK.HeaderText = "GMS_RANK";
-            this.GMS_RANK.Name = "GMS_RANK";
-            this.GMS_RANK.ReadOnly = true;
-            this.GMS_RANK.Width = 88;
-            // 
-            // GLANCE_VIEW_COUNT_TTM
-            // 
-            this.GLANCE_VIEW_COUNT_TTM.DataPropertyName = "GLANCE_VIEW_COUNT_TTM";
-            this.GLANCE_VIEW_COUNT_TTM.FillWeight = 31.4195F;
-            this.GLANCE_VIEW_COUNT_TTM.HeaderText = "GLANCE_VIEW_COUNT_TTM";
-            this.GLANCE_VIEW_COUNT_TTM.Name = "GLANCE_VIEW_COUNT_TTM";
-            this.GLANCE_VIEW_COUNT_TTM.ReadOnly = true;
-            this.GLANCE_VIEW_COUNT_TTM.Width = 179;
-            // 
-            // UNITS_CONVERSION_RATE
-            // 
-            this.UNITS_CONVERSION_RATE.DataPropertyName = "UNITS_CONVERSION_RATE";
-            this.UNITS_CONVERSION_RATE.FillWeight = 28.01687F;
-            this.UNITS_CONVERSION_RATE.HeaderText = "UNITS_CONVERSION_RATE";
-            this.UNITS_CONVERSION_RATE.Name = "UNITS_CONVERSION_RATE";
-            this.UNITS_CONVERSION_RATE.ReadOnly = true;
-            this.UNITS_CONVERSION_RATE.Width = 179;
             // 
             // pager1
             // 
@@ -2997,449 +3441,6 @@
             this.bindingNavigator6.TabIndex = 0;
             this.bindingNavigator6.Text = "bindingNavigator1";
             // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "MARKETPLACE_ID";
-            this.dataGridViewTextBoxColumn10.FillWeight = 74.60815F;
-            this.dataGridViewTextBoxColumn10.HeaderText = "MARKETPLACE_ID";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "GL_PRODUCT_GROUP";
-            this.dataGridViewTextBoxColumn11.FillWeight = 75.92999F;
-            this.dataGridViewTextBoxColumn11.HeaderText = "GL_PRODUCT_GROUP";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 144;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
-            this.dataGridViewTextBoxColumn25.HeaderText = "GL_PRODUCT_GROUP_DESC";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            this.dataGridViewTextBoxColumn25.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "CATEGORY_DESC";
-            this.dataGridViewTextBoxColumn12.FillWeight = 52.36113F;
-            this.dataGridViewTextBoxColumn12.HeaderText = "CATEGORY_DESC";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 123;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "SUBCATEGORY_DESC";
-            this.dataGridViewTextBoxColumn26.FillWeight = 56.53527F;
-            this.dataGridViewTextBoxColumn26.HeaderText = "SUBCATEGORY_DESC";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Width = 144;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.ActiveLinkColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "ASIN";
-            this.dataGridViewTextBoxColumn27.FillWeight = 21.41263F;
-            this.dataGridViewTextBoxColumn27.HeaderText = "ASIN";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            this.dataGridViewTextBoxColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn27.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn28.FillWeight = 32.617F;
-            this.dataGridViewTextBoxColumn28.HeaderText = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "BRAND_NAME";
-            this.dataGridViewTextBoxColumn29.FillWeight = 32.92808F;
-            this.dataGridViewTextBoxColumn29.HeaderText = "BRAND_NAME";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "ORDERED_GMS_USD_LAST4WK";
-            this.dataGridViewTextBoxColumn30.FillWeight = 49.86136F;
-            this.dataGridViewTextBoxColumn30.HeaderText = "ORDERED_GMS_USD_LAST4WK";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            this.dataGridViewTextBoxColumn30.Width = 193;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "INCREASED_GMS_LAST4WK";
-            this.dataGridViewTextBoxColumn31.FillWeight = 52.31409F;
-            this.dataGridViewTextBoxColumn31.HeaderText = "INCREASED_GMS_LAST4WK";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.ReadOnly = true;
-            this.dataGridViewTextBoxColumn31.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "INCREASED_PERCENT";
-            this.dataGridViewTextBoxColumn32.FillWeight = 35.99643F;
-            this.dataGridViewTextBoxColumn32.HeaderText = "INCREASED_PERCENT";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.ReadOnly = true;
-            this.dataGridViewTextBoxColumn32.Width = 151;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "FBA_ORDERED_GMS_USD_LAST4WK";
-            this.dataGridViewTextBoxColumn33.FillWeight = 38.64383F;
-            this.dataGridViewTextBoxColumn33.HeaderText = "FBA_ORDERED_GMS_USD_LAST4WK";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
-            this.dataGridViewTextBoxColumn33.Width = 221;
-            // 
-            // ORDERED_UNITS_LAST4WK
-            // 
-            this.ORDERED_UNITS_LAST4WK.DataPropertyName = "ORDERED_UNITS_LAST4WK";
-            this.ORDERED_UNITS_LAST4WK.HeaderText = "ORDERED_UNITS_LAST4WK";
-            this.ORDERED_UNITS_LAST4WK.Name = "ORDERED_UNITS_LAST4WK";
-            this.ORDERED_UNITS_LAST4WK.ReadOnly = true;
-            this.ORDERED_UNITS_LAST4WK.Width = 179;
-            // 
-            // FBA_ORDERED_UNITS_LAST4WK
-            // 
-            this.FBA_ORDERED_UNITS_LAST4WK.DataPropertyName = "FBA_ORDERED_UNITS_LAST4WK";
-            this.FBA_ORDERED_UNITS_LAST4WK.HeaderText = "FBA_ORDERED_UNITS_LAST4WK";
-            this.FBA_ORDERED_UNITS_LAST4WK.Name = "FBA_ORDERED_UNITS_LAST4WK";
-            this.FBA_ORDERED_UNITS_LAST4WK.ReadOnly = true;
-            this.FBA_ORDERED_UNITS_LAST4WK.Width = 207;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "ASP";
-            this.dataGridViewTextBoxColumn34.FillWeight = 10.16696F;
-            this.dataGridViewTextBoxColumn34.HeaderText = "ASP";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
-            this.dataGridViewTextBoxColumn34.Width = 53;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "INCREASED_GMS_RANK";
-            this.dataGridViewTextBoxColumn37.FillWeight = 28.01687F;
-            this.dataGridViewTextBoxColumn37.HeaderText = "INCREASED_GMS_RANK";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            this.dataGridViewTextBoxColumn37.Width = 158;
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            this.dataGridViewTextBoxColumn46.DataPropertyName = "MARKETPLACE_ID";
-            this.dataGridViewTextBoxColumn46.FillWeight = 74.60815F;
-            this.dataGridViewTextBoxColumn46.HeaderText = "MARKETPLACE_ID";
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            this.dataGridViewTextBoxColumn46.ReadOnly = true;
-            this.dataGridViewTextBoxColumn46.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.DataPropertyName = "GL_PRODUCT_GROUP";
-            this.dataGridViewTextBoxColumn47.FillWeight = 75.92999F;
-            this.dataGridViewTextBoxColumn47.HeaderText = "GL_PRODUCT_GROUP";
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            this.dataGridViewTextBoxColumn47.ReadOnly = true;
-            this.dataGridViewTextBoxColumn47.Width = 144;
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            this.dataGridViewTextBoxColumn48.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
-            this.dataGridViewTextBoxColumn48.HeaderText = "GL_PRODUCT_GROUP_DESC";
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            this.dataGridViewTextBoxColumn48.ReadOnly = true;
-            this.dataGridViewTextBoxColumn48.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            this.dataGridViewTextBoxColumn49.DataPropertyName = "CATEGORY_DESC";
-            this.dataGridViewTextBoxColumn49.FillWeight = 52.36113F;
-            this.dataGridViewTextBoxColumn49.HeaderText = "CATEGORY_DESC";
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            this.dataGridViewTextBoxColumn49.ReadOnly = true;
-            this.dataGridViewTextBoxColumn49.Width = 123;
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            this.dataGridViewTextBoxColumn50.DataPropertyName = "SUBCATEGORY_DESC";
-            this.dataGridViewTextBoxColumn50.FillWeight = 56.53527F;
-            this.dataGridViewTextBoxColumn50.HeaderText = "SUBCATEGORY_DESC";
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            this.dataGridViewTextBoxColumn50.ReadOnly = true;
-            this.dataGridViewTextBoxColumn50.Width = 144;
-            // 
-            // dataGridViewTextBoxColumn51
-            // 
-            this.dataGridViewTextBoxColumn51.ActiveLinkColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn51.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn51.DataPropertyName = "ASIN";
-            this.dataGridViewTextBoxColumn51.FillWeight = 21.41263F;
-            this.dataGridViewTextBoxColumn51.HeaderText = "ASIN";
-            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
-            this.dataGridViewTextBoxColumn51.ReadOnly = true;
-            this.dataGridViewTextBoxColumn51.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn51.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn51.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn52
-            // 
-            this.dataGridViewTextBoxColumn52.DataPropertyName = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn52.FillWeight = 32.617F;
-            this.dataGridViewTextBoxColumn52.HeaderText = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
-            this.dataGridViewTextBoxColumn52.ReadOnly = true;
-            this.dataGridViewTextBoxColumn52.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn53
-            // 
-            this.dataGridViewTextBoxColumn53.DataPropertyName = "BRAND_NAME";
-            this.dataGridViewTextBoxColumn53.FillWeight = 32.92808F;
-            this.dataGridViewTextBoxColumn53.HeaderText = "BRAND_NAME";
-            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
-            this.dataGridViewTextBoxColumn53.ReadOnly = true;
-            this.dataGridViewTextBoxColumn53.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn54
-            // 
-            this.dataGridViewTextBoxColumn54.DataPropertyName = "OFFER_COUNT";
-            this.dataGridViewTextBoxColumn54.FillWeight = 49.86136F;
-            this.dataGridViewTextBoxColumn54.HeaderText = "OFFER_COUNT";
-            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
-            this.dataGridViewTextBoxColumn54.ReadOnly = true;
-            this.dataGridViewTextBoxColumn54.Width = 109;
-            // 
-            // dataGridViewTextBoxColumn55
-            // 
-            this.dataGridViewTextBoxColumn55.DataPropertyName = "ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn55.FillWeight = 52.31409F;
-            this.dataGridViewTextBoxColumn55.HeaderText = "ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
-            this.dataGridViewTextBoxColumn55.ReadOnly = true;
-            this.dataGridViewTextBoxColumn55.Width = 165;
-            // 
-            // dataGridViewTextBoxColumn56
-            // 
-            this.dataGridViewTextBoxColumn56.DataPropertyName = "FBA_ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn56.FillWeight = 35.99643F;
-            this.dataGridViewTextBoxColumn56.HeaderText = "FBA_ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
-            this.dataGridViewTextBoxColumn56.ReadOnly = true;
-            this.dataGridViewTextBoxColumn56.Width = 193;
-            // 
-            // dataGridViewTextBoxColumn57
-            // 
-            this.dataGridViewTextBoxColumn57.DataPropertyName = "ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn57.FillWeight = 38.64383F;
-            this.dataGridViewTextBoxColumn57.HeaderText = "ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
-            this.dataGridViewTextBoxColumn57.ReadOnly = true;
-            this.dataGridViewTextBoxColumn57.Width = 151;
-            // 
-            // dataGridViewTextBoxColumn58
-            // 
-            this.dataGridViewTextBoxColumn58.DataPropertyName = "FBA_ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn58.HeaderText = "FBA_ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
-            this.dataGridViewTextBoxColumn58.ReadOnly = true;
-            this.dataGridViewTextBoxColumn58.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn60
-            // 
-            this.dataGridViewTextBoxColumn60.DataPropertyName = "ASP";
-            this.dataGridViewTextBoxColumn60.FillWeight = 10.16696F;
-            this.dataGridViewTextBoxColumn60.HeaderText = "ASP";
-            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
-            this.dataGridViewTextBoxColumn60.ReadOnly = true;
-            this.dataGridViewTextBoxColumn60.Width = 53;
-            // 
-            // dataGridViewTextBoxColumn61
-            // 
-            this.dataGridViewTextBoxColumn61.DataPropertyName = "GMS_RANK";
-            this.dataGridViewTextBoxColumn61.FillWeight = 28.01687F;
-            this.dataGridViewTextBoxColumn61.HeaderText = "GMS_RANK";
-            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
-            this.dataGridViewTextBoxColumn61.ReadOnly = true;
-            this.dataGridViewTextBoxColumn61.Width = 88;
-            // 
-            // Column23
-            // 
-            this.Column23.DataPropertyName = "GLANCE_VIEW_COUNT_TTM";
-            this.Column23.HeaderText = "GLANCE_VIEW_COUNT_TTM";
-            this.Column23.Name = "Column23";
-            this.Column23.ReadOnly = true;
-            this.Column23.Width = 179;
-            // 
-            // Column24
-            // 
-            this.Column24.DataPropertyName = "UNITS_CONVERSION_RATE";
-            this.Column24.HeaderText = "UNITS_CONVERSION_RATE";
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
-            this.Column24.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn59
-            // 
-            this.dataGridViewTextBoxColumn59.DataPropertyName = "MARKETPLACE_ID";
-            this.dataGridViewTextBoxColumn59.FillWeight = 74.60815F;
-            this.dataGridViewTextBoxColumn59.HeaderText = "MARKETPLACE_ID";
-            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
-            this.dataGridViewTextBoxColumn59.ReadOnly = true;
-            this.dataGridViewTextBoxColumn59.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn62
-            // 
-            this.dataGridViewTextBoxColumn62.DataPropertyName = "GL_PRODUCT_GROUP";
-            this.dataGridViewTextBoxColumn62.FillWeight = 75.92999F;
-            this.dataGridViewTextBoxColumn62.HeaderText = "GL_PRODUCT_GROUP";
-            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
-            this.dataGridViewTextBoxColumn62.ReadOnly = true;
-            this.dataGridViewTextBoxColumn62.Width = 144;
-            // 
-            // dataGridViewTextBoxColumn63
-            // 
-            this.dataGridViewTextBoxColumn63.DataPropertyName = "GL_PRODUCT_GROUP_DESC";
-            this.dataGridViewTextBoxColumn63.HeaderText = "GL_PRODUCT_GROUP_DESC";
-            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
-            this.dataGridViewTextBoxColumn63.ReadOnly = true;
-            this.dataGridViewTextBoxColumn63.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn64
-            // 
-            this.dataGridViewTextBoxColumn64.DataPropertyName = "CATEGORY_DESC";
-            this.dataGridViewTextBoxColumn64.FillWeight = 52.36113F;
-            this.dataGridViewTextBoxColumn64.HeaderText = "CATEGORY_DESC";
-            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
-            this.dataGridViewTextBoxColumn64.ReadOnly = true;
-            this.dataGridViewTextBoxColumn64.Width = 123;
-            // 
-            // dataGridViewTextBoxColumn65
-            // 
-            this.dataGridViewTextBoxColumn65.DataPropertyName = "SUBCATEGORY_DESC";
-            this.dataGridViewTextBoxColumn65.FillWeight = 56.53527F;
-            this.dataGridViewTextBoxColumn65.HeaderText = "SUBCATEGORY_DESC";
-            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
-            this.dataGridViewTextBoxColumn65.ReadOnly = true;
-            this.dataGridViewTextBoxColumn65.Width = 144;
-            // 
-            // dataGridViewTextBoxColumn66
-            // 
-            this.dataGridViewTextBoxColumn66.ActiveLinkColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn66.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn66.DataPropertyName = "ASIN";
-            this.dataGridViewTextBoxColumn66.FillWeight = 21.41263F;
-            this.dataGridViewTextBoxColumn66.HeaderText = "ASIN";
-            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
-            this.dataGridViewTextBoxColumn66.ReadOnly = true;
-            this.dataGridViewTextBoxColumn66.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn66.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn66.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn67
-            // 
-            this.dataGridViewTextBoxColumn67.DataPropertyName = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn67.FillWeight = 32.617F;
-            this.dataGridViewTextBoxColumn67.HeaderText = "ITEM_NAME";
-            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
-            this.dataGridViewTextBoxColumn67.ReadOnly = true;
-            this.dataGridViewTextBoxColumn67.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn68
-            // 
-            this.dataGridViewTextBoxColumn68.DataPropertyName = "BRAND_NAME";
-            this.dataGridViewTextBoxColumn68.FillWeight = 32.92808F;
-            this.dataGridViewTextBoxColumn68.HeaderText = "BRAND_NAME";
-            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
-            this.dataGridViewTextBoxColumn68.ReadOnly = true;
-            this.dataGridViewTextBoxColumn68.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn69
-            // 
-            this.dataGridViewTextBoxColumn69.DataPropertyName = "GLANCE_VIEW_COUNT_TTM";
-            this.dataGridViewTextBoxColumn69.FillWeight = 49.86136F;
-            this.dataGridViewTextBoxColumn69.HeaderText = "GLANCE_VIEW_COUNT_TTM";
-            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
-            this.dataGridViewTextBoxColumn69.ReadOnly = true;
-            this.dataGridViewTextBoxColumn69.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn70
-            // 
-            this.dataGridViewTextBoxColumn70.DataPropertyName = "ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn70.FillWeight = 52.31409F;
-            this.dataGridViewTextBoxColumn70.HeaderText = "ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
-            this.dataGridViewTextBoxColumn70.ReadOnly = true;
-            this.dataGridViewTextBoxColumn70.Width = 165;
-            // 
-            // dataGridViewTextBoxColumn71
-            // 
-            this.dataGridViewTextBoxColumn71.DataPropertyName = "FBA_ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn71.FillWeight = 35.99643F;
-            this.dataGridViewTextBoxColumn71.HeaderText = "FBA_ORDERED_GMS_USD_TTM";
-            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
-            this.dataGridViewTextBoxColumn71.ReadOnly = true;
-            this.dataGridViewTextBoxColumn71.Width = 193;
-            // 
-            // dataGridViewTextBoxColumn72
-            // 
-            this.dataGridViewTextBoxColumn72.DataPropertyName = "ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn72.FillWeight = 38.64383F;
-            this.dataGridViewTextBoxColumn72.HeaderText = "ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
-            this.dataGridViewTextBoxColumn72.ReadOnly = true;
-            this.dataGridViewTextBoxColumn72.Width = 151;
-            // 
-            // dataGridViewTextBoxColumn73
-            // 
-            this.dataGridViewTextBoxColumn73.DataPropertyName = "FBA_ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn73.HeaderText = "FBA_ORDERED_UNITS_TTM";
-            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
-            this.dataGridViewTextBoxColumn73.ReadOnly = true;
-            this.dataGridViewTextBoxColumn73.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn74
-            // 
-            this.dataGridViewTextBoxColumn74.DataPropertyName = "ASP";
-            this.dataGridViewTextBoxColumn74.FillWeight = 10.16696F;
-            this.dataGridViewTextBoxColumn74.HeaderText = "ASP";
-            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
-            this.dataGridViewTextBoxColumn74.ReadOnly = true;
-            this.dataGridViewTextBoxColumn74.Width = 53;
-            // 
-            // dataGridViewTextBoxColumn77
-            // 
-            this.dataGridViewTextBoxColumn77.DataPropertyName = "UNITS_CONVERSION_RATE";
-            this.dataGridViewTextBoxColumn77.HeaderText = "UNITS_CONVERSION_RATE";
-            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
-            this.dataGridViewTextBoxColumn77.ReadOnly = true;
-            this.dataGridViewTextBoxColumn77.Width = 179;
-            // 
-            // dataGridViewTextBoxColumn75
-            // 
-            this.dataGridViewTextBoxColumn75.DataPropertyName = "GMS_RANK";
-            this.dataGridViewTextBoxColumn75.FillWeight = 28.01687F;
-            this.dataGridViewTextBoxColumn75.HeaderText = "GMS_RANK";
-            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
-            this.dataGridViewTextBoxColumn75.ReadOnly = true;
-            this.dataGridViewTextBoxColumn75.Width = 88;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3759,22 +3760,6 @@
         private System.Windows.Forms.TextBox textBox42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MARKETPLACE_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GL_PRODUCT_GROUP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY_DESC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GL_PRODUCT_GROUP_DESC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SUBCATEGORY_DESC;
-        private System.Windows.Forms.DataGridViewLinkColumn ASIN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ITEM_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BRAND_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ORDERED_GMS_USD_TTM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FBA_ORDERED_GMS_USD_TTM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ORDERED_UNITS_TTM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FBA_ORDERED_UNITS_TTM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ASP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GMS_RANK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GLANCE_VIEW_COUNT_TTM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UNITS_CONVERSION_RATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
@@ -3824,6 +3809,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn74;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn77;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn75;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MARKETPLACE_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GL_PRODUCT_GROUP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY_DESC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GL_PRODUCT_GROUP_DESC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SUBCATEGORY_DESC;
+        private System.Windows.Forms.DataGridViewLinkColumn ASIN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITEM_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BRAND_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ORDERED_GMS_USD_TTM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FBA_ORDERED_GMS_USD_TTM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ORDERED_UNITS_TTM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FBA_ORDERED_UNITS_TTM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ASP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GMS_RANK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GLANCE_VIEW_COUNT_TTM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNITS_CONVERSION_RATE;
     }
 }
 
