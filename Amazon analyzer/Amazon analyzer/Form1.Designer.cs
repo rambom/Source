@@ -400,7 +400,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(20, 8);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1276, 777);
+            this.tabControl1.Size = new System.Drawing.Size(1920, 777);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -413,7 +413,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage1.Size = new System.Drawing.Size(1912, 739);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Top Asin";
             // 
@@ -447,7 +447,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1262, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(1888, 425);
             this.dataGridView1.TabIndex = 5;
             // 
             // MARKETPLACE_ID
@@ -615,7 +615,7 @@
             this.groupBox9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox9.Location = new System.Drawing.Point(8, 96);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(1254, 132);
+            this.groupBox9.Size = new System.Drawing.Size(1888, 132);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "搜索数据";
@@ -736,7 +736,7 @@
             this.groupBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(8, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox1.Size = new System.Drawing.Size(1888, 74);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "初始数据";
@@ -794,7 +794,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage2.Size = new System.Drawing.Size(1912, 739);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Top Seller";
             // 
@@ -833,7 +833,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1254, 425);
+            this.dataGridView2.Size = new System.Drawing.Size(1888, 425);
             this.dataGridView2.TabIndex = 8;
             // 
             // Column1
@@ -1026,7 +1026,7 @@
             this.groupBox10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox10.Location = new System.Drawing.Point(8, 107);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(1254, 132);
+            this.groupBox10.Size = new System.Drawing.Size(1888, 132);
             this.groupBox10.TabIndex = 7;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "搜索数据";
@@ -1115,7 +1115,7 @@
             this.groupBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(8, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox2.Size = new System.Drawing.Size(1888, 74);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "初始数据";
@@ -1172,7 +1172,7 @@
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage3.Size = new System.Drawing.Size(1912, 739);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Top Brand";
             // 
@@ -1199,7 +1199,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(1254, 474);
+            this.dataGridView3.Size = new System.Drawing.Size(1888, 474);
             this.dataGridView3.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
@@ -1292,7 +1292,7 @@
             this.groupBox11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox11.Location = new System.Drawing.Point(7, 99);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(1254, 83);
+            this.groupBox11.Size = new System.Drawing.Size(1888, 83);
             this.groupBox11.TabIndex = 10;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "搜索数据";
@@ -1349,7 +1349,7 @@
             this.groupBox3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(7, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox3.Size = new System.Drawing.Size(1888, 74);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "初始数据";
@@ -1406,7 +1406,7 @@
             this.tabPage4.Controls.Add(this.groupBox4);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage4.Size = new System.Drawing.Size(1912, 739);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Top Subcategory";
             // 
@@ -1434,7 +1434,7 @@
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowTemplate.Height = 23;
-            this.dataGridView4.Size = new System.Drawing.Size(1254, 425);
+            this.dataGridView4.Size = new System.Drawing.Size(1888, 425);
             this.dataGridView4.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn5
@@ -1547,7 +1547,7 @@
             this.groupBox12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox12.Location = new System.Drawing.Point(7, 98);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(1254, 132);
+            this.groupBox12.Size = new System.Drawing.Size(1888, 132);
             this.groupBox12.TabIndex = 7;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "搜索数据";
@@ -1620,7 +1620,7 @@
             this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox4.Location = new System.Drawing.Point(7, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox4.Size = new System.Drawing.Size(1888, 74);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "初始数据";
@@ -1677,7 +1677,7 @@
             this.tabPage5.Controls.Add(this.groupBox5);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage5.Size = new System.Drawing.Size(1912, 739);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mover & Shaker - ASIN";
             // 
@@ -1710,7 +1710,7 @@
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowTemplate.Height = 23;
-            this.dataGridView5.Size = new System.Drawing.Size(1254, 425);
+            this.dataGridView5.Size = new System.Drawing.Size(1888, 425);
             this.dataGridView5.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn10
@@ -1876,7 +1876,7 @@
             this.groupBox13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox13.Location = new System.Drawing.Point(7, 97);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(1254, 132);
+            this.groupBox13.Size = new System.Drawing.Size(1888, 132);
             this.groupBox13.TabIndex = 7;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "搜索数据";
@@ -1997,7 +1997,7 @@
             this.groupBox5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.Location = new System.Drawing.Point(7, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox5.Size = new System.Drawing.Size(1888, 74);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "初始数据";
@@ -2054,7 +2054,7 @@
             this.tabPage6.Controls.Add(this.groupBox6);
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage6.Size = new System.Drawing.Size(1912, 739);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Mover & Shaker - Brand";
             // 
@@ -2083,7 +2083,7 @@
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
             this.dataGridView6.RowTemplate.Height = 23;
-            this.dataGridView6.Size = new System.Drawing.Size(1254, 474);
+            this.dataGridView6.Size = new System.Drawing.Size(1888, 474);
             this.dataGridView6.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn38
@@ -2192,7 +2192,7 @@
             this.groupBox14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox14.Location = new System.Drawing.Point(7, 96);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(1254, 83);
+            this.groupBox14.Size = new System.Drawing.Size(1888, 83);
             this.groupBox14.TabIndex = 13;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "搜索数据";
@@ -2249,7 +2249,7 @@
             this.groupBox6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox6.Location = new System.Drawing.Point(7, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox6.Size = new System.Drawing.Size(1888, 74);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "初始数据";
@@ -2306,7 +2306,7 @@
             this.tabPage7.Controls.Add(this.groupBox7);
             this.tabPage7.Location = new System.Drawing.Point(4, 34);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage7.Size = new System.Drawing.Size(1912, 739);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Top ASIN with Limited Match";
             // 
@@ -2340,7 +2340,7 @@
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.ReadOnly = true;
             this.dataGridView7.RowTemplate.Height = 23;
-            this.dataGridView7.Size = new System.Drawing.Size(1254, 425);
+            this.dataGridView7.Size = new System.Drawing.Size(1888, 425);
             this.dataGridView7.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn46
@@ -2514,7 +2514,7 @@
             this.groupBox15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox15.Location = new System.Drawing.Point(7, 96);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(1254, 132);
+            this.groupBox15.Size = new System.Drawing.Size(1888, 132);
             this.groupBox15.TabIndex = 10;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "搜索数据";
@@ -2635,7 +2635,7 @@
             this.groupBox7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox7.Location = new System.Drawing.Point(7, 3);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox7.Size = new System.Drawing.Size(1888, 74);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "初始数据";
@@ -2692,7 +2692,7 @@
             this.tabPage8.Controls.Add(this.groupBox8);
             this.tabPage8.Location = new System.Drawing.Point(4, 34);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1268, 739);
+            this.tabPage8.Size = new System.Drawing.Size(1912, 739);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Top Conversion Rate";
             // 
@@ -2725,7 +2725,7 @@
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.ReadOnly = true;
             this.dataGridView8.RowTemplate.Height = 23;
-            this.dataGridView8.Size = new System.Drawing.Size(1254, 425);
+            this.dataGridView8.Size = new System.Drawing.Size(1888, 425);
             this.dataGridView8.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn59
@@ -2891,7 +2891,7 @@
             this.groupBox16.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox16.Location = new System.Drawing.Point(7, 98);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(1254, 132);
+            this.groupBox16.Size = new System.Drawing.Size(1888, 132);
             this.groupBox16.TabIndex = 13;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "搜索数据";
@@ -3012,7 +3012,7 @@
             this.groupBox8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox8.Location = new System.Drawing.Point(7, 3);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1254, 74);
+            this.groupBox8.Size = new System.Drawing.Size(1888, 74);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "初始数据";
@@ -3114,7 +3114,7 @@
             this.pager1.PageCount = 0;
             this.pager1.PageCurrent = 1;
             this.pager1.PageSize = 100;
-            this.pager1.Size = new System.Drawing.Size(1254, 30);
+            this.pager1.Size = new System.Drawing.Size(1888, 30);
             this.pager1.TabIndex = 0;
             // 
             // pager2
@@ -3126,7 +3126,7 @@
             this.pager2.PageCount = 0;
             this.pager2.PageCurrent = 1;
             this.pager2.PageSize = 100;
-            this.pager2.Size = new System.Drawing.Size(1254, 35);
+            this.pager2.Size = new System.Drawing.Size(1888, 35);
             this.pager2.TabIndex = 6;
             // 
             // bindingNavigator
@@ -3143,7 +3143,7 @@
             this.bindingNavigator.Name = "bindingNavigator";
             this.bindingNavigator.PositionItem = null;
             this.bindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator.Size = new System.Drawing.Size(1254, 35);
+            this.bindingNavigator.Size = new System.Drawing.Size(1888, 35);
             this.bindingNavigator.TabIndex = 0;
             this.bindingNavigator.Text = "bindingNavigator1";
             // 
@@ -3205,7 +3205,7 @@
             this.pager4.PageCount = 0;
             this.pager4.PageCurrent = 1;
             this.pager4.PageSize = 100;
-            this.pager4.Size = new System.Drawing.Size(1254, 35);
+            this.pager4.Size = new System.Drawing.Size(1888, 35);
             this.pager4.TabIndex = 9;
             // 
             // object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489
@@ -3222,7 +3222,7 @@
             this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Name = "object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489";
             this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.PositionItem = null;
             this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Size = new System.Drawing.Size(1254, 35);
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Size = new System.Drawing.Size(1888, 35);
             this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.TabIndex = 0;
             this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Text = "bindingNavigator1";
             // 
@@ -3334,7 +3334,7 @@
             this.pager7.PageCount = 0;
             this.pager7.PageCurrent = 1;
             this.pager7.PageSize = 100;
-            this.pager7.Size = new System.Drawing.Size(1254, 41);
+            this.pager7.Size = new System.Drawing.Size(1888, 41);
             this.pager7.TabIndex = 9;
             // 
             // object_09116d9d_087c_449a_ade4_380ba7f2fe4a
@@ -3351,7 +3351,7 @@
             this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Name = "object_09116d9d_087c_449a_ade4_380ba7f2fe4a";
             this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.PositionItem = null;
             this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Size = new System.Drawing.Size(1254, 41);
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Size = new System.Drawing.Size(1888, 41);
             this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.TabIndex = 0;
             this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Text = "bindingNavigator1";
             // 
@@ -3369,7 +3369,7 @@
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.PositionItem = null;
             this.bindingNavigator4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator4.Size = new System.Drawing.Size(1254, 41);
+            this.bindingNavigator4.Size = new System.Drawing.Size(1888, 41);
             this.bindingNavigator4.TabIndex = 0;
             this.bindingNavigator4.Text = "bindingNavigator1";
             // 
@@ -3384,7 +3384,7 @@
             this.pager8.PageCount = 0;
             this.pager8.PageCurrent = 1;
             this.pager8.PageSize = 100;
-            this.pager8.Size = new System.Drawing.Size(1254, 48);
+            this.pager8.Size = new System.Drawing.Size(1888, 48);
             this.pager8.TabIndex = 12;
             // 
             // object_9a42c604_22f5_44d2_bd85_897b96082b7a
@@ -3401,7 +3401,7 @@
             this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Name = "object_9a42c604_22f5_44d2_bd85_897b96082b7a";
             this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.PositionItem = null;
             this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Size = new System.Drawing.Size(1254, 48);
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Size = new System.Drawing.Size(1888, 48);
             this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.TabIndex = 0;
             this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Text = "bindingNavigator1";
             // 
@@ -3419,7 +3419,7 @@
             this.bindingNavigator5.Name = "bindingNavigator5";
             this.bindingNavigator5.PositionItem = null;
             this.bindingNavigator5.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator5.Size = new System.Drawing.Size(1254, 48);
+            this.bindingNavigator5.Size = new System.Drawing.Size(1888, 48);
             this.bindingNavigator5.TabIndex = 0;
             this.bindingNavigator5.Text = "bindingNavigator1";
             // 
@@ -3437,7 +3437,7 @@
             this.bindingNavigator6.Name = "bindingNavigator6";
             this.bindingNavigator6.PositionItem = null;
             this.bindingNavigator6.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator6.Size = new System.Drawing.Size(1254, 48);
+            this.bindingNavigator6.Size = new System.Drawing.Size(1888, 48);
             this.bindingNavigator6.TabIndex = 0;
             this.bindingNavigator6.Text = "bindingNavigator1";
             // 
@@ -3446,9 +3446,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1272, 773);
+            this.ClientSize = new System.Drawing.Size(1912, 773);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1920, 800);
+            this.MinimumSize = new System.Drawing.Size(1920, 800);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Amazon analyzer";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
