@@ -59,6 +59,7 @@
     <Compile Include="Database\DataParameter.cs" />
     <Compile Include="Database\DfkDataReader.cs" />
     <Compile Include="Database\IDataBase.cs" />
+    <Compile Include="Helper\NumberHelper.cs" />
     <Compile Include="Database\OracleBulkInsert.cs" />
     <Compile Include="Database\OracleHandler.cs" />
     <Compile Include="Form1.cs">

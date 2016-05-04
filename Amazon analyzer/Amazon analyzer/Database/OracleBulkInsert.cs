@@ -7,6 +7,7 @@ using System.IO;
 using System.Text;
 using System.Timers;
 using Oracle.DataAccess.Client;
+using Amazon_analyzer.Helpers;
 
 namespace Amazon_analyzer.Database
 {
@@ -386,7 +387,7 @@ namespace Amazon_analyzer.Database
                     oracleDataAdapter.Fill(dtSchema);
                 }
             }
-           
+
 
             if (dtSchema.Rows.Count <= 0)
             {
@@ -767,7 +768,12 @@ namespace Amazon_analyzer.Database
             foreach (var parameter in parameters)
             {
                 int intIndex = this._dicSourceColumnIndex[parameter.ParameterName];
-                ((object[])parameter.Value)[rowIndex] = intIndex < arryList.Length ? arryList[intIndex] : null;
+                object value = arryList[intIndex];
+                decimal number;
+                if (NumberHelper.IsNumeric(value, 28, 2, out number))
+                    ((object[])parameter.Value)[rowIndex] = intIndex < arryList.Length ? number : 0;
+                else
+                    ((object[])parameter.Value)[rowIndex] = intIndex < arryList.Length ? arryList[intIndex] : null;
             }
         }
 
@@ -823,15 +829,15 @@ namespace Amazon_analyzer.Database
             SkipRows();
 
             OracleConnection oracleConnection;
-            if(string.IsNullOrEmpty(this._connectionString))
+            if (string.IsNullOrEmpty(this._connectionString))
             {
-                 oracleConnection = this._oracleConnection;
+                oracleConnection = this._oracleConnection;
             }
             else
             {
-                 oracleConnection = new OracleConnection(this._connectionString);
+                oracleConnection = new OracleConnection(this._connectionString);
             }
-           
+
 
             OracleCommand commandOracle = new OracleCommand(BuildBulkInsertCommandText(), oracleConnection) { BindByName = true };
 

@@ -18,6 +18,15 @@
     GRANT DBA TO AMAZON_ANALYZER;
     ALTER USER "AMAZON_ANALYZER" DEFAULT ROLE  ALL;
 	
+drop table MOVER_SHAKER_ASIN;
+drop table MOVER_SHAKER_BRAND;
+drop table TOP_ASIN;
+drop table TOP_ASIN_WITH_LIMITED_MATCH;
+drop table TOP_BRAND;
+drop table TOP_CONVERSION_RATE;
+drop table TOP_SELLER;
+drop table TOP_SUBCATEGORY;
+
 create table MOVER_SHAKER_ASIN
 (
   marketplace_id              VARCHAR2(50),
@@ -28,14 +37,14 @@ create table MOVER_SHAKER_ASIN
   asin                        VARCHAR2(10),
   item_name                   VARCHAR2(2000),
   brand_name                  VARCHAR2(300),
-  ordered_gms_usd_last4wk     VARCHAR2(50),
-  increased_gms_last4wk       VARCHAR2(50),
-  increased_percent           VARCHAR2(50),
-  fba_ordered_gms_usd_last4wk VARCHAR2(50),
-  ordered_units_last4wk       VARCHAR2(50),
-  fba_ordered_units_last4wk   VARCHAR2(50),
-  asp                         VARCHAR2(50),
-  increased_gms_rank          VARCHAR2(50)
+  ordered_gms_usd_last4wk     NUMBER(38,2),
+  increased_gms_last4wk       NUMBER(38,2),
+  increased_percent           NUMBER(38,2),
+  fba_ordered_gms_usd_last4wk NUMBER(38,2),
+  ordered_units_last4wk       NUMBER(38,2),
+  fba_ordered_units_last4wk   NUMBER(38,2),
+  asp                         NUMBER(38,2),
+  increased_gms_rank          NUMBER(38,2)
 );
 create table MOVER_SHAKER_BRAND
 (
@@ -43,14 +52,14 @@ create table MOVER_SHAKER_BRAND
   gl_product_group            VARCHAR2(50),
   gl_product_group_desc       VARCHAR2(50),
   brand_name                  VARCHAR2(300),
-  ordered_gms_usd_last4wk     VARCHAR2(50),
-  increased_gms_last4wk       VARCHAR2(50),
-  increased_percent           VARCHAR2(50),
-  fba_ordered_gms_usd_last4wk VARCHAR2(50),
-  ordered_units_last4wk       VARCHAR2(50),
-  fba_ordered_units_last4wk   VARCHAR2(50),
-  asp                         VARCHAR2(50),
-  increased_gms_rank          VARCHAR2(50)
+  ordered_gms_usd_last4wk     NUMBER(38,2),
+  increased_gms_last4wk       NUMBER(38,2),
+  increased_percent           NUMBER(38,2),
+  fba_ordered_gms_usd_last4wk NUMBER(38,2),
+  ordered_units_last4wk       NUMBER(38,2),
+  fba_ordered_units_last4wk   NUMBER(38,2),
+  asp                         NUMBER(38,2),
+  increased_gms_rank          NUMBER(38,2)
 );
 create table TOP_ASIN
 (
@@ -62,14 +71,14 @@ create table TOP_ASIN
   asin                    VARCHAR2(10),
   item_name               VARCHAR2(2000),
   brand_name              VARCHAR2(300),
-  ordered_gms_usd_ttm     VARCHAR2(50),
-  fba_ordered_gms_usd_ttm VARCHAR2(50),
-  ordered_units_ttm       VARCHAR2(50),
-  fba_ordered_units_ttm   VARCHAR2(50),
-  asp                     VARCHAR2(50),
-  gms_rank                VARCHAR2(50),
-  glance_view_count_ttm   VARCHAR2(50),
-  units_conversion_rate   VARCHAR2(50)
+  ordered_gms_usd_ttm     NUMBER(38,2),
+  fba_ordered_gms_usd_ttm NUMBER(38,2),
+  ordered_units_ttm       NUMBER(38,2),
+  fba_ordered_units_ttm   NUMBER(38,2),
+  asp                     NUMBER(38,2),
+  gms_rank                NUMBER(38,2),
+  glance_view_count_ttm   NUMBER(38,2),
+  units_conversion_rate   NUMBER(38,2)
 );
 create table TOP_ASIN_WITH_LIMITED_MATCH
 (
@@ -81,15 +90,15 @@ create table TOP_ASIN_WITH_LIMITED_MATCH
   asin                    VARCHAR2(10),
   item_name               VARCHAR2(2000),
   brand_name              VARCHAR2(300),
-  offer_count             VARCHAR2(50),
-  ordered_gms_usd_ttm     VARCHAR2(50),
-  fba_ordered_gms_usd_ttm VARCHAR2(50),
-  ordered_units_ttm       VARCHAR2(50),
-  fba_ordered_units_ttm   VARCHAR2(50),
-  asp                     VARCHAR2(50),
-  gms_rank                VARCHAR2(50),
-  glance_view_count_ttm   VARCHAR2(50),
-  units_conversion_rate   VARCHAR2(50)
+  offer_count             NUMBER(38,2),
+  ordered_gms_usd_ttm     NUMBER(38,2),
+  fba_ordered_gms_usd_ttm NUMBER(38,2),
+  ordered_units_ttm       NUMBER(38,2),
+  fba_ordered_units_ttm   NUMBER(38,2),
+  asp                     NUMBER(38,2),
+  gms_rank                NUMBER(38,2),
+  glance_view_count_ttm   NUMBER(38,2),
+  units_conversion_rate   NUMBER(38,2)
 );
 create table TOP_BRAND
 (
@@ -97,12 +106,12 @@ create table TOP_BRAND
   gl_product_group_desc   VARCHAR2(50),
   marketplace_id          VARCHAR2(50),
   brand_name              VARCHAR2(300),
-  ordered_gms_usd_ttm     VARCHAR2(50),
-  fba_ordered_gms_usd_ttm VARCHAR2(50),
-  ordered_units_ttm       VARCHAR2(50),
-  fba_ordered_units_ttm   VARCHAR2(50),
-  asp                     VARCHAR2(50),
-  gms_rank                VARCHAR2(50)
+  ordered_gms_usd_ttm     NUMBER(38,2),
+  fba_ordered_gms_usd_ttm NUMBER(38,2),
+  ordered_units_ttm       NUMBER(38,2),
+  fba_ordered_units_ttm   NUMBER(38,2),
+  asp                     NUMBER(38,2),
+  gms_rank                NUMBER(38,2)
 );
 create table TOP_CONVERSION_RATE
 (
@@ -114,14 +123,14 @@ create table TOP_CONVERSION_RATE
   asin                    VARCHAR2(10),
   item_name               VARCHAR2(2000),
   brand_name              VARCHAR2(300),
-  glance_view_count_ttm   VARCHAR2(50),
-  ordered_gms_usd_ttm     VARCHAR2(50),
-  fba_ordered_gms_usd_ttm VARCHAR2(50),
-  ordered_units_ttm       VARCHAR2(50),
-  fba_ordered_units_ttm   VARCHAR2(50),
-  asp                     VARCHAR2(50),
-  units_conversion_rate   VARCHAR2(50),
-  gms_rank                VARCHAR2(50)
+  glance_view_count_ttm   NUMBER(38,2),
+  ordered_gms_usd_ttm     NUMBER(38,2),
+  fba_ordered_gms_usd_ttm NUMBER(38,2),
+  ordered_units_ttm       NUMBER(38,2),
+  fba_ordered_units_ttm   NUMBER(38,2),
+  asp                     NUMBER(38,2),
+  units_conversion_rate   NUMBER(38,2),
+  gms_rank                NUMBER(38,2)
 );
 create table TOP_SELLER
 (
@@ -138,15 +147,15 @@ create table TOP_SELLER
   fba_launch_date           VARCHAR2(50),
   opportunity_owner         VARCHAR2(50),
   sf_country_of_origin      VARCHAR2(50),
-  offering_count            VARCHAR2(50),
-  fba_offering_count        VARCHAR2(50),
+  offering_count            NUMBER(38,2),
+  fba_offering_count        NUMBER(38,2),
   gcid_seller               VARCHAR2(50),
-  ordered_gms_usd_ttm       VARCHAR2(50),
-  fba_ordered_gms_usd_ttm   VARCHAR2(50),
-  ordered_units_ttm         VARCHAR2(50),
-  fba_ordered_units_ttm     VARCHAR2(50),
-  asp                       VARCHAR2(50),
-  gms_rank                  VARCHAR2(50)
+  ordered_gms_usd_ttm       NUMBER(38,2),
+  fba_ordered_gms_usd_ttm   NUMBER(38,2),
+  ordered_units_ttm         NUMBER(38,2),
+  fba_ordered_units_ttm     NUMBER(38,2),
+  asp                       NUMBER(38,2),
+  gms_rank                  NUMBER(38,2)
 );
 create table TOP_SUBCATEGORY
 (
@@ -155,10 +164,10 @@ create table TOP_SUBCATEGORY
   gl_product_group_desc   VARCHAR2(50),
   category_desc           VARCHAR2(100),
   subcategory_desc        VARCHAR2(100),
-  ordered_gms_usd_ttm     VARCHAR2(50),
-  fba_ordered_gms_usd_ttm VARCHAR2(50),
-  ordered_units_ttm       VARCHAR2(50),
-  fba_ordered_units_ttm   VARCHAR2(50),
-  asp                     VARCHAR2(50),
-  gms_rank                VARCHAR2(50)
+  ordered_gms_usd_ttm     NUMBER(38,2),
+  fba_ordered_gms_usd_ttm NUMBER(38,2),
+  ordered_units_ttm       NUMBER(38,2),
+  fba_ordered_units_ttm   NUMBER(38,2),
+  asp                     NUMBER(38,2),
+  gms_rank                NUMBER(38,2)
 );
