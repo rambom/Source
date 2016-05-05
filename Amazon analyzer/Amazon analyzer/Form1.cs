@@ -1,6 +1,7 @@
 ﻿using Amazon_analyzer.Database;
 using Oracle.DataAccess.Client;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -76,73 +77,168 @@ namespace Amazon_analyzer
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView1.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView1.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView1.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager2.EventPaging += pager2_EventPaging;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView2.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView2.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView2.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager3.EventPaging += pager3_EventPaging;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView3.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView3.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView3.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager4.EventPaging += pager4_EventPaging;
             this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView4.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView4.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView4.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager5.EventPaging += pager5_EventPaging;
             this.dataGridView5.AutoGenerateColumns = false;
             this.dataGridView5.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView5.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView5.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView5.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager6.EventPaging += pager6_EventPaging;
             this.dataGridView6.AutoGenerateColumns = false;
             this.dataGridView6.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView6.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView6.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView6.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager7.EventPaging += pager7_EventPaging;
             this.dataGridView7.AutoGenerateColumns = false;
             this.dataGridView7.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView7.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView7.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView7.DataBindingComplete += dataGridView_DataBindingComplete;
             this.pager8.EventPaging += pager8_EventPaging;
             this.dataGridView8.AutoGenerateColumns = false;
             this.dataGridView8.RowPostPaint += dataGridView_RowPostPaint;
             this.dataGridView8.CellContentClick += dataGridView_CellContentClick;
+            this.dataGridView8.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
+            this.dataGridView8.DataBindingComplete += dataGridView_DataBindingComplete;
             foreach (DataGridViewColumn col in this.dataGridView1.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
             foreach (DataGridViewColumn col in this.dataGridView2.Columns)
             {
                 col.MinimumWidth = minimumWidth;
-            } 
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
+            }
             foreach (DataGridViewColumn col in this.dataGridView3.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
             foreach (DataGridViewColumn col in this.dataGridView4.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
             foreach (DataGridViewColumn col in this.dataGridView5.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
             foreach (DataGridViewColumn col in this.dataGridView6.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
             foreach (DataGridViewColumn col in this.dataGridView7.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
             foreach (DataGridViewColumn col in this.dataGridView8.Columns)
             {
                 col.MinimumWidth = minimumWidth;
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
         }
-        
+
+        void dataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            DataGridView dg = (DataGridView)sender;
+            if (!gridOrder.ContainsKey(dg.Name)) return;
+            if (gridOrder[dg.Name][1].EndsWith("asc"))
+            {
+                dg.Columns[int.Parse(gridOrder[dg.Name][0])].HeaderCell.SortGlyphDirection = SortOrder.Ascending;
+            }
+            else
+            {
+                dg.Columns[int.Parse(gridOrder[dg.Name][0])].HeaderCell.SortGlyphDirection = SortOrder.Descending;
+            }
+        }
+
+        void dataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView dg = (DataGridView)sender;
+            if (gridOrder.ContainsKey(dg.Name))
+            {
+                if (gridOrder[dg.Name][1].Equals(dg.Columns[e.ColumnIndex].DataPropertyName + " desc"))
+                {
+                    gridOrder[dg.Name][1] = dg.Columns[e.ColumnIndex].DataPropertyName + " asc";
+                }
+                else
+                {
+                    gridOrder.Remove(dg.Name);
+                    gridOrder.Add(dg.Name, new string[2]);
+                    gridOrder[dg.Name][0] = e.ColumnIndex.ToString();
+                    gridOrder[dg.Name][1] = dg.Columns[e.ColumnIndex].DataPropertyName + " desc";
+                }
+            }
+            else
+            {
+                gridOrder.Remove(dg.Name);
+                gridOrder.Add(dg.Name, new string[2]);
+                gridOrder[dg.Name][0] = e.ColumnIndex.ToString();
+                gridOrder[dg.Name][1] = dg.Columns[e.ColumnIndex].DataPropertyName + " desc";
+            }
+
+            switch (dg.Name)
+            {
+                case "dataGridView1":
+                    this.pager1.Bind();
+                    break;
+                case "dataGridView2":
+                    this.pager2.Bind();
+                    break;
+                case "dataGridView3":
+                    this.pager3.Bind();
+                    break;
+                case "dataGridView4":
+                    this.pager4.Bind();
+                    break;
+                case "dataGridView5":
+                    this.pager5.Bind();
+                    break;
+                case "dataGridView6":
+                    this.pager6.Bind();
+                    break;
+                case "dataGridView7":
+                    this.pager7.Bind();
+                    break;
+                case "dataGridView8":
+                    this.pager8.Bind();
+                    break;
+            }
+        }
+
+        private IDictionary<string, string[]> gridOrder = new Dictionary<string, string[]>();
+
+
         public string getOrderBy(DataGridView grid)
         {
-            if (grid.SortedColumn == null || grid.SortOrder == SortOrder.None) { return string.Empty; }
-            return string.Format("{0} {1}", grid.SortedColumn.DataPropertyName, grid.SortOrder == SortOrder.Descending ? "desc" : "asc");
+            return gridOrder.ContainsKey(grid.Name) ? gridOrder[grid.Name][1] : "";
         }
+
         int pager1_EventPaging(Control.EventPagingArg e)
         {
 
@@ -215,7 +311,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager2.PageCurrent - 1) * this.pager1.PageSize, (this.pager2.PageCurrent) * this.pager2.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView2), (this.pager2.PageCurrent - 1) * this.pager1.PageSize, (this.pager2.PageCurrent) * this.pager2.PageSize);
             this.dataGridView2.DataSource = dt;
             return (int)rowsCount;
         }
@@ -237,7 +333,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager3.PageCurrent - 1) * this.pager3.PageSize, (this.pager3.PageCurrent) * this.pager3.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView3), (this.pager3.PageCurrent - 1) * this.pager3.PageSize, (this.pager3.PageCurrent) * this.pager3.PageSize);
             this.dataGridView3.DataSource = dt;
             return (int)rowsCount;
         }
@@ -264,7 +360,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager4.PageCurrent - 1) * this.pager4.PageSize, (this.pager4.PageCurrent) * this.pager4.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView4), (this.pager4.PageCurrent - 1) * this.pager4.PageSize, (this.pager4.PageCurrent) * this.pager4.PageSize);
             this.dataGridView4.DataSource = dt;
             return (int)rowsCount;
         }
@@ -306,7 +402,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager5.PageCurrent - 1) * this.pager5.PageSize, (this.pager5.PageCurrent) * this.pager5.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView5), (this.pager5.PageCurrent - 1) * this.pager5.PageSize, (this.pager5.PageCurrent) * this.pager5.PageSize);
             this.dataGridView5.DataSource = dt;
             return (int)rowsCount;
         }
@@ -328,7 +424,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager6.PageCurrent - 1) * this.pager6.PageSize, (this.pager6.PageCurrent) * this.pager6.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView6), (this.pager6.PageCurrent - 1) * this.pager6.PageSize, (this.pager6.PageCurrent) * this.pager6.PageSize);
             this.dataGridView6.DataSource = dt;
             return (int)rowsCount;
         }
@@ -370,7 +466,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager7.PageCurrent - 1) * this.pager7.PageSize, (this.pager7.PageCurrent) * this.pager7.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView7), (this.pager7.PageCurrent - 1) * this.pager7.PageSize, (this.pager7.PageCurrent) * this.pager7.PageSize);
             this.dataGridView7.DataSource = dt;
             return (int)rowsCount;
         }
@@ -412,7 +508,7 @@ namespace Amazon_analyzer
             }
 
             decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, "", (this.pager8.PageCurrent - 1) * this.pager8.PageSize, (this.pager8.PageCurrent) * this.pager8.PageSize);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView8), (this.pager8.PageCurrent - 1) * this.pager8.PageSize, (this.pager8.PageCurrent) * this.pager8.PageSize);
             this.dataGridView8.DataSource = dt;
             return (int)rowsCount;
         }
