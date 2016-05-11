@@ -39,6 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pager1 = new Amazon_analyzer.Control.Pager();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MARKETPLACE_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GL_PRODUCT_GROUP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +77,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pager2 = new Amazon_analyzer.Control.Pager();
+            this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,6 +118,9 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pager3 = new Amazon_analyzer.Control.Pager();
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,6 +144,8 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pager4 = new Amazon_analyzer.Control.Pager();
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,6 +172,8 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pager5 = new Amazon_analyzer.Control.Pager();
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -201,6 +211,10 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.pager6 = new Amazon_analyzer.Control.Pager();
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -226,6 +240,9 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.pager7 = new Amazon_analyzer.Control.Pager();
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -264,6 +281,10 @@
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.pager8 = new Amazon_analyzer.Control.Pager();
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator6 = new System.Windows.Forms.BindingNavigator(this.components);
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -309,80 +330,67 @@
             this.backgroundWorker6 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker7 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker8 = new System.ComponentModel.BackgroundWorker();
-            this.pager1 = new Amazon_analyzer.Control.Pager();
-            this.pager2 = new Amazon_analyzer.Control.Pager();
-            this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pager3 = new Amazon_analyzer.Control.Pager();
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pager4 = new Amazon_analyzer.Control.Pager();
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pager5 = new Amazon_analyzer.Control.Pager();
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pager6 = new Amazon_analyzer.Control.Pager();
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pager7 = new Amazon_analyzer.Control.Pager();
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.pager8 = new Amazon_analyzer.Control.Pager();
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigator6 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.export1 = new System.Windows.Forms.LinkLabel();
+            this.export2 = new System.Windows.Forms.LinkLabel();
+            this.export3 = new System.Windows.Forms.LinkLabel();
+            this.export4 = new System.Windows.Forms.LinkLabel();
+            this.export5 = new System.Windows.Forms.LinkLabel();
+            this.export6 = new System.Windows.Forms.LinkLabel();
+            this.export7 = new System.Windows.Forms.LinkLabel();
+            this.export8 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.pager2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.pager3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_e80d0185_9239_40e6_852f_9b2619558e6c)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox11.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.pager4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.groupBox12.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.pager5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.groupBox13.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            this.groupBox14.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            this.groupBox15.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            this.groupBox16.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.pager2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
-            this.pager3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_e80d0185_9239_40e6_852f_9b2619558e6c)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.pager4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489)).BeginInit();
-            this.pager5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6)).BeginInit();
             this.pager6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.groupBox14.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.pager7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            this.groupBox15.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.pager8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.object_9a42c604_22f5_44d2_bd85_897b96082b7a)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.groupBox16.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -416,6 +424,17 @@
             this.tabPage1.Size = new System.Drawing.Size(1912, 739);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Top Asin";
+            // 
+            // pager1
+            // 
+            this.pager1.Location = new System.Drawing.Point(8, 695);
+            this.pager1.Name = "pager1";
+            this.pager1.NMax = 0;
+            this.pager1.PageCount = 0;
+            this.pager1.PageCurrent = 1;
+            this.pager1.PageSize = 100;
+            this.pager1.Size = new System.Drawing.Size(1888, 30);
+            this.pager1.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -599,6 +618,7 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.export1);
             this.groupBox9.Controls.Add(this.label42);
             this.groupBox9.Controls.Add(this.textBox42);
             this.groupBox9.Controls.Add(this.label43);
@@ -797,6 +817,36 @@
             this.tabPage2.Size = new System.Drawing.Size(1912, 739);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Top Seller";
+            // 
+            // pager2
+            // 
+            this.pager2.Controls.Add(this.bindingNavigator);
+            this.pager2.Location = new System.Drawing.Point(8, 701);
+            this.pager2.Name = "pager2";
+            this.pager2.NMax = 0;
+            this.pager2.PageCount = 0;
+            this.pager2.PageCurrent = 1;
+            this.pager2.PageSize = 100;
+            this.pager2.Size = new System.Drawing.Size(1888, 35);
+            this.pager2.TabIndex = 6;
+            // 
+            // bindingNavigator
+            // 
+            this.bindingNavigator.AddNewItem = null;
+            this.bindingNavigator.CountItem = null;
+            this.bindingNavigator.DeleteItem = null;
+            this.bindingNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator.MoveFirstItem = null;
+            this.bindingNavigator.MoveLastItem = null;
+            this.bindingNavigator.MoveNextItem = null;
+            this.bindingNavigator.MovePreviousItem = null;
+            this.bindingNavigator.Name = "bindingNavigator";
+            this.bindingNavigator.PositionItem = null;
+            this.bindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator.Size = new System.Drawing.Size(1888, 35);
+            this.bindingNavigator.TabIndex = 0;
+            this.bindingNavigator.Text = "bindingNavigator1";
             // 
             // dataGridView2
             // 
@@ -1014,6 +1064,7 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.export2);
             this.groupBox10.Controls.Add(this.linkLabel10);
             this.groupBox10.Controls.Add(this.label16);
             this.groupBox10.Controls.Add(this.label14);
@@ -1176,6 +1227,55 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Top Brand";
             // 
+            // pager3
+            // 
+            this.pager3.Controls.Add(this.object_e80d0185_9239_40e6_852f_9b2619558e6c);
+            this.pager3.Controls.Add(this.bindingNavigator1);
+            this.pager3.Location = new System.Drawing.Point(8, 692);
+            this.pager3.Name = "pager3";
+            this.pager3.NMax = 0;
+            this.pager3.PageCount = 0;
+            this.pager3.PageCurrent = 1;
+            this.pager3.PageSize = 100;
+            this.pager3.Size = new System.Drawing.Size(1253, 41);
+            this.pager3.TabIndex = 9;
+            // 
+            // object_e80d0185_9239_40e6_852f_9b2619558e6c
+            // 
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.AddNewItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.CountItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.DeleteItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Location = new System.Drawing.Point(0, 0);
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MoveFirstItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MoveLastItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MoveNextItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MovePreviousItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Name = "object_e80d0185_9239_40e6_852f_9b2619558e6c";
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.PositionItem = null;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Size = new System.Drawing.Size(1253, 41);
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.TabIndex = 0;
+            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Text = "bindingNavigator1";
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1253, 41);
+            this.bindingNavigator1.TabIndex = 0;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToAddRows = false;
@@ -1284,6 +1384,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.export3);
             this.groupBox11.Controls.Add(this.linkLabel11);
             this.groupBox11.Controls.Add(this.label17);
             this.groupBox11.Controls.Add(this.label18);
@@ -1409,6 +1510,36 @@
             this.tabPage4.Size = new System.Drawing.Size(1912, 739);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Top Subcategory";
+            // 
+            // pager4
+            // 
+            this.pager4.Controls.Add(this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489);
+            this.pager4.Location = new System.Drawing.Point(7, 696);
+            this.pager4.Name = "pager4";
+            this.pager4.NMax = 0;
+            this.pager4.PageCount = 0;
+            this.pager4.PageCurrent = 1;
+            this.pager4.PageSize = 100;
+            this.pager4.Size = new System.Drawing.Size(1888, 35);
+            this.pager4.TabIndex = 9;
+            // 
+            // object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489
+            // 
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.AddNewItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.CountItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.DeleteItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Location = new System.Drawing.Point(0, 0);
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MoveFirstItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MoveLastItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MoveNextItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MovePreviousItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Name = "object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489";
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.PositionItem = null;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Size = new System.Drawing.Size(1888, 35);
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.TabIndex = 0;
+            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Text = "bindingNavigator1";
             // 
             // dataGridView4
             // 
@@ -1537,6 +1668,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.export4);
             this.groupBox12.Controls.Add(this.linkLabel12);
             this.groupBox12.Controls.Add(this.label20);
             this.groupBox12.Controls.Add(this.label21);
@@ -1555,7 +1687,7 @@
             // linkLabel12
             // 
             this.linkLabel12.AutoSize = true;
-            this.linkLabel12.Location = new System.Drawing.Point(602, 88);
+            this.linkLabel12.Location = new System.Drawing.Point(548, 88);
             this.linkLabel12.Name = "linkLabel12";
             this.linkLabel12.Size = new System.Drawing.Size(29, 12);
             this.linkLabel12.TabIndex = 2;
@@ -1680,6 +1812,36 @@
             this.tabPage5.Size = new System.Drawing.Size(1912, 739);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Mover & Shaker - ASIN";
+            // 
+            // pager5
+            // 
+            this.pager5.Controls.Add(this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6);
+            this.pager5.Location = new System.Drawing.Point(8, 695);
+            this.pager5.Name = "pager5";
+            this.pager5.NMax = 0;
+            this.pager5.PageCount = 0;
+            this.pager5.PageCurrent = 1;
+            this.pager5.PageSize = 100;
+            this.pager5.Size = new System.Drawing.Size(1253, 35);
+            this.pager5.TabIndex = 6;
+            // 
+            // object_482e7ab6_a92d_4ae5_a112_02c1a32083b6
+            // 
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.AddNewItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.CountItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.DeleteItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Location = new System.Drawing.Point(0, 0);
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MoveFirstItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MoveLastItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MoveNextItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MovePreviousItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Name = "object_482e7ab6_a92d_4ae5_a112_02c1a32083b6";
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.PositionItem = null;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Size = new System.Drawing.Size(1253, 35);
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.TabIndex = 0;
+            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Text = "bindingNavigator1";
             // 
             // dataGridView5
             // 
@@ -1860,6 +2022,7 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.export5);
             this.groupBox13.Controls.Add(this.label27);
             this.groupBox13.Controls.Add(this.textBox27);
             this.groupBox13.Controls.Add(this.linkLabel13);
@@ -2058,6 +2221,74 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Mover & Shaker - Brand";
             // 
+            // pager6
+            // 
+            this.pager6.Controls.Add(this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4);
+            this.pager6.Controls.Add(this.bindingNavigator2);
+            this.pager6.Controls.Add(this.bindingNavigator3);
+            this.pager6.Location = new System.Drawing.Point(7, 689);
+            this.pager6.Name = "pager6";
+            this.pager6.NMax = 0;
+            this.pager6.PageCount = 0;
+            this.pager6.PageCurrent = 1;
+            this.pager6.PageSize = 100;
+            this.pager6.Size = new System.Drawing.Size(1261, 48);
+            this.pager6.TabIndex = 12;
+            // 
+            // object_33977ef1_a74a_4557_99cc_c5d15b6faac4
+            // 
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.AddNewItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.CountItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.DeleteItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Location = new System.Drawing.Point(0, 0);
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MoveFirstItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MoveLastItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MoveNextItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MovePreviousItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Name = "object_33977ef1_a74a_4557_99cc_c5d15b6faac4";
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.PositionItem = null;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Size = new System.Drawing.Size(1261, 48);
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.TabIndex = 0;
+            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Text = "bindingNavigator1";
+            // 
+            // bindingNavigator2
+            // 
+            this.bindingNavigator2.AddNewItem = null;
+            this.bindingNavigator2.CountItem = null;
+            this.bindingNavigator2.DeleteItem = null;
+            this.bindingNavigator2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator2.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator2.MoveFirstItem = null;
+            this.bindingNavigator2.MoveLastItem = null;
+            this.bindingNavigator2.MoveNextItem = null;
+            this.bindingNavigator2.MovePreviousItem = null;
+            this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.PositionItem = null;
+            this.bindingNavigator2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator2.Size = new System.Drawing.Size(1261, 48);
+            this.bindingNavigator2.TabIndex = 0;
+            this.bindingNavigator2.Text = "bindingNavigator1";
+            // 
+            // bindingNavigator3
+            // 
+            this.bindingNavigator3.AddNewItem = null;
+            this.bindingNavigator3.CountItem = null;
+            this.bindingNavigator3.DeleteItem = null;
+            this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator3.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator3.MoveFirstItem = null;
+            this.bindingNavigator3.MoveLastItem = null;
+            this.bindingNavigator3.MoveNextItem = null;
+            this.bindingNavigator3.MovePreviousItem = null;
+            this.bindingNavigator3.Name = "bindingNavigator3";
+            this.bindingNavigator3.PositionItem = null;
+            this.bindingNavigator3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator3.Size = new System.Drawing.Size(1261, 48);
+            this.bindingNavigator3.TabIndex = 0;
+            this.bindingNavigator3.Text = "bindingNavigator3";
+            // 
             // dataGridView6
             // 
             this.dataGridView6.AllowUserToAddRows = false;
@@ -2184,6 +2415,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.export6);
             this.groupBox14.Controls.Add(this.linkLabel14);
             this.groupBox14.Controls.Add(this.label28);
             this.groupBox14.Controls.Add(this.label29);
@@ -2309,6 +2541,55 @@
             this.tabPage7.Size = new System.Drawing.Size(1912, 739);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Top ASIN with Limited Match";
+            // 
+            // pager7
+            // 
+            this.pager7.Controls.Add(this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a);
+            this.pager7.Controls.Add(this.bindingNavigator4);
+            this.pager7.Location = new System.Drawing.Point(7, 689);
+            this.pager7.Name = "pager7";
+            this.pager7.NMax = 0;
+            this.pager7.PageCount = 0;
+            this.pager7.PageCurrent = 1;
+            this.pager7.PageSize = 100;
+            this.pager7.Size = new System.Drawing.Size(1888, 41);
+            this.pager7.TabIndex = 9;
+            // 
+            // object_09116d9d_087c_449a_ade4_380ba7f2fe4a
+            // 
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.AddNewItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.CountItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.DeleteItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Location = new System.Drawing.Point(0, 0);
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MoveFirstItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MoveLastItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MoveNextItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MovePreviousItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Name = "object_09116d9d_087c_449a_ade4_380ba7f2fe4a";
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.PositionItem = null;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Size = new System.Drawing.Size(1888, 41);
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.TabIndex = 0;
+            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Text = "bindingNavigator1";
+            // 
+            // bindingNavigator4
+            // 
+            this.bindingNavigator4.AddNewItem = null;
+            this.bindingNavigator4.CountItem = null;
+            this.bindingNavigator4.DeleteItem = null;
+            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator4.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator4.MoveFirstItem = null;
+            this.bindingNavigator4.MoveLastItem = null;
+            this.bindingNavigator4.MoveNextItem = null;
+            this.bindingNavigator4.MovePreviousItem = null;
+            this.bindingNavigator4.Name = "bindingNavigator4";
+            this.bindingNavigator4.PositionItem = null;
+            this.bindingNavigator4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator4.Size = new System.Drawing.Size(1888, 41);
+            this.bindingNavigator4.TabIndex = 0;
+            this.bindingNavigator4.Text = "bindingNavigator1";
             // 
             // dataGridView7
             // 
@@ -2498,6 +2779,7 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.export7);
             this.groupBox15.Controls.Add(this.label30);
             this.groupBox15.Controls.Add(this.textBox30);
             this.groupBox15.Controls.Add(this.linkLabel15);
@@ -2696,6 +2978,74 @@
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Top Conversion Rate";
             // 
+            // pager8
+            // 
+            this.pager8.Controls.Add(this.object_9a42c604_22f5_44d2_bd85_897b96082b7a);
+            this.pager8.Controls.Add(this.bindingNavigator5);
+            this.pager8.Controls.Add(this.bindingNavigator6);
+            this.pager8.Location = new System.Drawing.Point(7, 691);
+            this.pager8.Name = "pager8";
+            this.pager8.NMax = 0;
+            this.pager8.PageCount = 0;
+            this.pager8.PageCurrent = 1;
+            this.pager8.PageSize = 100;
+            this.pager8.Size = new System.Drawing.Size(1888, 48);
+            this.pager8.TabIndex = 12;
+            // 
+            // object_9a42c604_22f5_44d2_bd85_897b96082b7a
+            // 
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.AddNewItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.CountItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.DeleteItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Location = new System.Drawing.Point(0, 0);
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MoveFirstItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MoveLastItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MoveNextItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MovePreviousItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Name = "object_9a42c604_22f5_44d2_bd85_897b96082b7a";
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.PositionItem = null;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Size = new System.Drawing.Size(1888, 48);
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.TabIndex = 0;
+            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Text = "bindingNavigator1";
+            // 
+            // bindingNavigator5
+            // 
+            this.bindingNavigator5.AddNewItem = null;
+            this.bindingNavigator5.CountItem = null;
+            this.bindingNavigator5.DeleteItem = null;
+            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator5.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator5.MoveFirstItem = null;
+            this.bindingNavigator5.MoveLastItem = null;
+            this.bindingNavigator5.MoveNextItem = null;
+            this.bindingNavigator5.MovePreviousItem = null;
+            this.bindingNavigator5.Name = "bindingNavigator5";
+            this.bindingNavigator5.PositionItem = null;
+            this.bindingNavigator5.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator5.Size = new System.Drawing.Size(1888, 48);
+            this.bindingNavigator5.TabIndex = 0;
+            this.bindingNavigator5.Text = "bindingNavigator1";
+            // 
+            // bindingNavigator6
+            // 
+            this.bindingNavigator6.AddNewItem = null;
+            this.bindingNavigator6.CountItem = null;
+            this.bindingNavigator6.DeleteItem = null;
+            this.bindingNavigator6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bindingNavigator6.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator6.MoveFirstItem = null;
+            this.bindingNavigator6.MoveLastItem = null;
+            this.bindingNavigator6.MoveNextItem = null;
+            this.bindingNavigator6.MovePreviousItem = null;
+            this.bindingNavigator6.Name = "bindingNavigator6";
+            this.bindingNavigator6.PositionItem = null;
+            this.bindingNavigator6.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.bindingNavigator6.Size = new System.Drawing.Size(1888, 48);
+            this.bindingNavigator6.TabIndex = 0;
+            this.bindingNavigator6.Text = "bindingNavigator1";
+            // 
             // dataGridView8
             // 
             this.dataGridView8.AllowUserToAddRows = false;
@@ -2875,6 +3225,7 @@
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.export8);
             this.groupBox16.Controls.Add(this.label36);
             this.groupBox16.Controls.Add(this.textBox36);
             this.groupBox16.Controls.Add(this.linkLabel16);
@@ -3106,340 +3457,85 @@
             this.backgroundWorker8.WorkerReportsProgress = true;
             this.backgroundWorker8.WorkerSupportsCancellation = true;
             // 
-            // pager1
+            // export1
             // 
-            this.pager1.Location = new System.Drawing.Point(8, 695);
-            this.pager1.Name = "pager1";
-            this.pager1.NMax = 0;
-            this.pager1.PageCount = 0;
-            this.pager1.PageCurrent = 1;
-            this.pager1.PageSize = 100;
-            this.pager1.Size = new System.Drawing.Size(1888, 30);
-            this.pager1.TabIndex = 0;
+            this.export1.AutoSize = true;
+            this.export1.Location = new System.Drawing.Point(1182, 88);
+            this.export1.Name = "export1";
+            this.export1.Size = new System.Drawing.Size(29, 12);
+            this.export1.TabIndex = 9;
+            this.export1.TabStop = true;
+            this.export1.Text = "导出";
             // 
-            // pager2
+            // export2
             // 
-            this.pager2.Controls.Add(this.bindingNavigator);
-            this.pager2.Location = new System.Drawing.Point(8, 701);
-            this.pager2.Name = "pager2";
-            this.pager2.NMax = 0;
-            this.pager2.PageCount = 0;
-            this.pager2.PageCurrent = 1;
-            this.pager2.PageSize = 100;
-            this.pager2.Size = new System.Drawing.Size(1888, 35);
-            this.pager2.TabIndex = 6;
+            this.export2.AutoSize = true;
+            this.export2.Location = new System.Drawing.Point(1036, 88);
+            this.export2.Name = "export2";
+            this.export2.Size = new System.Drawing.Size(29, 12);
+            this.export2.TabIndex = 10;
+            this.export2.TabStop = true;
+            this.export2.Text = "导出";
             // 
-            // bindingNavigator
+            // export3
             // 
-            this.bindingNavigator.AddNewItem = null;
-            this.bindingNavigator.CountItem = null;
-            this.bindingNavigator.DeleteItem = null;
-            this.bindingNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator.MoveFirstItem = null;
-            this.bindingNavigator.MoveLastItem = null;
-            this.bindingNavigator.MoveNextItem = null;
-            this.bindingNavigator.MovePreviousItem = null;
-            this.bindingNavigator.Name = "bindingNavigator";
-            this.bindingNavigator.PositionItem = null;
-            this.bindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator.Size = new System.Drawing.Size(1888, 35);
-            this.bindingNavigator.TabIndex = 0;
-            this.bindingNavigator.Text = "bindingNavigator1";
+            this.export3.AutoSize = true;
+            this.export3.Location = new System.Drawing.Point(1048, 40);
+            this.export3.Name = "export3";
+            this.export3.Size = new System.Drawing.Size(29, 12);
+            this.export3.TabIndex = 10;
+            this.export3.TabStop = true;
+            this.export3.Text = "导出";
             // 
-            // pager3
+            // export4
             // 
-            this.pager3.Controls.Add(this.object_e80d0185_9239_40e6_852f_9b2619558e6c);
-            this.pager3.Controls.Add(this.bindingNavigator1);
-            this.pager3.Location = new System.Drawing.Point(8, 692);
-            this.pager3.Name = "pager3";
-            this.pager3.NMax = 0;
-            this.pager3.PageCount = 0;
-            this.pager3.PageCurrent = 1;
-            this.pager3.PageSize = 100;
-            this.pager3.Size = new System.Drawing.Size(1253, 41);
-            this.pager3.TabIndex = 9;
+            this.export4.AutoSize = true;
+            this.export4.Location = new System.Drawing.Point(619, 88);
+            this.export4.Name = "export4";
+            this.export4.Size = new System.Drawing.Size(29, 12);
+            this.export4.TabIndex = 10;
+            this.export4.TabStop = true;
+            this.export4.Text = "导出";
             // 
-            // object_e80d0185_9239_40e6_852f_9b2619558e6c
+            // export5
             // 
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.AddNewItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.CountItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.DeleteItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Location = new System.Drawing.Point(0, 0);
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MoveFirstItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MoveLastItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MoveNextItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.MovePreviousItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Name = "object_e80d0185_9239_40e6_852f_9b2619558e6c";
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.PositionItem = null;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Size = new System.Drawing.Size(1253, 41);
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.TabIndex = 0;
-            this.object_e80d0185_9239_40e6_852f_9b2619558e6c.Text = "bindingNavigator1";
+            this.export5.AutoSize = true;
+            this.export5.Location = new System.Drawing.Point(1207, 88);
+            this.export5.Name = "export5";
+            this.export5.Size = new System.Drawing.Size(29, 12);
+            this.export5.TabIndex = 10;
+            this.export5.TabStop = true;
+            this.export5.Text = "导出";
             // 
-            // bindingNavigator1
+            // export6
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.CountItem = null;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = null;
-            this.bindingNavigator1.MoveLastItem = null;
-            this.bindingNavigator1.MoveNextItem = null;
-            this.bindingNavigator1.MovePreviousItem = null;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = null;
-            this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1253, 41);
-            this.bindingNavigator1.TabIndex = 0;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.export6.AutoSize = true;
+            this.export6.Location = new System.Drawing.Point(1045, 40);
+            this.export6.Name = "export6";
+            this.export6.Size = new System.Drawing.Size(29, 12);
+            this.export6.TabIndex = 10;
+            this.export6.TabStop = true;
+            this.export6.Text = "导出";
             // 
-            // pager4
+            // export7
             // 
-            this.pager4.Controls.Add(this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489);
-            this.pager4.Location = new System.Drawing.Point(7, 696);
-            this.pager4.Name = "pager4";
-            this.pager4.NMax = 0;
-            this.pager4.PageCount = 0;
-            this.pager4.PageCurrent = 1;
-            this.pager4.PageSize = 100;
-            this.pager4.Size = new System.Drawing.Size(1888, 35);
-            this.pager4.TabIndex = 9;
+            this.export7.AutoSize = true;
+            this.export7.Location = new System.Drawing.Point(1209, 88);
+            this.export7.Name = "export7";
+            this.export7.Size = new System.Drawing.Size(29, 12);
+            this.export7.TabIndex = 10;
+            this.export7.TabStop = true;
+            this.export7.Text = "导出";
             // 
-            // object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489
+            // export8
             // 
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.AddNewItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.CountItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.DeleteItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Location = new System.Drawing.Point(0, 0);
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MoveFirstItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MoveLastItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MoveNextItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.MovePreviousItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Name = "object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489";
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.PositionItem = null;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Size = new System.Drawing.Size(1888, 35);
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.TabIndex = 0;
-            this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489.Text = "bindingNavigator1";
-            // 
-            // pager5
-            // 
-            this.pager5.Controls.Add(this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6);
-            this.pager5.Location = new System.Drawing.Point(8, 695);
-            this.pager5.Name = "pager5";
-            this.pager5.NMax = 0;
-            this.pager5.PageCount = 0;
-            this.pager5.PageCurrent = 1;
-            this.pager5.PageSize = 100;
-            this.pager5.Size = new System.Drawing.Size(1253, 35);
-            this.pager5.TabIndex = 6;
-            // 
-            // object_482e7ab6_a92d_4ae5_a112_02c1a32083b6
-            // 
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.AddNewItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.CountItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.DeleteItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Location = new System.Drawing.Point(0, 0);
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MoveFirstItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MoveLastItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MoveNextItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.MovePreviousItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Name = "object_482e7ab6_a92d_4ae5_a112_02c1a32083b6";
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.PositionItem = null;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Size = new System.Drawing.Size(1253, 35);
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.TabIndex = 0;
-            this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6.Text = "bindingNavigator1";
-            // 
-            // pager6
-            // 
-            this.pager6.Controls.Add(this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4);
-            this.pager6.Controls.Add(this.bindingNavigator2);
-            this.pager6.Controls.Add(this.bindingNavigator3);
-            this.pager6.Location = new System.Drawing.Point(7, 689);
-            this.pager6.Name = "pager6";
-            this.pager6.NMax = 0;
-            this.pager6.PageCount = 0;
-            this.pager6.PageCurrent = 1;
-            this.pager6.PageSize = 100;
-            this.pager6.Size = new System.Drawing.Size(1261, 48);
-            this.pager6.TabIndex = 12;
-            // 
-            // object_33977ef1_a74a_4557_99cc_c5d15b6faac4
-            // 
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.AddNewItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.CountItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.DeleteItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Location = new System.Drawing.Point(0, 0);
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MoveFirstItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MoveLastItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MoveNextItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.MovePreviousItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Name = "object_33977ef1_a74a_4557_99cc_c5d15b6faac4";
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.PositionItem = null;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Size = new System.Drawing.Size(1261, 48);
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.TabIndex = 0;
-            this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4.Text = "bindingNavigator1";
-            // 
-            // bindingNavigator2
-            // 
-            this.bindingNavigator2.AddNewItem = null;
-            this.bindingNavigator2.CountItem = null;
-            this.bindingNavigator2.DeleteItem = null;
-            this.bindingNavigator2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator2.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator2.MoveFirstItem = null;
-            this.bindingNavigator2.MoveLastItem = null;
-            this.bindingNavigator2.MoveNextItem = null;
-            this.bindingNavigator2.MovePreviousItem = null;
-            this.bindingNavigator2.Name = "bindingNavigator2";
-            this.bindingNavigator2.PositionItem = null;
-            this.bindingNavigator2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1261, 48);
-            this.bindingNavigator2.TabIndex = 0;
-            this.bindingNavigator2.Text = "bindingNavigator1";
-            // 
-            // bindingNavigator3
-            // 
-            this.bindingNavigator3.AddNewItem = null;
-            this.bindingNavigator3.CountItem = null;
-            this.bindingNavigator3.DeleteItem = null;
-            this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator3.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator3.MoveFirstItem = null;
-            this.bindingNavigator3.MoveLastItem = null;
-            this.bindingNavigator3.MoveNextItem = null;
-            this.bindingNavigator3.MovePreviousItem = null;
-            this.bindingNavigator3.Name = "bindingNavigator3";
-            this.bindingNavigator3.PositionItem = null;
-            this.bindingNavigator3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator3.Size = new System.Drawing.Size(1261, 48);
-            this.bindingNavigator3.TabIndex = 0;
-            this.bindingNavigator3.Text = "bindingNavigator3";
-            // 
-            // pager7
-            // 
-            this.pager7.Controls.Add(this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a);
-            this.pager7.Controls.Add(this.bindingNavigator4);
-            this.pager7.Location = new System.Drawing.Point(7, 689);
-            this.pager7.Name = "pager7";
-            this.pager7.NMax = 0;
-            this.pager7.PageCount = 0;
-            this.pager7.PageCurrent = 1;
-            this.pager7.PageSize = 100;
-            this.pager7.Size = new System.Drawing.Size(1888, 41);
-            this.pager7.TabIndex = 9;
-            // 
-            // object_09116d9d_087c_449a_ade4_380ba7f2fe4a
-            // 
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.AddNewItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.CountItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.DeleteItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Location = new System.Drawing.Point(0, 0);
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MoveFirstItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MoveLastItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MoveNextItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.MovePreviousItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Name = "object_09116d9d_087c_449a_ade4_380ba7f2fe4a";
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.PositionItem = null;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Size = new System.Drawing.Size(1888, 41);
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.TabIndex = 0;
-            this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a.Text = "bindingNavigator1";
-            // 
-            // bindingNavigator4
-            // 
-            this.bindingNavigator4.AddNewItem = null;
-            this.bindingNavigator4.CountItem = null;
-            this.bindingNavigator4.DeleteItem = null;
-            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator4.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator4.MoveFirstItem = null;
-            this.bindingNavigator4.MoveLastItem = null;
-            this.bindingNavigator4.MoveNextItem = null;
-            this.bindingNavigator4.MovePreviousItem = null;
-            this.bindingNavigator4.Name = "bindingNavigator4";
-            this.bindingNavigator4.PositionItem = null;
-            this.bindingNavigator4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator4.Size = new System.Drawing.Size(1888, 41);
-            this.bindingNavigator4.TabIndex = 0;
-            this.bindingNavigator4.Text = "bindingNavigator1";
-            // 
-            // pager8
-            // 
-            this.pager8.Controls.Add(this.object_9a42c604_22f5_44d2_bd85_897b96082b7a);
-            this.pager8.Controls.Add(this.bindingNavigator5);
-            this.pager8.Controls.Add(this.bindingNavigator6);
-            this.pager8.Location = new System.Drawing.Point(7, 691);
-            this.pager8.Name = "pager8";
-            this.pager8.NMax = 0;
-            this.pager8.PageCount = 0;
-            this.pager8.PageCurrent = 1;
-            this.pager8.PageSize = 100;
-            this.pager8.Size = new System.Drawing.Size(1888, 48);
-            this.pager8.TabIndex = 12;
-            // 
-            // object_9a42c604_22f5_44d2_bd85_897b96082b7a
-            // 
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.AddNewItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.CountItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.DeleteItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Location = new System.Drawing.Point(0, 0);
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MoveFirstItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MoveLastItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MoveNextItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.MovePreviousItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Name = "object_9a42c604_22f5_44d2_bd85_897b96082b7a";
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.PositionItem = null;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Size = new System.Drawing.Size(1888, 48);
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.TabIndex = 0;
-            this.object_9a42c604_22f5_44d2_bd85_897b96082b7a.Text = "bindingNavigator1";
-            // 
-            // bindingNavigator5
-            // 
-            this.bindingNavigator5.AddNewItem = null;
-            this.bindingNavigator5.CountItem = null;
-            this.bindingNavigator5.DeleteItem = null;
-            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator5.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator5.MoveFirstItem = null;
-            this.bindingNavigator5.MoveLastItem = null;
-            this.bindingNavigator5.MoveNextItem = null;
-            this.bindingNavigator5.MovePreviousItem = null;
-            this.bindingNavigator5.Name = "bindingNavigator5";
-            this.bindingNavigator5.PositionItem = null;
-            this.bindingNavigator5.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator5.Size = new System.Drawing.Size(1888, 48);
-            this.bindingNavigator5.TabIndex = 0;
-            this.bindingNavigator5.Text = "bindingNavigator1";
-            // 
-            // bindingNavigator6
-            // 
-            this.bindingNavigator6.AddNewItem = null;
-            this.bindingNavigator6.CountItem = null;
-            this.bindingNavigator6.DeleteItem = null;
-            this.bindingNavigator6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bindingNavigator6.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator6.MoveFirstItem = null;
-            this.bindingNavigator6.MoveLastItem = null;
-            this.bindingNavigator6.MoveNextItem = null;
-            this.bindingNavigator6.MovePreviousItem = null;
-            this.bindingNavigator6.Name = "bindingNavigator6";
-            this.bindingNavigator6.PositionItem = null;
-            this.bindingNavigator6.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator6.Size = new System.Drawing.Size(1888, 48);
-            this.bindingNavigator6.TabIndex = 0;
-            this.bindingNavigator6.Text = "bindingNavigator1";
+            this.export8.AutoSize = true;
+            this.export8.Location = new System.Drawing.Point(1210, 88);
+            this.export8.Name = "export8";
+            this.export8.Size = new System.Drawing.Size(29, 12);
+            this.export8.TabIndex = 10;
+            this.export8.TabStop = true;
+            this.export8.Text = "导出";
             // 
             // Form1
             // 
@@ -3462,74 +3558,74 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.pager2.ResumeLayout(false);
+            this.pager2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.pager3.ResumeLayout(false);
+            this.pager3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_e80d0185_9239_40e6_852f_9b2619558e6c)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.pager4.ResumeLayout(false);
+            this.pager4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.pager5.ResumeLayout(false);
+            this.pager5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
+            this.pager6.ResumeLayout(false);
+            this.pager6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
+            this.pager7.ResumeLayout(false);
+            this.pager7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.pager2.ResumeLayout(false);
-            this.pager2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
-            this.pager3.ResumeLayout(false);
-            this.pager3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_e80d0185_9239_40e6_852f_9b2619558e6c)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.pager4.ResumeLayout(false);
-            this.pager4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_7cb446ab_f522_4f0c_abbd_cbe76f3fd489)).EndInit();
-            this.pager5.ResumeLayout(false);
-            this.pager5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_482e7ab6_a92d_4ae5_a112_02c1a32083b6)).EndInit();
-            this.pager6.ResumeLayout(false);
-            this.pager6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_33977ef1_a74a_4557_99cc_c5d15b6faac4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
-            this.pager7.ResumeLayout(false);
-            this.pager7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.object_09116d9d_087c_449a_ade4_380ba7f2fe4a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
             this.pager8.ResumeLayout(false);
             this.pager8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.object_9a42c604_22f5_44d2_bd85_897b96082b7a)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3829,6 +3925,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GMS_RANK;
         private System.Windows.Forms.DataGridViewTextBoxColumn GLANCE_VIEW_COUNT_TTM;
         private System.Windows.Forms.DataGridViewTextBoxColumn UNITS_CONVERSION_RATE;
+        private System.Windows.Forms.LinkLabel export1;
+        private System.Windows.Forms.LinkLabel export2;
+        private System.Windows.Forms.LinkLabel export3;
+        private System.Windows.Forms.LinkLabel export4;
+        private System.Windows.Forms.LinkLabel export5;
+        private System.Windows.Forms.LinkLabel export6;
+        private System.Windows.Forms.LinkLabel export7;
+        private System.Windows.Forms.LinkLabel export8;
     }
 }
 

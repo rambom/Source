@@ -1,4 +1,5 @@
 ﻿using Amazon_analyzer.Database;
+using Amazon_analyzer.Helpers;
 using Oracle.DataAccess.Client;
 using System;
 using System.Collections;
@@ -6,6 +7,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -121,6 +124,16 @@ namespace Amazon_analyzer
             this.dataGridView8.CellContentClick += dataGridView_CellContentClick;
             this.dataGridView8.ColumnHeaderMouseClick += dataGridView_ColumnHeaderMouseClick;
             this.dataGridView8.DataBindingComplete += dataGridView_DataBindingComplete;
+
+            this.export1.Click += export_Click;
+            this.export2.Click += export_Click;
+            this.export3.Click += export_Click;
+            this.export4.Click += export_Click;
+            this.export5.Click += export_Click;
+            this.export6.Click += export_Click;
+            this.export7.Click += export_Click;
+            this.export8.Click += export_Click;
+
             foreach (DataGridViewColumn col in this.dataGridView1.Columns)
             {
                 col.MinimumWidth = minimumWidth;
@@ -161,6 +174,53 @@ namespace Amazon_analyzer
                 col.MinimumWidth = minimumWidth;
                 col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
+        }
+
+        void export_Click(object sender, EventArgs e)
+        {
+            string strCondition = "";
+            string tableName = "";
+            List<DataParameter> param = new List<DataParameter>();
+            string orderBy = "";
+            switch (this.tabControl1.SelectedIndex)
+            {
+                case 0:
+                    this.GetPager1Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView1);
+                    break;
+                case 1:
+                    this.GetPager2Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView2);
+                    break;
+                case 2:
+                    this.GetPager3Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView3);
+                    break;
+                case 3:
+                    this.GetPager4Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView4);
+                    break;
+                case 4:
+                    this.GetPager5Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView5);
+                    break;
+                case 5:
+                    this.GetPager6Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView6);
+                    break;
+                case 6:
+                    this.GetPager7Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView7);
+                    break;
+                case 7:
+                    this.GetPager8Condition(out strCondition, out tableName, out param);
+                    orderBy = this.getOrderBy(dataGridView8);
+                    break;
+            }
+            DbDataReader dataReader = db.ExecuteDataReader(string.Format("select * from {0} where 1=1 {1} {2}", tableName, strCondition, string.IsNullOrEmpty(orderBy) ? "" : "order by " + orderBy), param);
+            string fileName = string.Format("{0}-{1:yyyyMMddhhmmss}.xlsx", tableName,DateTime.Now);
+            ExcelHelper.ExportExcel(dataReader, "", fileName, true);
+            System.Diagnostics.Process.Start(fileName);
         }
 
         void dataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -242,9 +302,22 @@ namespace Amazon_analyzer
         int pager1_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["top_asin_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager1Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView1), (this.pager1.PageCurrent - 1) * this.pager1.PageSize, (this.pager1.PageCurrent) * this.pager1.PageSize);
+            this.dataGridView1.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager1Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["top_asin_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox9.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label9.Text.Trim());
@@ -276,19 +349,27 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label42.Text.Trim());
                 param.Add(new DataParameter(label42.Text.Trim(), DbType.String, 50, textBox42.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView1), (this.pager1.PageCurrent - 1) * this.pager1.PageSize, (this.pager1.PageCurrent) * this.pager1.PageSize);
-            this.dataGridView1.DataSource = dt;
-            return (int)rowsCount;
         }
 
         int pager2_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["top_seller_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager2Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView2), (this.pager2.PageCurrent - 1) * this.pager1.PageSize, (this.pager2.PageCurrent) * this.pager2.PageSize);
+            this.dataGridView2.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager2Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["top_seller_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox13.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label13.Text.Trim());
@@ -309,18 +390,26 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label16.Text.Trim());
                 param.Add(new DataParameter(label16.Text.Trim(), DbType.String, 50, textBox16.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView2), (this.pager2.PageCurrent - 1) * this.pager1.PageSize, (this.pager2.PageCurrent) * this.pager2.PageSize);
-            this.dataGridView2.DataSource = dt;
-            return (int)rowsCount;
         }
         int pager3_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["top_brand_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager3Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView3), (this.pager3.PageCurrent - 1) * this.pager3.PageSize, (this.pager3.PageCurrent) * this.pager3.PageSize);
+            this.dataGridView3.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager3Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["top_brand_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox17.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label17.Text.Trim());
@@ -331,18 +420,26 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label18.Text.Trim());
                 param.Add(new DataParameter(label18.Text.Trim(), DbType.String, 50, textBox18.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView3), (this.pager3.PageCurrent - 1) * this.pager3.PageSize, (this.pager3.PageCurrent) * this.pager3.PageSize);
-            this.dataGridView3.DataSource = dt;
-            return (int)rowsCount;
         }
         int pager4_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["top_subcategory_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager4Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView4), (this.pager4.PageCurrent - 1) * this.pager4.PageSize, (this.pager4.PageCurrent) * this.pager4.PageSize);
+            this.dataGridView4.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager4Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["top_subcategory_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox19.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label19.Text.Trim());
@@ -358,18 +455,26 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label21.Text.Trim());
                 param.Add(new DataParameter(label21.Text.Trim(), DbType.String, 50, textBox21.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView4), (this.pager4.PageCurrent - 1) * this.pager4.PageSize, (this.pager4.PageCurrent) * this.pager4.PageSize);
-            this.dataGridView4.DataSource = dt;
-            return (int)rowsCount;
         }
         int pager5_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["mover_shaker_asin_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager5Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView5), (this.pager5.PageCurrent - 1) * this.pager5.PageSize, (this.pager5.PageCurrent) * this.pager5.PageSize);
+            this.dataGridView5.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager5Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["mover_shaker_asin_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox22.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label22.Text.Trim());
@@ -400,18 +505,26 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label27.Text.Trim());
                 param.Add(new DataParameter(label27.Text.Trim(), DbType.String, 50, textBox27.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView5), (this.pager5.PageCurrent - 1) * this.pager5.PageSize, (this.pager5.PageCurrent) * this.pager5.PageSize);
-            this.dataGridView5.DataSource = dt;
-            return (int)rowsCount;
         }
         int pager6_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["mover_shaker_brand_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager6Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView6), (this.pager6.PageCurrent - 1) * this.pager6.PageSize, (this.pager6.PageCurrent) * this.pager6.PageSize);
+            this.dataGridView6.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager6Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["mover_shaker_brand_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox28.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label28.Text.Trim());
@@ -422,18 +535,26 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label29.Text.Trim());
                 param.Add(new DataParameter(label29.Text.Trim(), DbType.String, 50, textBox29.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView6), (this.pager6.PageCurrent - 1) * this.pager6.PageSize, (this.pager6.PageCurrent) * this.pager6.PageSize);
-            this.dataGridView6.DataSource = dt;
-            return (int)rowsCount;
         }
         int pager7_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["top_asin_with_limited_match_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager7Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView7), (this.pager7.PageCurrent - 1) * this.pager7.PageSize, (this.pager7.PageCurrent) * this.pager7.PageSize);
+            this.dataGridView7.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager7Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["top_asin_with_limited_match_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox31.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label31.Text.Trim());
@@ -464,18 +585,26 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label30.Text.Trim());
                 param.Add(new DataParameter(label30.Text.Trim(), DbType.String, 50, textBox30.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView7), (this.pager7.PageCurrent - 1) * this.pager7.PageSize, (this.pager7.PageCurrent) * this.pager7.PageSize);
-            this.dataGridView7.DataSource = dt;
-            return (int)rowsCount;
         }
         int pager8_EventPaging(Control.EventPagingArg e)
         {
 
-            string strCondition = "";
-            string tableName = ConfigurationManager.AppSettings["top_conversion_rate_table"];
-            List<DataParameter> param = new List<DataParameter>();
+            string strCondition;
+            string tableName;
+            List<DataParameter> param;
+            GetPager8Condition(out strCondition, out tableName, out param);
+
+            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView8), (this.pager8.PageCurrent - 1) * this.pager8.PageSize, (this.pager8.PageCurrent) * this.pager8.PageSize);
+            this.dataGridView8.DataSource = dt;
+            return (int)rowsCount;
+        }
+
+        private void GetPager8Condition(out string strCondition, out string tableName, out List<DataParameter> param)
+        {
+            strCondition = "";
+            tableName = ConfigurationManager.AppSettings["top_conversion_rate_table"];
+            param = new List<DataParameter>();
             if (!string.IsNullOrEmpty(textBox37.Text.Trim()))
             {
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label37.Text.Trim());
@@ -506,11 +635,6 @@ namespace Amazon_analyzer
                 strCondition += string.Format(" and {0} like '%' || :{0} || '%'", this.label36.Text.Trim());
                 param.Add(new DataParameter(label36.Text.Trim(), DbType.String, 50, textBox36.Text.Trim()));
             }
-
-            decimal rowsCount = db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
-            DataTable dt = db.ExecuteDataTablePaged(tableName, "*", "", strCondition, param, getOrderBy(this.dataGridView8), (this.pager8.PageCurrent - 1) * this.pager8.PageSize, (this.pager8.PageCurrent) * this.pager8.PageSize);
-            this.dataGridView8.DataSource = dt;
-            return (int)rowsCount;
         }
         ~Form1()
         {

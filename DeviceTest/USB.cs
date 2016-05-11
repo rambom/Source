@@ -44,7 +44,6 @@ namespace DeviceTest
     {
         public String PNPDeviceID;      // 设备ID
         public String Name;             // 设备名称
-        public String ClassGuid;        // 设备类GUID
     }
 
     /// <summary>
@@ -373,8 +372,7 @@ namespace DeviceTest
                     {
                         HostControllerInfo Element;
                         Element.PNPDeviceID = MO["PNPDeviceID"] as String;  // 设备ID
-                        Element.Name = MO["Name"] as String;    // 设备描述  
-                        Element.ClassGuid = MO["ClassGuid"] as String; //设备类GUID
+                        Element.Name = MO["Name"] as String;    // 设备描述                        
                         HostControllers.Add(Element);
                     }
                 }

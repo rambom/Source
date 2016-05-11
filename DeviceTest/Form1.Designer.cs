@@ -72,7 +72,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(185, 21);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "HID\\VID_1A56&PID_DD01\\6&3B090287&0&0000";
             // 
             // label2
             // 
@@ -89,7 +88,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(185, 21);
             this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "{745a17a0-74d3-11d0-b6fe-00a0c90f57da}";
             // 
             // checkBox1
             // 
