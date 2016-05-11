@@ -218,7 +218,7 @@ namespace Amazon_analyzer
                     break;
             }
             DbDataReader dataReader = db.ExecuteDataReader(string.Format("select * from {0} where 1=1 {1} {2}", tableName, strCondition, string.IsNullOrEmpty(orderBy) ? "" : "order by " + orderBy), param);
-            string fileName = string.Format("{0}-{1:yyyyMMddhhmmss}.xlsx", tableName,DateTime.Now);
+            string fileName = string.Format("{0}_{1:yyyyMMddHHmmss}.xlsx", tableName, DateTime.Now);
             ExcelHelper.ExportExcel(dataReader, "", fileName, true);
             System.Diagnostics.Process.Start(fileName);
         }
