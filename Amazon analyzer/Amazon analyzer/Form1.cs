@@ -1,5 +1,6 @@
 ﻿using Amazon_analyzer.Database;
 using Amazon_analyzer.Helpers;
+using Aspose.Cells;
 using Oracle.DataAccess.Client;
 using System;
 using System.Collections;
@@ -14,6 +15,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Amazon_analyzer
@@ -25,6 +27,9 @@ namespace Amazon_analyzer
         string asinUrl = ConfigurationManager.AppSettings["asin_url"];
         IDataBase db = new OracleHandler(conn_string);
         int minimumWidth = 200;
+        private ProgressForm progressForm = null;
+        private delegate bool IncreaseHandle(int nValue);
+        private IncreaseHandle myIncrease = null;
         public Form1()
         {
             InitializeComponent();
@@ -175,7 +180,16 @@ namespace Amazon_analyzer
                 col.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
         }
+        private void ShowProcessBar()
+        {
+            progressForm = new ProgressForm();
 
+            // Init increase event
+            myIncrease = new IncreaseHandle(progressForm.Increase);
+            progressForm.StartPosition = FormStartPosition.CenterScreen;
+            progressForm.ShowDialog();
+            progressForm = null;
+        }
         void export_Click(object sender, EventArgs e)
         {
             string strCondition = "";
@@ -217,10 +231,75 @@ namespace Amazon_analyzer
                     orderBy = this.getOrderBy(dataGridView8);
                     break;
             }
-            DbDataReader dataReader = db.ExecuteDataReader(string.Format("select * from {0} where 1=1 {1} {2}", tableName, strCondition, string.IsNullOrEmpty(orderBy) ? "" : "order by " + orderBy), param);
+            Thread fThread = new Thread(new ParameterizedThreadStart(ExportExcel));//开辟一个新的线程
+            fThread.Start(new object[] { strCondition, tableName, param, orderBy });
+        }
+
+        public void ExportExcel(object args)
+        {
+            string strCondition = ((object[])args)[0] as string;
+            string tableName = ((object[])args)[1] as string;
+            List<DataParameter> param = ((object[])args)[2] as List<DataParameter>;
+            string orderBy = ((object[])args)[3] as string;
+
             string fileName = string.Format("{0}_{1:yyyyMMddHHmmss}.xlsx", tableName, DateTime.Now);
-            ExcelHelper.ExportExcel(dataReader, "", fileName, true);
+
+
+            Workbook workbook = new Workbook();
+            workbook.Worksheets.Add();
+            bool first = true;
+            int rowIndex = 0;
+            Style style = new Style();
+
+            MethodInvoker mi = new MethodInvoker(ShowProcessBar);
+            this.BeginInvoke(mi);
+            Thread.Sleep(1000);
+            this.Invoke(this.myIncrease, new object[] { 0 });
+
+            int rowsCount = (int)db.ExecuteScalar("select count(1) from " + tableName + " where 1=1 " + strCondition, param);
+            DbDataReader dataReader = db.ExecuteDataReader(string.Format("select * from {0} where 1=1 {1} {2}", tableName, strCondition, string.IsNullOrEmpty(orderBy) ? "" : "order by " + orderBy), param);
+
+            while (dataReader.Read())
+            {
+                for (int i = 0; i < dataReader.FieldCount; i++)
+                {
+                    if (first)
+                    {
+                        style.Custom = "@";
+                        style.Font.IsBold = true;
+                        workbook.Worksheets[0].Cells[rowIndex, i].SetStyle(style);
+                        workbook.Worksheets[0].Cells[rowIndex, i].Value = dataReader.GetName(i);
+                    }
+
+                    style.Font.IsBold = false; if (dataReader[i] is string)
+                    {
+                        style.Custom = "@";
+                    }
+                    else if (dataReader[i] is DateTime)
+                    {
+                        style.Custom = "yyyy-MM-dd";
+                    }
+                    else if (dataReader[i] is decimal)
+                    {
+                        style.Custom = "####.#####";
+                        style.ShrinkToFit = true;
+                    }
+                    workbook.Worksheets[0].Cells[rowIndex + 1, i].SetStyle(style);
+                    workbook.Worksheets[0].Cells[rowIndex + 1, i].Value = dataReader[i];
+                }
+                first = false;
+                rowIndex++;
+                this.Invoke(this.myIncrease, new object[] { (rowIndex * 100 - 1) / rowsCount });
+            }
+            workbook.Worksheets[0].AutoFitColumns();
+            workbook.Worksheets[0].AutoFitRows(true);
+            if (fileName.ToLower().EndsWith(".xlsx"))
+                workbook.Save(fileName, FileFormatType.Excel2007Xlsx);
+            else
+                workbook.Save(fileName, FileFormatType.Default);
+            this.Invoke(this.myIncrease, new object[] { 100 });
             System.Diagnostics.Process.Start(fileName);
+
         }
 
         void dataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -229,11 +308,11 @@ namespace Amazon_analyzer
             if (!gridOrder.ContainsKey(dg.Name)) return;
             if (gridOrder[dg.Name][1].EndsWith("asc"))
             {
-                dg.Columns[int.Parse(gridOrder[dg.Name][0])].HeaderCell.SortGlyphDirection = SortOrder.Ascending;
+                dg.Columns[int.Parse(gridOrder[dg.Name][0])].HeaderCell.SortGlyphDirection = System.Windows.Forms.SortOrder.Ascending;
             }
             else
             {
-                dg.Columns[int.Parse(gridOrder[dg.Name][0])].HeaderCell.SortGlyphDirection = SortOrder.Descending;
+                dg.Columns[int.Parse(gridOrder[dg.Name][0])].HeaderCell.SortGlyphDirection = System.Windows.Forms.SortOrder.Descending;
             }
         }
 
