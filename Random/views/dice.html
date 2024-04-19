@@ -1,13 +1,13 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0029)https://www.random.org/lists/ -->
+<!-- saved from url=(0028)https://www.random.org/dice/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>RANDOM.ORG - List Randomizer</title>
+  <title>RANDOM.ORG - Dice Roller</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="./Resource/style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../resource/style.css" media="all">
   <!--[if IE]>
   <link rel="stylesheet" type="text/css" href="/css/iestyle.css" media="all" />
   <![endif]-->
@@ -22,31 +22,59 @@
 
   <meta name="Keywords" content="true random numbers">
   <meta name="description"
-    content="This page allows you to randomize lists of strings using true randomness, which for many purposes is better than the pseudo-random number algorithms typically used in computer programs.">
+    content="This page allows you to roll virtual dice using true randomness, which for many purposes is better than the pseudo-random number algorithms typically used in computer programs.">
   <meta name="author" content="Mads Haahr">
-  <script type="text/javascript" src="./Resource/random.js"></script>
-  <script type="text/javascript" src="./Resource/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="./Resource/simpledropdown.jquery.js"></script>
+  <script type="text/javascript" src="../resource/random.js"></script>
+  <script type="text/javascript" src="../resource/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../resource/simpledropdown.jquery.js"></script>
   <script type="text/javascript">
+    var urlParams = new URLSearchParams(window.location.search);
+    var numValue = urlParams.get('num');
+
     window.onload = function () {
-      var list = document.getElementById("list");
-      list.placeholder = "A,1\nB,2\nC,3";
-      list.value = window.sessionStorage.getItem("LotteriesSettings");
-      document.getElementById("txtIp").value = window.sessionStorage.getItem("IpSettings");
+      document.getElementById("fRollerTitle").style.display = !numValue ? "block" : "none";
+      document.getElementById("fRollerSelected").style.display = !numValue ? "block" : "none";
+      document.getElementsByName("num")[0].value = !numValue ? "2" : numValue;
+      document.getElementById("btnSubmit1").style.display = !numValue ? "inline-block" : "none";
+      document.getElementById("btnReset").style.display = !numValue ? "inline-block" : "none";
+      document.getElementById("fRollerFooter").style.display = !numValue ? "block" : "none";
+      var sRollerTitle = document.getElementById("sRollerTitle");
+      sRollerTitle.style.display = numValue ? "block" : "none";
+      sRollerTitle.innerText = "You rolled " + numValue + " dice:";
+      setDiceRoller();
+      var sRollerTime = document.getElementById("sRollerTime");
+      sRollerTime.style.display = numValue ? "block" : "none";
+      sRollerTime.innerText = "Timestamp: " + new Date().toISOString().substring(0,19).replace(/[A-Za-z]/g,' ') + " UTC";
+      document.getElementById("btnSubmit2").style.display = numValue ? "inline-block" : "none";
+      document.getElementById("btnBack").style.display = numValue ? "inline-block" : "none";
+      document.getElementById("sRollerFooter").style.display = numValue ? "block" : "none";
     }
 
-    function save() {
-      window.sessionStorage.setItem("LotteriesSettings", document.getElementById("list").value.trim());
-      window.sessionStorage.setItem("IpSettings", document.getElementById("txtIp").value.trim());
+    function setDiceRoller() {
+      var eleRollerDice = document.getElementById("sRollerDice");
+      if (!numValue) {
+        eleRollerDice.style.display = "none";
+        return;
+      }
+      var numbers = [];
+      eleRollerDice.style.display = "block";
+      for (var i = 1; i <= numValue; i++) {
+        var rn = Math.floor(Math.random() * 6) + 1;
+        numbers.push(rn);
+        var img = document.createElement("img");
+        img.src = "../resource/dice" + rn + ".png";
+        img.alt = rn;
+        eleRollerDice.appendChild(img);
+      }
+      sessionStorage.setItem("diceRoller",numbers);
     }
   </script>
 </head>
 
 <body>
-
   <div id="invisible">
     <ul id="navigation">
-      <li><a href="./index.html">Home</a></li>
+      <li><a href="../index.html">Home</a></li>
       <li><a href="https://www.random.org/#games">Games</a>
         <ul>
           <li><a href="https://www.random.org/quick-pick/">Lottery Quick Pick</a></li>
@@ -159,50 +187,104 @@
       from the RANDOM.ORG domain. Other sites that claim to be operated by us are impostors. If in doubt, <a
         href="mailto:contact@random.org">contact us</a>.</p>
 
-    <h2>Randomizer Settings</h2>
+    <h2>Dice Roller</h2>
 
+    <p id="fRollerTitle" style="display: none;">This form allows you to roll virtual dice. The randomness
+      comes from atmospheric noise, which for many purposes is better
+      than the pseudo-random number algorithms typically used in
+      computer programs.</p>
+    <p id="sRollerTitle" style="display: none;"></p>
+    <p id="sRollerDice" style="display: none;">
+    </p>
+    <p id="sRollerTime" style="display: none;">Timestamp: 2024-04-16 08:57:38 UTC</p>
+    <form method="get" action="./dice.html">
 
-    <p id="fListTitle">This form allows you to arrange the items of a list in random
-      order. The randomness comes from atmospheric noise, which for many
-      purposes is better than the pseudo-random number algorithms
-      typically used in computer programs.</p>
-
-    <form id="frList" method="post" action="./settings.html">
-      <h3>Part 1: Enter List Items</h3>
-
-      <p>Enter your items in the field below, each on a separate
-        line. Items can be numbers, names, email addresses, etc. A
-        maximum of 10,000 items are allowed. Please don't enter anything
-        you would consider confidential (<a href="https://www.random.org/faq/#Q3.2">here's why</a>).</p>
-
-      <div>
-        <textarea cols="60" rows="10" name="list" id="list"></textarea><br>
-
-        (you're viewing this form <span style="color:green">securely</span>)
-      </div>
-
-      <p></p>
-
-      <h3>Part 2: Enter Ip Address</h3>
-
-      <p><input type="text" id="txtIp" required></p>
+      <p id="fRollerSelected" style="display: none;">Roll
+        <select name="num">
+          <option value="1">1</option>
+          <option value="2" selected="true">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+          <option value="53">53</option>
+          <option value="54">54</option>
+          <option value="55">55</option>
+          <option value="56">56</option>
+          <option value="57">57</option>
+          <option value="58">58</option>
+          <option value="59">59</option>
+          <option value="60">60</option>
+        </select>
+        virtual dice.</p>
 
       <p>
-        <input id="btnSubmit" type="submit" value="Save Settings" onclick="save()">
-        <input id="btnReset" type="reset" value="Rest Form" onclick="form.reset()">
+        <input id="btnSubmit1" type="submit" value="Roll Dice" style="display: none;">
+        <input id="btnReset" type="reset" value="Reset Form" style="display: none;">
+        <input id="btnSubmit2" type="submit" value="Roll Again" style="display: none;">
+        <input id="btnBack" type="button" onclick="history.go(-1);" value="Go Back" style="display: none;">
       </p>
+
     </form>
 
+    <p id="fRollerFooter" style="display: none;">Confused about terminology? The word ‘die’ is singular and ‘dice’ is
+      plural.</p>
+    <p id="sRollerFooter" style="display: none;">Does this not look random to you? Check out the <a
+        href="https://www.random.org/faq/#Q2.8">FAQ</a>.</p>
 
-    <p></p>
     <div class="ruler"></div>
 
     <div style="text-align:center;">
       <div>© 1998-2024 RANDOM.ORG<br>Follow us: <a href="https://twitter.com/RandomOrg">Twitter</a> | <a rel="me"
           href="https://mastodon.world/@random">Mastodon</a>
         <!-- | <a href="https://www.facebook.com/RANDOM.ORG">Facebook</a> | <a href="https://plus.google.com/+RandomOrg">Google+</a> -->
-        <br><a href="https://www.random.org/terms">Terms and Conditions</a><br><a
-          href="https://www.random.org/company">About Us</a></div>
+        <br><a href="https://www.random.org/terms">Terms and Conditions</a><br><a href="https://www.random.org/company">About Us</a></div>
     </div>
     <!-- no analytics here -->
 
