@@ -64,6 +64,7 @@
         var img = document.createElement("img");
         img.src = "../resource/dice" + rn + ".png";
         img.alt = rn;
+        img.style = "margin-right:4px";
         eleRollerDice.appendChild(img);
       }
       sessionStorage.setItem("diceRoller",numbers);
@@ -194,9 +195,8 @@
       than the pseudo-random number algorithms typically used in
       computer programs.</p>
     <p id="sRollerTitle" style="display: none;"></p>
-    <p id="sRollerDice" style="display: none;">
-    </p>
-    <p id="sRollerTime" style="display: none;">Timestamp: 2024-04-16 08:57:38 UTC</p>
+    <p id="sRollerDice" style="display: none;"></p>
+    <p id="sRollerTime" style="display: none;margin-top: 18.5px;">Timestamp: 2024-04-16 08:57:38 UTC</p>
     <form method="get" action="./dice.html">
 
       <p id="fRollerSelected" style="display: none;">Roll
@@ -263,13 +263,10 @@
           <option value="60">60</option>
         </select>
         virtual dice.</p>
-
-      <p>
         <input id="btnSubmit1" type="submit" value="Roll Dice" style="display: none;">
         <input id="btnReset" type="reset" value="Reset Form" style="display: none;">
         <input id="btnSubmit2" type="submit" value="Roll Again" style="display: none;">
         <input id="btnBack" type="button" onclick="history.go(-1);" value="Go Back" style="display: none;">
-      </p>
 
     </form>
 

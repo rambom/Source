@@ -118,7 +118,7 @@
       sListTime.innerHTML = "IP: " + (!ip ? "49.75.182.225" : ip) + "<br>Timestamp: " + new Date().toISOString().substring(0,19).replace(/[A-Za-z]/g,' ') + " UTC";
       document.getElementById("sListMore").style.display = numValue ? "block" : "none";
       var sListCount = document.getElementById("sListCount");
-      sListCount.style.display = numValue ? "block" : "none";
+      sListCount.style.display = numValue && numValue != "1" ? "block" : "none";
       sListCount.innerText = "You have randomized this list " + numValue + " times.";
       document.getElementById("sButtonBlock").style.display = numValue ? "block" : "none";
     }
