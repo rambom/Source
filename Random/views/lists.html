@@ -81,15 +81,23 @@
       }
       var firstShuffleList = JSON.parse(firstShuffle);
       for(var i=0; i<lotteries.length; i++){
-        var arr = lotteries[i].split(",");
+        var arr = lotteries[i].replace("，", ",").split(",");
         if(arr.length != 2){
           continue;
         }
-        var index = firstShuffleList.indexOf(arr[0].trim());
-        if(index == -1 || list.length <= index){
+        var index1 = firstShuffleList.indexOf(arr[0].trim());
+        if(index1 == -1 || list.length <= index1){
           continue;
         }
-        list[index] = arr[1].trim();
+        var index2 = list.indexOf(arr[1].trim());
+        if(index1 == index2){
+          continue;
+        }
+        var temp = list[index1];
+        list[index1] = arr[1].trim();
+        if(index2 != -1){          
+          list[index2] = temp;
+        }
       }
       return list;
     }
